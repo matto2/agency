@@ -1,0 +1,39 @@
+---
+import Logo from "./Logo.astro";
+---
+
+<nav class="md:flex md:justify-between md:items-center">
+  <div class="text-center md:flex md:items-center">
+    <Logo />
+  </div>
+  <div class="flex justify-center items-center">
+    <div class="flex items-center space-x-4 text-slate-500 text-lg">
+      <a href="/" class="hover:text-black cursor-pointer">Work</a>
+      <a href="/about" class="hover:text-black cursor-pointer">About</a>
+      <a href="/services" class="hover:text-black cursor-pointer">Services</a>
+      <a href="/contact" class="hover:text-black cursor-pointer">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const nav = document.querySelector(
+    "nav.md\\:flex.md\\:justify-between.md\\:items-center"
+  );
+  const navLinks = nav.querySelectorAll("a");
+  const currentURL = window.location.href;
+  navLinks.forEach((link) => {
+    if (link.href === currentURL) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+<style>
+  .active {
+    font-family: sans-serif;
+    font-weight: 900;
+    color: #4f46e5;
+    text-decoration-line: none; /* Change this color to match your desired indigo color */
+  }
+</style>

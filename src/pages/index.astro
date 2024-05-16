@@ -1,16 +1,61 @@
 ---
-
+import Base from "../layouts/Base.astro";
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+import sunset from "../assets/sunset.webp";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base title="Home bra">
+  <h1
+    class="font-sans text-5xl animate-faster animate-backInUp mx-auto text-center text-indigo-600 md:text-8xl font-bold py-8"
+  >
+    Elevate Your Brand
+  </h1>
+  <p
+    class="text-xl px-12 md:text-3xl mb-8 md:px-3 mx-auto text-center max-w-xl"
+  >
+    I create designs that will capture attention and drive engagement with your
+    brand.
+  </p>
+  <a href="mailto:mattosurf@gmail.com?subject=Hey Matt!" " target='_blank"'>
+    <div class="mb-2 mx-auto text-center">
+      <Button text="Email Me!" />
+    </div>
+  </a>
+
+  <div
+    class="grid items-center grid-cols-2 mx-auto sm:grid-cols-3 md:grid-cols-4 gap-6"
+  >
+    <Card img={sunset} alt="Card Image" title="Web Design" link="/about" />
+    <Card
+      img={sunset}
+      alt="Card Image"
+      title="Web Design"
+      link="https://www.google.com"
+    />
+    <Card
+      img={sunset}
+      alt="Card Image"
+      title="Web Design"
+      link="https://www.google.com"
+    />
+    <Card
+      img={sunset}
+      alt="Card Image"
+      title="Web Design"
+      link="https://www.google.com"
+    />
+    <Card
+      img={sunset}
+      alt="Card Image"
+      title="Web Design"
+      link="https://www.google.com"
+    />
+    <Card
+      img={sunset}
+      alt="Card Image"
+      title="Web Design"
+      link="https://www.google.com"
+    />
+  </div>
+</Base>
