@@ -4,4 +4,50 @@ import Base from "../layouts/Base.astro";
 
 <Base title="Contact">
   <h1 class="font-sans font-bold text-5xl my-8">Contact</h1>
+
+  <form
+    name="contact"
+    netlify
+    class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md"
+  >
+    <div class="mb-4">
+      <label class="block text-gray-700 font-bold mb-2" for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        required
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-bold mb-2" for="email">Email</label
+      >
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        required
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-bold mb-2" for="message"
+        >Message</label
+      >
+      <textarea
+        name="message"
+        id="message"
+        rows="4"
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-y"
+        required></textarea>
+    </div>
+    <div class="flex items-center justify-between">
+      <button
+        type="submit"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >Send</button
+      >
+    </div>
+  </form>
 </Base>

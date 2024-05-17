@@ -5,6 +5,110 @@ import mattbiopic from "../assets/mattbiopic.jpg";
 ---
 
 <Base title="About">
-  <h1 class="font-sans font-bold text-5xl my-8">About</h1>
-  <Image src={mattbiopic} alt="matt biopic" class="rounded-full" />
+  <div class="max-w-3xl mx-auto">
+    <h1 class="font-sans font-bold text-5xl my-8">About</h1>
+    <div class="flex flex-col sm:flex-row items-center sm:items-start">
+      <Image
+        src={mattbiopic}
+        alt="matt biopic"
+        class="rounded-full mx-auto max-w-xs sm:mr-8 mb-6"
+      />
+
+      <section class="mb-8 sm:mb-0">
+        <h2 class="font-sans text-xl font-semibold mb-2">
+          Welcome to Matt O'Leary Design!
+        </h2>
+        <p class="mb-4">
+          With a passion for design that spans over 20 years, I have dedicated
+          my career to transforming ideas into visually stunning and effective
+          solutions. My journey in the design world began when I was working at
+          a print shop and a buddy said “let’s publish a surf magazine!”. That
+          experience led to work at design agencies, as an in-house designer and
+          prepress manager for a large retailer, plus several tech firms
+          designing the user interface of digital products. Throughout this
+          time, I have nurtured my own design business, taking good care of my
+          client’s creative needs. As a life-long artist, I’m adept at combining
+          my creative eye with technical and practical know-how.
+        </p>
+      </section>
+    </div>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-sans font-semibold mb-2">What I Offer</h2>
+      <p class="mb-4">
+        I specialize in providing bespoke design services tailored to meet your
+        unique needs. Whether you're a startup looking to establish a brand
+        identity, a small business in need of a website makeover, or an
+        organization aiming to enhance your visual communications, I am here to
+        help.
+      </p>
+      <ul class="list-disc list-outside ml-4">
+        <li class="mb-2">
+          <span class="font-sans font-bold">Branding & Identity:</span> Crafting
+          memorable and impactful brands from the ground up.
+        </li>
+        <li class="mb-2">
+          <span class="font-sans font-bold">Graphic Design:</span> Creating eye-catching
+          designs for print and digital media.
+        </li>
+        <li class="mb-2">
+          <span class="font-sans font-bold">Web Design:</span> Building responsive,
+          user-friendly websites that drive engagement.
+        </li>
+        <li class="mb-2">
+          <span class="font-sans font-bold">UX/UI Design:</span> Designing intuitive
+          interfaces that enhance user experience.
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-sans font-semibold mb-2">Why Choose Me?</h2>
+      <p class="mb-4">
+        Choosing Matt O’Leary Design means working directly with me on every
+        aspect of your project. This personalized approach ensures clear
+        communication, attention to detail, and a deep understanding of your
+        vision and goals. I am committed to delivering high-quality designs that
+        exceed expectations and help your brand stand out in a crowded
+        marketplace. Additionally, I follow a mini-agency model where if I can
+        leverage my contacts to expand creative jobs as needed.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-sans font-semibold mb-2">
+        Let's Create Something Beautiful
+      </h2>
+      <p class="mb-4">
+        I'm always excited to take on new challenges and bring creative ideas to
+        life. If you're looking for a dedicated designer who will treat your
+        project with the same care and passion as you do, look no further. Let's
+        collaborate to create something beautiful and impactful together.
+      </p>
+      <p>
+        Feel free to reach out to discuss your project or to learn more about
+        how I can help your business thrive.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-sans font-semibold mb-2">Contact Information:</h2>
+      <ul class="list-disc list-inside ml-4">
+        <li class="mb-2">
+          Email: <a
+            href="mailto:mattosurf@gmail.com"
+            class="text-indigo-600 hover:text-indigo-900 hover:underline"
+            >mattosurf@gmail.com</a
+          >
+        </li>
+        <li class="mb-2">
+          Phone: <a
+            href="tel:8312347766"
+            class="text-indigo-600 hover:text-indigo-900 hover:underline"
+            >831-234-7766</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
 </Base>
