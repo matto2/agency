@@ -3,6 +3,7 @@ import Base from "../layouts/Base.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import sunset from "../assets/sunset.webp";
+import webdesign from "../assets/webdesign.jpg";
 ---
 
 <Base title="Home bra">
@@ -26,7 +27,12 @@ import sunset from "../assets/sunset.webp";
   <div
     class="grid items-center grid-cols-2 mx-auto sm:grid-cols-3 md:grid-cols-4 gap-6"
   >
-    <Card img={sunset} alt="Card Image" title="Web Design" link="/about" />
+    <Card
+      img={webdesign}
+      alt="Card Image"
+      title="Web Design"
+      link="/webdesign"
+    />
     <Card
       img={sunset}
       alt="Card Image"

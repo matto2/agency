@@ -1,0 +1,16 @@
+---
+import Base from "../layouts/Base.astro";
+import { Image } from "astro:assets";
+import coastal from "../assets/coastal.jpg";
+import Back from "../components/Back.astro";
+import whale from "../assets/whale.jpg";
+import comealong from "../assets/comealong.jpg";
+---
+
+<Base title="Web Design">
+  <Back />
+  <h1 class="font-sans font-bold text-5xl my-8">Web Design</h1>
+  <Image src={coastal} alt="coastal image" />
+  <Image src={whale} alt="whale image" />
+  <Image src={comealong} alt="come along image" />
+</Base>

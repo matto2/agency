@@ -1,5 +1,10 @@
 ---
 import Base from "../layouts/Base.astro";
+import { Image } from "astro:assets";
+import mattbiopic from "../assets/mattbiopic.jpg";
 ---
 
-<Base title="About" />
+<Base title="About">
+  <h1 class="font-sans font-bold text-5xl my-8">About</h1>
+  <Image src={mattbiopic} alt="matt biopic" class="rounded-full" />
+</Base>
