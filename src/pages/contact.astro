@@ -1,53 +1,83 @@
 ---
 import Base from "../layouts/Base.astro";
+import Button from "../components/Button.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <Base title="Contact">
-  <h1 class="font-sans font-bold text-5xl my-8">Contact</h1>
+  <div class="max-w-3xl mx-auto">
+    <h1 class="font-sans font-bold text-5xl my-8">Contact</h1>
+    <p class="mb-8 text-lg">
+      Reach out to discuss your project or to learn more about how I can help
+      your business thrive.
+    </p>
+    <form
+      name="contact"
+      method="POST"
+      netlify-honeypot="bot-field"
+      data-netlify="true"
+      class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md"
+    >
+      <p class="hidden">
+        <label>
+          Don’t fill this out if you’re human: <input name="bot-field" />
+        </label>
+      </p>
 
-  <form
-    name="contact"
-    netlify
-    class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md"
-  >
-    <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2" for="name">Name</label>
-      <input
-        type="text"
-        name="name"
-        id="name"
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        required
-      />
-    </div>
-    <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2" for="email">Email</label
-      >
-      <input
-        type="email"
-        name="email"
-        id="email"
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        required
-      />
-    </div>
-    <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2" for="message"
-        >Message</label
-      >
-      <textarea
-        name="message"
-        id="message"
-        rows="4"
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-y"
-        required></textarea>
-    </div>
-    <div class="flex items-center justify-between">
-      <button
-        type="submit"
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        >Send</button
-      >
-    </div>
-  </form>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="name">Name</label
+        >
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="email"
+          >Email</label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="message"
+          >Message</label
+        >
+        <textarea
+          name="message"
+          id="message"
+          rows="4"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600 resize-y"
+          required></textarea>
+      </div>
+      <div class="flex items-center justify-between">
+        <Button type="submit" text="Send" />
+      </div>
+    </form>
+    <ul class="list-disc list-inside mt-8">
+      <li class="mb-2">
+        Email: <a
+          href="mailto:mattosurf@gmail.com"
+          class="text-indigo-600 hover:text-indigo-800 hover:underline"
+          >mattosurf@gmail.com</a
+        >
+      </li>
+      <li class="mb-0">
+        Call/text: <a
+          href="tel:8312752566"
+          class="text-indigo-600 hover:text-indigo-800 hover:underline"
+          >(831) 275-2566</a
+        >
+      </li>
+    </ul>
+    <Contact />
+  </div>
 </Base>

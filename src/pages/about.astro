@@ -2,6 +2,8 @@
 import Base from "../layouts/Base.astro";
 import { Image } from "astro:assets";
 import mattbiopic from "../assets/mattbiopic.jpg";
+import Contact from "../components/Contact.astro";
+import LogoField from "../components/LogoField.astro";
 ---
 
 <Base title="About">
@@ -74,6 +76,12 @@ import mattbiopic from "../assets/mattbiopic.jpg";
         leverage my contacts to expand creative jobs as needed.
       </p>
     </section>
+    <section class="mb-8">
+      <h2 class="text-xl font-sans font-semibold mb-6">
+        Brands I've Worked With/For:
+      </h2>
+      <LogoField />
+    </section>
 
     <section class="mb-8">
       <h2 class="text-xl font-sans font-semibold mb-2">
@@ -85,30 +93,29 @@ import mattbiopic from "../assets/mattbiopic.jpg";
         project with the same care and passion as you do, look no further. Let's
         collaborate to create something beautiful and impactful together.
       </p>
-      <p>
-        Feel free to reach out to discuss your project or to learn more about
-        how I can help your business thrive.
+      <p class="mb-2">
+        Reach out to discuss your project or to learn more about how I can help
+        your business thrive.
       </p>
-    </section>
 
-    <section class="mb-8">
-      <h2 class="text-xl font-sans font-semibold mb-2">Contact Information:</h2>
-      <ul class="list-disc list-inside ml-4">
+      <!-- <h2 class="text-xl font-sans font-semibold mb-2">Contact Information:</h2> -->
+      <ul class="list-disc list-inside">
         <li class="mb-2">
           Email: <a
             href="mailto:mattosurf@gmail.com"
-            class="text-indigo-600 hover:text-indigo-900 hover:underline"
+            class="text-indigo-600 hover:text-indigo-800 hover:underline"
             >mattosurf@gmail.com</a
           >
         </li>
-        <li class="mb-2">
-          Phone: <a
-            href="tel:8312347766"
-            class="text-indigo-600 hover:text-indigo-900 hover:underline"
-            >831-234-7766</a
+        <li class="mb-0">
+          Call/text: <a
+            href="tel:8312752566"
+            class="text-indigo-600 hover:text-indigo-800 hover:underline"
+            >(831) 275-2566</a
           >
         </li>
       </ul>
+      <Contact />
     </section>
   </div>
 </Base>

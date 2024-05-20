@@ -1,0 +1,76 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import costco from "../assets/costco.svg";
+import swinerton from "../assets/swinerton.svg";
+import ta from "../assets/ta.png";
+import oneill from "../assets/oneill.svg";
+import bigsurf from "../assets/bigsurf.png";
+import stagnaro from "../assets/stagnaro.svg";
+import annieglass from "../assets/annieglass.png";
+import syncplicity from "../assets/syncplicity.png";
+import siemens from "../assets/siemens.svg";
+import wiser from "../assets/wiser.svg";
+import beko from "../assets/beko.svg";
+import currys from "../assets/currys.svg";
+---
+
+<grid
+  class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 place-items-center"
+>
+  <Icon name="axway" alt="Axway Logo" class="align-middle" />
+  <Icon name="kiteworks" alt="KiteWorks Logo" class="align-middle" />
+  <Icon name="westmarine" alt="West Marine Logo" />
+  <Image src={costco} alt="Costco Logo" width={110} />
+  <Image src={swinerton} alt="Swinerton Logo" width={120} />
+  <Image src={wiser} alt="Wiser Logo" width={110} />
+  <!-- <Image src={wiser} alt="Wiser Logo" width={110} /> -->
+  <Icon name="fastpencil" alt="Fast Pencil Logo" />
+  <Icon name="cisco" alt="Cisco Logo" />
+  <Icon name="martinellis" alt="Martinellis Logo" />
+  <Icon name="khakis" alt="Khakis Logo" />
+  <Icon name="calgiant" alt="Cal Giant Logo" />
+  <Image src={ta} alt="Tanimura & Antle Logo" width={90} />
+  <Image src={oneill} alt="Oneill Logo" width={100} />
+  <Image src={bigsurf} alt="Big Surf Logo" width={120} />
+  <Image src={stagnaro} alt="Stagnaro Logo" width={140} />
+  <Image src={annieglass} alt="Annie Glass Logo" width={100} />
+  <Image src={syncplicity} alt="Syncplicity Logo" width={110} />
+  <Image src={siemens} alt="Siemens Logo" width={100} />
+  <Image src={beko} alt="Beko Logo" width={60} />
+  <Image src={currys} alt="Currys Logo" width={60} />
+</grid>
+
+<style>
+  [data-icon="axway"] {
+    font-size: 2rem;
+  }
+
+  [data-icon="fastpencil"] {
+    font-size: 1.5rem;
+  }
+
+  [data-icon="kirkland"] {
+    font-size: 2rem;
+  }
+
+  [data-icon="martinellis"] {
+    font-size: 1.5rem;
+  }
+
+  [data-icon="wiser"] {
+    font-size: 2.3rem;
+  }
+
+  [data-icon="cisco"] {
+    font-size: 2rem;
+  }
+
+  [data-icon="khakis"] {
+    font-size: 1.7rem;
+  }
+
+  [data-icon="calgiant"] {
+    font-size: 2.5rem;
+  }
+</style>
