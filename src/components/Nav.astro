@@ -17,15 +17,19 @@ import Logo from "./Logo.astro";
 </nav>
 
 <script>
-  const nav = document.querySelector(
-    "nav.md\\:flex.md\\:justify-between.md\\:items-center"
-  );
-  const navLinks = nav.querySelectorAll("a");
-  const currentURL = window.location.href;
-  navLinks.forEach((link) => {
-    if (link.href === currentURL) {
-      link.classList.add("active");
-    }
+  document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.querySelector(
+      "nav.md\\:flex.md\\:justify-between.md\\:items-center"
+    );
+    const navLinks = nav.querySelectorAll("a");
+    const currentURL = window.location.pathname; // Use pathname for comparison
+
+    navLinks.forEach((link) => {
+      const linkPathname = new URL(link.href).pathname; // Get the pathname of the link
+      if (linkPathname === currentURL) {
+        link.classList.add("active");
+      }
+    });
   });
 </script>
 
