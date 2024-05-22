@@ -1,0 +1,14 @@
+---
+import Base from "../layouts/Base.astro";
+import { Image } from "astro:assets";
+import coastal1 from "../assets/coastal1.webp";
+import Back from "../components/Back.astro";
+
+const title = "Coastal Nature Guides";
+---
+
+<Base title="Coastal Nature Guides">
+  <Back />
+  <h1 class="font-sans font-bold text-5xl my-8">{title}</h1>
+  <Image src={coastal1} alt="coastal image" />
+</Base>

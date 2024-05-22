@@ -1,0 +1,14 @@
+---
+import Base from "../layouts/Base.astro";
+import { Image } from "astro:assets";
+import Back from "../components/Back.astro";
+import khakis1 from "../assets/khakis1.webp";
+
+const title = "Khakis of Carmel";
+---
+
+<Base title={title}>
+  <Back />
+  <h1 class="font-sans font-bold text-5xl my-8">{title}</h1>
+  <Image src={khakis1} alt="khakis" />
+</Base>

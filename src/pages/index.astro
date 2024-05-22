@@ -3,10 +3,11 @@ import Base from "../layouts/Base.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import sunset from "../assets/sunset.webp";
-import webdesign from "../assets/webdesign.jpg";
+import coastal1 from "../assets/coastal1.webp";
+import khakis1 from "../assets/khakis1.webp";
 ---
 
-<Base title="Home bra">
+<Base title="Matt O'Leary Design - Home">
   <h1
     class="font-sans text-5xl animate-faster animate-backInUp mx-auto text-center text-indigo-600 md:text-8xl font-bold py-8"
   >
@@ -28,17 +29,12 @@ import webdesign from "../assets/webdesign.jpg";
     class="grid items-center grid-cols-2 mx-auto sm:grid-cols-3 md:grid-cols-4 gap-6"
   >
     <Card
-      img={webdesign}
-      alt="Card Image"
-      title="Web Design"
-      link="/webdesign"
+      img={coastal1}
+      alt="coastal nature guides"
+      title="Coastal Nature Guides"
+      link="/coastal"
     />
-    <Card
-      img={sunset}
-      alt="Card Image"
-      title="Web Design"
-      link="https://www.google.com"
-    />
+    <Card img={khakis1} alt="khakis" title="Khakis of Carmel" link="/khakis" />
     <Card
       img={sunset}
       alt="Card Image"

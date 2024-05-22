@@ -4,6 +4,21 @@ import { Image } from "astro:assets";
 import mattbiopic from "../assets/mattbiopic.jpg";
 import Contact from "../components/Contact.astro";
 import LogoField from "../components/LogoField.astro";
+import Tools from "../components/Tools.astro";
+import creativesuite from "../assets/creativesuite.svg";
+import figma from "../assets/figma.svg";
+import miro from "../assets/miro.svg";
+import astro from "../assets/astro.svg";
+import tailwindcss from "../assets/tailwindcss.svg";
+import vscode from "../assets/vscode.svg";
+import github from "../assets/github.svg";
+import chatgpt from "../assets/chatgpt.svg";
+import AllTools from "../components/AllTools.astro";
+import Testimonial from "../components/Testimonial.astro";
+import abishek from "../assets/abishek.png";
+import diana from "../assets/diana.jpg";
+import bruce from "../assets/bruce.jpg";
+import jennine from "../assets/jennine.jpg";
 ---
 
 <Base title="About">
@@ -23,14 +38,18 @@ import LogoField from "../components/LogoField.astro";
         <p class="mb-4">
           With a passion for design that spans over 20 years, I have dedicated
           my career to transforming ideas into visually stunning and effective
-          solutions. My journey in the design world began when I was working at
-          a print shop and a buddy said “let’s publish a surf magazine!”. That
-          experience led to work at design agencies, as an in-house designer and
-          prepress manager for a large retailer, plus several tech firms
-          designing the user interface of digital products. Throughout this
-          time, I have nurtured my own design business, taking good care of my
-          client’s creative needs. As a life-long artist, I’m adept at combining
-          my creative eye with technical and practical know-how.
+          solutions. My journey in design began while working at a print shop
+          and a buddy said “let’s publish a surf magazine!” That humble
+          beginning led to stints at a couple of marketing agencies, as an
+          in-house designer for a large retailer, plus product design roles at
+          several start-ups and established companies where I was responsible
+          for designing, testing, and elevating the user experience of digital
+          products. Throughout this time, I have nurtured my own design
+          business, taking good care of the creative needs of my clients.
+          <!-- Here's my <a
+            href="/MatthewOLeary-Resume.pdf"
+            class="underline text-indigo-600 hover:text-indigo-800">resume</a
+          >. -->
         </p>
       </section>
     </div>
@@ -42,7 +61,8 @@ import LogoField from "../components/LogoField.astro";
         unique needs. Whether you're a startup looking to establish a brand
         identity, a small business in need of a website makeover, or an
         organization aiming to enhance your visual communications, I am here to
-        help.
+        help. I’m adept at combining my creativity with technical and practical
+        know-how to bring your vision to life.
       </p>
       <ul class="list-disc list-outside ml-4">
         <li class="mb-2">
@@ -55,13 +75,19 @@ import LogoField from "../components/LogoField.astro";
         </li>
         <li class="mb-2">
           <span class="font-sans font-bold">Web Design:</span> Building responsive,
-          user-friendly websites that drive engagement.
+          user-friendly websites that drive engagement and sales (eCommerce).
         </li>
         <li class="mb-2">
           <span class="font-sans font-bold">UX/UI Design:</span> Designing intuitive
           interfaces that enhance user experience.
         </li>
       </ul>
+      <p>
+        See all <a
+          href="/services"
+          class="underline text-indigo-600 hover:text-indigo-800">services</a
+        >
+      </p>
     </section>
 
     <section class="mb-8">
@@ -78,10 +104,56 @@ import LogoField from "../components/LogoField.astro";
     </section>
     <section class="mb-8">
       <h2 class="text-xl font-sans font-semibold mb-6">
-        Brands I've Worked With/For:
+        Brands I've Worked With/For
       </h2>
       <LogoField />
     </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-sans font-semibold mb-2">
+        What People Are Saying
+      </h2>
+      <p class="mb-4">
+        I've had the pleasure to work with some amazing people. Here's what some
+        of them had to say:
+      </p>
+      <Testimonial
+        quote="Matt is an incredibly designer who works hard to identify/solve for customers pain points His designs for critical & heavily used functionality were well received and had a lasting impact on the product adoption."
+        img={abishek}
+        alt="Abishek Aurora picture"
+        person="Abishek Aurora"
+        title="Director of Product"
+        company="Credit Karma"
+      />
+
+      <Testimonial
+        quote="I worked with Matt on a variety of packaging and communication material design and production projects. Matt is very knowledgeable as well as personable, guiding the process to ensure expected creative outcomes."
+        img={diana}
+        alt="Diana picture"
+        person="Diana (DeVincenzi) McClean"
+        title="Director of Marketing and Communications"
+        company="Mission Produce"
+      />
+
+      <Testimonial
+        quote="Matt is a very creative individual. His knowledge of design as well as production techniques and crafts is invaluable and enables him to participate from start to finish on every project. From book covers to website and page design, Matt's creative sense is remarkable and invaluable."
+        img={bruce}
+        alt="Bruce Butterfield picture"
+        person="Bruce Butterfield"
+        title="CEO and Founder"
+        company="The Wittfield Group"
+      />
+
+      <Testimonial
+        quote="I find it refreshing to work with someone who knows how to tackle big projects while staying calm, focused and creative all while delivering outstanding work."
+        img={jennine}
+        alt="Jennine Dureau picture"
+        person="Jennine Dureau"
+        title="Marketing Program Manager"
+        company="TurboTax"
+      />
+    </section>
+    <!-- <AllTools /> -->
 
     <section class="mb-8">
       <h2 class="text-xl font-sans font-semibold mb-2">

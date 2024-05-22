@@ -1,0 +1,79 @@
+---
+import { Image } from "astro:assets";
+
+import Tools from "../components/Tools.astro";
+import creativesuite from "../assets/creativesuite.svg";
+import figma from "../assets/figma.svg";
+import miro from "../assets/miro.svg";
+import astro from "../assets/astro.svg";
+import tailwindcss from "../assets/tailwindcss.svg";
+import vscode from "../assets/vscode.svg";
+import github from "../assets/github.svg";
+import chatgpt from "../assets/chatgpt.svg";
+---
+
+<section class="mb-8">
+  <h2 class="text-xl font-sans font-semibold mb-4">My Favorite Tools</h2>
+
+  <Tools
+    img={creativesuite}
+    alt="Adobe Creative Suite logo"
+    name="Adobe Creative Suite"
+    description={`The graphic design and photo-editing power house. I mostly use the
+        big three—Photoshop, Illustrator, and InDesign—but also use other
+        apps in the suite as needed.`}
+  />
+
+  <Tools
+    img={figma}
+    alt="Figma logo"
+    name="Figma"
+    description={`I use Figma to design prototypes and flows for web and mobile apps. Great for collaboration with other designers and developers, and also for testing the UI with customers.`}
+  />
+
+  <Tools
+    img={miro}
+    alt="Miro logo"
+    name="Miro"
+    description={`I like Miro for wireframing and low-fidelity prototyping.`}
+  />
+
+  <Tools
+    img={astro}
+    alt="Astro logo"
+    name="Astro"
+    description={`I use Astro (aka Astro.js) to build fast, beautiful, and SEO-optimized websites.`}
+  />
+  <Tools
+    img={tailwindcss}
+    alt="Tailwind logo"
+    name="Tailwind"
+    description={`I use Tailwind CSS to style websites efficiently.`}
+  />
+  <Tools
+    img={vscode}
+    alt="Visual Studio Code logo"
+    name="Visual Studio Code"
+    description={`For creating and editing code.`}
+  />
+
+  <Tools
+    img={github}
+    alt="GitHub logo"
+    name="GitHub"
+    description={`For version control and collaboration with others.`}
+  />
+
+  <Tools
+    img={chatgpt}
+    alt="ChatGPT logo"
+    name="ChatGPT"
+    description={`For quick answering questions and providing guidance.`}
+  />
+  <p class="mb-4">
+    These are the main tools I use in my design and development workflow. Others
+    include Microsoft Office apps, Google Workspace, Notion, Stripe, Square,
+    Netlify, as well as Wordpress and Shopify. My goal is to use the best tools
+    to create awesome designs and bring them to life.
+  </p>
+</section>
