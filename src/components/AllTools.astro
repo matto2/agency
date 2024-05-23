@@ -10,10 +10,15 @@ import tailwindcss from "../assets/tailwindcss.svg";
 import vscode from "../assets/vscode.svg";
 import github from "../assets/github.svg";
 import chatgpt from "../assets/chatgpt.svg";
+import apple from "../assets/apple.svg";
+import netlify from "../assets/netlify.svg";
 ---
 
 <section class="mb-8">
-  <h2 class="text-xl font-sans font-semibold mb-4">My Favorite Tools</h2>
+  <!-- <h2 class="text-xl font-sans font-semibold mb-4">My Favorite Tools</h2> -->
+  <p class="mb-4">
+    Here are some of the tools I use in my design and development workflow.
+  </p>
 
   <Tools
     img={creativesuite}
@@ -42,7 +47,7 @@ import chatgpt from "../assets/chatgpt.svg";
     img={astro}
     alt="Astro logo"
     name="Astro"
-    description={`I use Astro (aka Astro.js) to build fast, beautiful, and SEO-optimized websites.`}
+    description={`I use Astro (aka Astro.js) to build fast, performant, and SEO-optimized websites.`}
   />
   <Tools
     img={tailwindcss}
@@ -65,15 +70,28 @@ import chatgpt from "../assets/chatgpt.svg";
   />
 
   <Tools
+    img={apple}
+    alt="Apple logo"
+    name="Apple"
+    description={`MacbookPro for hardware + various Apple apps (daily Notes app user here).`}
+  />
+
+  <Tools
+    img={netlify}
+    alt="Netlify logo"
+    name="Netlify"
+    description={`For hosting and deploying websites.`}
+  />
+
+  <Tools
     img={chatgpt}
     alt="ChatGPT logo"
     name="ChatGPT"
     description={`For quick answering questions and providing guidance.`}
   />
   <p class="mb-4">
-    These are the main tools I use in my design and development workflow. Others
-    include Microsoft Office apps, Google Workspace, Notion, Stripe, Square,
-    Netlify, as well as Wordpress and Shopify. My goal is to use the best tools
-    to create awesome designs and bring them to life.
+    Others tools I use include Microsoft Office apps, Google Workspace, Notion,
+    Stripe, Square, Netlify, as well as Wordpress and Shopify. My goal is to use
+    the best tools to create awesome designs and bring them to life.
   </p>
 </section>

@@ -1,0 +1,19 @@
+---
+import Base from "../layouts/Base.astro";
+import AllTools from "../components/AllTools.astro";
+// import Breadcrumb from "../components/Breadcrumb.astro";
+import BackToAbout from "../components/BackToAbout.astro";
+
+const title = "My Favorite Tools";
+---
+
+<Base title="My Favorite Tools">
+  <div class="max-w-4xl mx-auto">
+    <!-- <Breadcrumb /> -->
+
+    <BackToAbout />
+
+    <h1 class="font-sans font-bold text-5xl my-8">{title}</h1>
+    <AllTools />
+  </div>
+</Base>

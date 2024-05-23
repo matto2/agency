@@ -3,15 +3,15 @@ const { img, alt, name, description } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
-<div class="sm:flex sm:items-start mb-5">
+<div class="sm:flex sm:items-start mb-8">
   <Image
     src={img}
     alt={alt}
     width={50}
     class="mr-4 mb-2 sm:mb-0 align-top rounded-md"
   />
-  <div>
-    <p class="font-bold">{name}</p>
+  <div class="align-center">
+    <p class="font-bold font-sans from-neutral-700">{name}</p>
     <p>
       {description}
     </p>

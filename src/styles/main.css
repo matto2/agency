@@ -14,3 +14,16 @@ h1 {
 .strong {
     font-weight: 600;
 }
+
+    header {
+      width: 100%;
+    }
+
+    footer {
+        width: 100%;
+      }
+  
+      .bold-text {
+        font-weight: 700;
+        font-family: sans-serif;/* Ensuring the bold version of the font is used */
+      }     
