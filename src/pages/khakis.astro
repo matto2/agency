@@ -2,14 +2,35 @@
 import BaseThinner from "../layouts/BaseThinner.astro";
 import { Image } from "astro:assets";
 import Back from "../components/Back.astro";
-import khakis1 from "../assets/khakis1.webp";
+import khakis1 from "../assets/khakis1.png";
+import khakis2 from "../assets/khakis2.png";
+import khakis3 from "../assets/khakis3.png";
+import khakis4 from "../assets/khakis4.png";
+import khakis5 from "../assets/khakis5.png";
+import khakis6 from "../assets/khakis6.png";
 
 const title = "Khakis of Carmel";
 ---
 
 <BaseThinner title={title}>
   <Back next="/books" />
-  <h1 class="font-sans font-bold text-5xl my-8">{title}</h1>
-  <Image src={khakis1} alt="khakis" />
+  <section class="mb-8">
+    <h1 class="font-sans font-bold text-5xl my-8">{title}</h1>
+    <p class="mb-6">
+      While working with the team at Khakis of Carmel I was able to craft
+      improved advertising and in-store event signage. I conducted several photo
+      shoots featuring newly arrived clothing and also updated the eCommerce
+      (Shopify) website.
+    </p>
+    <!-- <Image src={khakis1} alt="khakis" /> -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <Image src={khakis1} alt="khakis1" class="w-full" />
+      <Image src={khakis2} alt="khakis2" class="w-full" />
+      <Image src={khakis3} alt="khakis3" class="w-full" />
+      <Image src={khakis4} alt="khakis4" class="w-full" />
+      <Image src={khakis5} alt="khakis5" class="w-full" />
+      <Image src={khakis6} alt="khakis6" class="w-full" />
+    </div>
+  </section>
   <Back next="/books" />
 </BaseThinner>
