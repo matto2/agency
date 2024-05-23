@@ -2,13 +2,14 @@
 import Base from "../layouts/Base.astro";
 import Button from "../components/Button.astro";
 import Contact from "../components/Contact.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <Base title="Contact">
-  <div class="max-w-3xl mx-auto">
+  <div class="max-w-2xl mx-auto">
     <h1 class="font-sans font-bold text-5xl my-8">Contact</h1>
-    <p class="mb-8 text-lg">
-      Reach out to discuss your project or to learn more about how I can help
+    <p class="mb-4 text-lg">
+      Reach out to discuss your project, or to learn more about how I can help
       your business thrive.
     </p>
     <form
@@ -16,7 +17,7 @@ import Contact from "../components/Contact.astro";
       method="POST"
       netlify-honeypot="bot-field"
       data-netlify="true"
-      class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md"
+      class="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl mb-6"
     >
       <p class="hidden">
         <label>
@@ -62,22 +63,7 @@ import Contact from "../components/Contact.astro";
         <Button type="submit" text="Send" />
       </div>
     </form>
-    <ul class="list-disc list-inside mt-8">
-      <li class="mb-2">
-        Email: <a
-          href="mailto:mattosurf@gmail.com"
-          class="text-indigo-600 hover:text-indigo-800 hover:underline"
-          >mattosurf@gmail.com</a
-        >
-      </li>
-      <li class="mb-0">
-        Call/text: <a
-          href="tel:8312752566"
-          class="text-indigo-600 hover:text-indigo-800 hover:underline"
-          >(831) 275-2566</a
-        >
-      </li>
-    </ul>
+
     <Contact />
   </div>
 </Base>

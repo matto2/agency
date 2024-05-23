@@ -19,10 +19,11 @@ import abishek from "../assets/abishek.png";
 import diana from "../assets/diana.jpg";
 import bruce from "../assets/bruce.jpg";
 import jennine from "../assets/jennine.jpg";
+import { Icon } from "astro-icon/components";
 ---
 
 <Base title="About">
-  <div class="max-w-3xl mx-auto">
+  <div class="max-w-4xl mx-auto">
     <h1 class="font-sans font-bold text-5xl my-8">About</h1>
     <div class="flex flex-col sm:flex-row items-center sm:items-start">
       <Image
@@ -118,7 +119,7 @@ import jennine from "../assets/jennine.jpg";
         of them had to say:
       </p>
       <Testimonial
-        quote="Matt is an incredibly designer who works hard to identify/solve for customers pain points His designs for critical & heavily used functionality were well received and had a lasting impact on the product adoption."
+        quote="Matt is an incredibly designer who works hard to identify/solve for customers' pain points. His designs for critical and heavily used functionality were well received and had a lasting impact on the product adoption."
         img={abishek}
         alt="Abishek Aurora picture"
         person="Abishek Aurora"
@@ -149,7 +150,7 @@ import jennine from "../assets/jennine.jpg";
         img={jennine}
         alt="Jennine Dureau picture"
         person="Jennine Dureau"
-        title="Marketing Program Manager"
+        title="Marketing Manager"
         company="TurboTax"
       />
     </section>
@@ -165,28 +166,13 @@ import jennine from "../assets/jennine.jpg";
         project with the same care and passion as you do, look no further. Let's
         collaborate to create something beautiful and impactful together.
       </p>
-      <p class="mb-2">
+      <p class="mb-2 font-semibold">
         Reach out to discuss your project or to learn more about how I can help
         your business thrive.
       </p>
 
       <!-- <h2 class="text-xl font-sans font-semibold mb-2">Contact Information:</h2> -->
-      <ul class="list-disc list-inside">
-        <li class="mb-2">
-          Email: <a
-            href="mailto:mattosurf@gmail.com"
-            class="text-indigo-600 hover:text-indigo-800 hover:underline"
-            >mattosurf@gmail.com</a
-          >
-        </li>
-        <li class="mb-0">
-          Call/text: <a
-            href="tel:8312752566"
-            class="text-indigo-600 hover:text-indigo-800 hover:underline"
-            >(831) 275-2566</a
-          >
-        </li>
-      </ul>
+
       <Contact />
     </section>
   </div>

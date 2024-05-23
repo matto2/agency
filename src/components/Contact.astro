@@ -2,8 +2,41 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<a href="https://www.linkedin.com/in/matt-oleary/">
-  <p class="text-xl py-6 text-indigo-600 hover:text-indigo-800">
-    <Icon name="linkedin" />
-  </p>
-</a>
+<ul class="list-none list-inside">
+  <li class="mb-2 flex">
+    <a href="mailto:mattosurf@gmail.com">
+      <Icon name="mail" class="text-indigo-600 hover:text-indigo-800 mr-2" /></a
+    >
+    <a
+      href="mailto:mattosurf@gmail.com"
+      class="text-indigo-600 font-semibold hover:text-indigo-800 hover:underline"
+      >mattosurf@gmail.com</a
+    >
+  </li>
+  <li class="mb-2 flex">
+    <a href="tel:8312752566">
+      <Icon
+        name="phone"
+        class="text-indigo-600 hover:text-indigo-800 mr-2"
+      /></a
+    >
+    <a
+      href="tel:8312752566"
+      class="text-indigo-600 font-semibold hover:text-indigo-800 hover:underline"
+      >(831) 275-2566
+    </a>
+  </li>
+  <li class="mb-2 flex">
+    <a href="https://www.linkedin.com/in/matt-oleary/">
+      <Icon
+        name="linkedin"
+        class="text-indigo-600 hover:text-indigo-800 mr-2"
+      /></a
+    >
+    <a
+      href="https://www.linkedin.com/in/matt-oleary/"
+      class="text-indigo-600 font-semibold hover:text-indigo-800 hover:underline"
+      >in/matt-oleary
+    </a>
+  </li>
+</ul>

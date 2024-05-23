@@ -1,5 +1,5 @@
 ---
-import Base from "../layouts/Base.astro";
+import BaseThinner from "../layouts/BaseThinner.astro";
 import { Image } from "astro:assets";
 import Back from "../components/Back.astro";
 import khakis1 from "../assets/khakis1.webp";
@@ -7,8 +7,9 @@ import khakis1 from "../assets/khakis1.webp";
 const title = "Khakis of Carmel";
 ---
 
-<Base title={title}>
-  <Back />
+<BaseThinner title={title}>
+  <Back next="/books" />
   <h1 class="font-sans font-bold text-5xl my-8">{title}</h1>
   <Image src={khakis1} alt="khakis" />
-</Base>
+  <Back next="/books" />
+</BaseThinner>

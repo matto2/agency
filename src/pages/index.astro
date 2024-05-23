@@ -5,6 +5,10 @@ import Card from "../components/Card.astro";
 import sunset from "../assets/sunset.webp";
 import coastal1 from "../assets/coastal1.webp";
 import khakis1 from "../assets/khakis1.webp";
+import books from "../assets/books.png";
+import kiteworks from "../assets/kiteworks.jpg";
+import openbanking from "../assets/openbanking.png";
+import lpc from "../assets/lpc.png";
 ---
 
 <Base title="Matt O'Leary Design - Home">
@@ -26,7 +30,7 @@ import khakis1 from "../assets/khakis1.webp";
   </a>
 
   <div
-    class="grid items-center grid-cols-2 mx-auto sm:grid-cols-3 md:grid-cols-4 gap-6"
+    class="grid items-center w-full mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2"
   >
     <Card
       img={coastal1}
@@ -35,29 +39,24 @@ import khakis1 from "../assets/khakis1.webp";
       link="/coastal"
     />
     <Card img={khakis1} alt="khakis" title="Khakis of Carmel" link="/khakis" />
+    <Card img={books} alt="Books Image" title="Book Covers" link="/books" />
     <Card
-      img={sunset}
-      alt="Card Image"
-      title="Web Design"
-      link="https://www.google.com"
+      img={kiteworks}
+      alt="kiteworks Image"
+      title="Kiteworks Web App"
+      link="/kiteworks"
     />
     <Card
-      img={sunset}
-      alt="Card Image"
-      title="Web Design"
-      link="https://www.google.com"
+      img={openbanking}
+      alt="open banking Image"
+      title="Open Banking"
+      link="/openbanking"
     />
     <Card
-      img={sunset}
-      alt="Card Image"
-      title="Web Design"
-      link="https://www.google.com"
-    />
-    <Card
-      img={sunset}
-      alt="Card Image"
-      title="Web Design"
-      link="https://www.google.com"
+      img={lpc}
+      alt="live price check Image"
+      title="Live Price Check"
+      link="/livepricecheck"
     />
   </div>
 </Base>

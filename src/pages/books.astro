@@ -1,0 +1,56 @@
+---
+import BaseThinner from "../layouts/BaseThinner.astro";
+import { Image } from "astro:assets";
+import Back from "../components/Back.astro";
+import healer from "../assets/healer.png";
+import third from "../assets/third.jpg";
+import travel from "../assets/travel.jpg";
+import miles from "../assets/miles.jpg";
+import conversations from "../assets/conversations.jpg";
+import gullibills from "../assets/gullibills.jpg";
+import homework from "../assets/homework.jpg";
+import kills from "../assets/kills.jpg";
+import prego from "../assets/prego.jpg";
+import shakespeare from "../assets/shakespeare.jpg";
+import till from "../assets/till.jpg";
+import together from "../assets/together.jpg";
+import torque from "../assets/torque.jpg";
+
+const title = "Book Covers";
+---
+
+<BaseThinner title={title}>
+  <Back next="/kiteworks" />
+  <h1 class="font-sans font-bold text-5xl my-8">{title}</h1>
+  <p class="mb-2 max-w-4xl" style="white-space:">
+    While at FastPencil I had the opportunity to work with many talented authors
+    on their book projects. We'd start with a kick-off meeting to go over the
+    story and to get a vibe for what they were looking for. Next I'd start
+    creating some design options and iterating BaseThinnerd on feedback until we
+    were satisfied. It was truly gratifying to help bring the authors' creations
+    to life.
+  </p>
+  <p class="mb-8 font-semibold">
+    <a
+      href="mailto:mattosurf@gmail.com?subject=Hey Matt!"
+      class="text-indigo-600 hover:text-indigo-800 hover:underline">Reach out</a
+    > to chat about your next book project!
+  </p>
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <Image src={torque} alt="Torque" class="w-full" />
+    <Image src={miles} alt="500 Miles" class="w-full" />
+    <Image src={together} alt="Together" class="w-full" />
+    <Image src={till} alt="Till" class="w-full" />
+    <Image src={shakespeare} alt="Shakespeare" class="w-full" />
+    <Image src={homework} alt="Homework" class="w-full" />
+    <Image src={gullibills} alt="Gullibills" class="w-full" />
+    <Image src={conversations} alt="Conversations" class="w-full" />
+    <Image src={healer} alt="Healer" class="w-full" />
+    <Image src={travel} alt="Travel to Tomorrow" class="w-full" />
+    <Image src={third} alt="Third Times a Charm" class="w-full" />
+    <Image src={prego} alt="Prego" class="w-full" />
+    <Image src={kills} alt="Kills" class="w-full" />
+  </div>
+  <Back next="/kiteworks" />
+</BaseThinner>

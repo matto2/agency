@@ -1,0 +1,25 @@
+---
+const { title } = Astro.props;
+import "../styles/main.css";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+// Supports weights 100-900
+import "@fontsource-variable/montserrat";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-stone-100 mx-auto px-4 2xl:px-0 max-w-7xl">
+    <Nav />
+    <main class="mx-auto max-w-4xl">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

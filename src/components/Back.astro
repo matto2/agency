@@ -1,3 +1,14 @@
-<div class="text-slate-500 my-4 hover:text-indigo-600 text-lg">
-  <a href="/"> &larr; Home </a>
+---
+const { next } = Astro.props;
+---
+
+<div
+  class="text-indigo-600 my-4 hover:text-indigo-800 text-lg flex justify-between"
+>
+  <div>
+    <a href="/"> &uarr; Home </a>
+  </div>
+  <div>
+    <a href={next}> Next &rarr; </a>
+  </div>
 </div>
