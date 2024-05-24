@@ -10,6 +10,7 @@ import kiteworks from "../assets/kiteworks.jpg";
 import openbanking from "../assets/openbanking.png";
 import lpc from "../assets/lpc.png";
 import fastpencil from "../assets/fastpencil.png";
+import Contact from "../components/Contact.astro";
 ---
 
 <Base title="Matt O'Leary Design - Home">
@@ -31,7 +32,7 @@ import fastpencil from "../assets/fastpencil.png";
   </a>
 
   <div
-    class="grid items-center w-full mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2"
+    class="grid items-center w-full mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2 mb-8"
   >
     <Card
       img={coastal1}
@@ -66,4 +67,13 @@ import fastpencil from "../assets/fastpencil.png";
       link="/fastpencil"
     />
   </div>
+  <p class="mb-8">
+    I specialize in custom graphic and web design services for startups, small
+    businesses, and organizations. Whether you need a brand identity, new
+    website, or enhanced visual communications, I blend creativity with
+    technical expertise to bring your vision to life. Reach out to see how I can
+    help you today!
+  </p>
+
+  <Contact />
 </Base>
