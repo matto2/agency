@@ -15,72 +15,79 @@ import juice from "../assets/juice.png";
 ---
 
 <Base title="Matt O'Leary Design - Home">
-  <h1
-    class="font-sans text-5xl animate-faster animate-backInUp mx-auto text-center text-indigo-600 md:text-8xl font-bold py-8"
-  >
-    Elevate Your Brand
-  </h1>
-  <p
-    class="text-xl px-12 md:text-3xl mb-8 md:px-3 mx-auto text-center max-w-xl"
-  >
-    I create designs that will capture attention and drive engagement with your
-    brand.
-  </p>
-  <a href="mailto:mattosurf@gmail.com?subject=Hey Matt!" " target='_blank"'>
-    <div class="mb-2 mx-auto text-center">
-      <Button text="Email Me!" />
+  <section class="px-4 2xl:px-0">
+    <h1
+      class="font-sans text-5xl animate-faster animate-backInUp mx-auto text-center text-indigo-600 md:text-8xl font-bold py-8"
+    >
+      Elevate Your Brand
+    </h1>
+    <p
+      class="text-xl px-12 md:text-3xl mb-8 md:px-3 mx-auto text-center max-w-xl"
+    >
+      I create designs that will capture attention and drive engagement with
+      your brand.
+    </p>
+    <a href="mailto:mattosurf@gmail.com?subject=Hey Matt!" " target='_blank"'>
+      <div class="mb-2 mx-auto text-center">
+        <Button text="Email Me!" />
+      </div>
+    </a>
+
+    <div
+      class="grid items-center w-full mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2 mb-2"
+    >
+      <Card
+        img={coastal2}
+        alt="coastal nature guides"
+        title="Coastal Nature Guides"
+        link="/coastal"
+      />
+      <Card
+        img={khakis1}
+        alt="khakis"
+        title="Khakis of Carmel"
+        link="/khakis"
+      />
+      <Card img={books} alt="Books Image" title="Book Covers" link="/books" />
+      <Card
+        img={kiteworks}
+        alt="kiteworks Image"
+        title="Kiteworks Web App"
+        link="/kiteworks"
+      />
+      <Card
+        img={openbanking}
+        alt="open banking Image"
+        title="Open Banking"
+        link="/openbanking"
+      />
+      <Card
+        img={lpc}
+        alt="live price check Image"
+        title="Live Price Check"
+        link="/livepricecheck"
+      />
+      <Card
+        img={fastpencil}
+        alt="FastPencil Image"
+        title="FastPencil"
+        link="/fastpencil"
+      />
+      <Card
+        img={juice}
+        alt="Juice Image"
+        title="The Juice Magazine"
+        link="/juice"
+      />
     </div>
-  </a>
+    <p class="mb-8">
+      I specialize in custom graphic and web design services for startups, small
+      businesses, and organizations. Whether you need a brand identity, new
+      website, or enhanced visual communications, I blend creativity with
+      technical expertise to bring your vision to life. Reach out to see how I
+      can help you today!
+    </p>
 
-  <div
-    class="grid items-center w-full mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2 mb-8"
-  >
-    <Card
-      img={coastal2}
-      alt="coastal nature guides"
-      title="Coastal Nature Guides"
-      link="/coastal"
-    />
-    <Card img={khakis1} alt="khakis" title="Khakis of Carmel" link="/khakis" />
-    <Card img={books} alt="Books Image" title="Book Covers" link="/books" />
-    <Card
-      img={kiteworks}
-      alt="kiteworks Image"
-      title="Kiteworks Web App"
-      link="/kiteworks"
-    />
-    <Card
-      img={openbanking}
-      alt="open banking Image"
-      title="Open Banking"
-      link="/openbanking"
-    />
-    <Card
-      img={lpc}
-      alt="live price check Image"
-      title="Live Price Check"
-      link="/livepricecheck"
-    />
-    <Card
-      img={fastpencil}
-      alt="FastPencil Image"
-      title="FastPencil"
-      link="/fastpencil"
-    />
-    <Card
-      img={juice}
-      alt="Juice Image"
-      title="The Juice Magazine"
-      link="/juice"
-    />
-  </div>
-  <p class="mb-8">
-    I specialize in custom graphic and web design services for startups, small
-    businesses, and organizations. Whether you need a brand identity, new
-    website, or enhanced visual communications, I blend creativity with
-    technical expertise to bring your vision to life. Reach out to see how I can
-    help you today!
-  </p>
-
-  <Contact />
+    <!-- <Contact /> -->
+  </section>
 </Base>

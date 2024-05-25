@@ -1,5 +1,78 @@
-<footer class="border-t border-slate-300 mt-12">
-  <div class="my-4">
+---
+import Contact from "../components/Contact.astro";
+---
+
+<footer class="border-t border-slate-300 px-4">
+  <div
+    class="grid md:grid-cols-3 md:gap-x-12 place-items-start max-w-4xl mx-auto"
+  >
+    <div class="mt-6 min-w-96">
+      <Contact />
+    </div>
+    <div class="mt-6 mb-4 font-sans font-semibold">
+      <p>
+        <a
+          href="/"
+          class="text-lg text-indigo-600 hover:text-indigo-800 hover:underline mb-2"
+          >Work</a
+        >
+      </p>
+      <p>
+        <a
+          href="/about"
+          class="text-lg text-indigo-600 hover:text-indigo-800 hover:underline mb-2"
+          >About</a
+        >
+      </p>
+      <p>
+        <a
+          href="/services"
+          class="text-lg text-indigo-600 hover:text-indigo-800 hover:underline mb-2"
+          >Services</a
+        >
+      </p>
+      <p>
+        <a
+          href="/contact"
+          class="text-lg text-indigo-600 hover:text-indigo-800 hover:underline mb-2"
+          >Contact</a
+        >
+      </p>
+    </div>
+    <div class="mt-6 min-w-96">
+      <p class="font-sans font-semibold">Other Links</p>
+      <p>
+        <a
+          href="https://olearystudios.com/"
+          class="text-indigo-600 hover:text-indigo-800 hover:underline mb-2"
+          >O'Leary Studios</a
+        >
+      </p>
+      <p>
+        <a
+          href="https://keeptheapostrophe.com/"
+          class="text-indigo-600 hover:text-indigo-800 hover:underline mb-2"
+          >Keep the Apostrophe in Irish Names</a
+        >
+      </p>
+      <p>
+        <a
+          href="https://minnieoleary.com/"
+          class="text-indigo-600 hover:text-indigo-800 hover:underline mb-2"
+          >minnieoleary.com</a
+        >
+      </p>
+      <!-- <p>
+        <a
+          href="/contact"
+          class="text-indigo-600 hover:text-indigo-800 hover:underline mb-2"
+          >Contact</a
+        >
+      </p> -->
+    </div>
+  </div>
+
+  <div class="my-4 text-center">
     &copy;
     <span id="copyright">
       <script>
