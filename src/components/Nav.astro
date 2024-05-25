@@ -37,7 +37,7 @@ import Logo from "./Logo.astro";
     setActiveNavLink();
 
     // Handle view transitions
-    document.addEventListener("viewTransitionEnd", setActiveNavLink);
+    document.addEventListener("astro:after-swap", setActiveNavLink);
 
     // Handle navigation changes for SPA routing
     window.addEventListener("popstate", setActiveNavLink);
