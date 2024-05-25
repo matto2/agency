@@ -30,12 +30,16 @@ module.exports = withAnimations({
         '.font-sans': {
           fontFamily: theme('fontFamily.sans'),
         },
+        '.font-semibold': {
+          fontFamily: theme('fontFamily.montserrat'),
+          fontWeight: theme('fontWeight.semibold'),
+        },
         '.font-bold': {
           fontFamily: theme('fontFamily.montserrat'),
           fontWeight: theme('fontWeight.bold'),
         },
-      }
-      addUtilities(newUtilities, ['responsive', 'hover'])
+      };
+      addUtilities(newUtilities, ['responsive', 'hover']);
     },
   ],
 });
