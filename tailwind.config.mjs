@@ -6,9 +6,36 @@ module.exports = withAnimations({
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['"Montserrat Variable"', ...defaultTheme.fontFamily.sans],
+        sans: [
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          '"Noto Sans"',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
+        ],
+        montserrat: ['"Montserrat Variable"', 'sans-serif'],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities, theme }) {
+      const newUtilities = {
+        '.font-sans': {
+          fontFamily: theme('fontFamily.sans'),
+        },
+        '.font-bold': {
+          fontFamily: theme('fontFamily.montserrat'),
+          fontWeight: theme('fontWeight.bold'),
+        },
+      }
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    },
+  ],
 });
