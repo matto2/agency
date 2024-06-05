@@ -1,0 +1,36 @@
+---
+import BaseThinner from "../../layouts/BaseThinner.astro";
+import { Image } from "astro:assets";
+import coastal2 from "../../assets/coastal2.png";
+import Back from "../../components/Back.astro";
+
+const title = "Coastal Nature Guides";
+---
+
+<BaseThinner title="Coastal Nature Guides">
+  <div class="mx-4 2xl:mx-0">
+    <Back next="/work/khakis" />
+    <section class="mb-8">
+      <h1 class="font-sans font-bold text-5xl my-8">{title}</h1>
+      <p class="mb-6">
+        Coastal Nature Guides is a work-in-progress - full website coming soon!
+        When finished the site will offer unforgettable experiences led by
+        highly experienced guides with deep knowledge of Monterey County and Big
+        Sur. These vast areas feature unique landscapes with countless places to
+        explore. Operated by the same team that runs
+        <a
+          href="https://www.bigsurfadventures.com/"
+          target="_blank"
+          class="text-indigo-600 hover:text-indigo-800 hover:underline"
+          >Big Surf Adventures</a
+        >.
+      </p>
+      <p class="mb-6">
+        My role so far has been to create an online presence for the site, and I
+        also designed the logo.
+      </p>
+      <Image src={coastal2} alt="coastal image" />
+    </section>
+    <Back next="/work/khakis" />
+  </div>
+</BaseThinner>

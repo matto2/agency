@@ -25,7 +25,11 @@ import Logo from "./Logo.astro";
       navLinks.forEach((link) => {
         const linkPath = new URL(link.href).pathname;
         const normalizePath = (path) => path.replace(/\/+$/, "");
-        if (normalizePath(linkPath) === normalizePath(currentPath)) {
+
+        // Match exact paths or subpaths for 'Work' link
+        if (linkPath === "/" && currentPath.startsWith("/work")) {
+          link.classList.add("active");
+        } else if (normalizePath(linkPath) === normalizePath(currentPath)) {
           link.classList.add("active");
         } else {
           link.classList.remove("active");
