@@ -44,6 +44,7 @@ const title = "Book Covers";
         data-fslightbox="gallery"
         data-caption="torque book cover"
         href="/torque.jpg"
+        id="openLightboxButton"
       >
         <Image src={torque} alt="Torque" class="w-full" />
       </a>
@@ -135,4 +136,13 @@ const title = "Book Covers";
     </div>
   </section>
   <Back next="/work/kiteworks" />
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const openLightboxButton = document.getElementById("openLightboxButton");
+
+      openLightboxButton.addEventListener("click", function () {
+        fsLightbox.open();
+      });
+    });
+  </script>
 </BaseThinner>
