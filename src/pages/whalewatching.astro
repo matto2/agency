@@ -1,0 +1,82 @@
+---
+import BaseThinner from "../layouts/BaseThinner.astro";
+import { Image } from "astro:assets";
+import Back from "../components/Back.astro";
+import whale_shirts from "../assets/whale_shirts.png";
+import whale_van_banner from "../assets/whale_van_banner.png";
+import whale_rack2 from "../assets/whale_rack2.png";
+import whale_hat from "../assets/whale_hat.png";
+import whale_web from "../assets/whale_web.png";
+
+const title = "Santa Cruz Whale Watching";
+---
+
+<BaseThinner title="Santa Cruz Whale Watching">
+  <div class="mx-4 2xl:mx-0">
+    <Back next="/juice" />
+    <section class="mb-8">
+      <h1 class="font-sans font-bold text-5xl my-8">{title}</h1>
+      <p class="mb-6 mt-2">
+        I've had the pleasure of working with the team at Santa Cruz Whale
+        Watching / Stagnaro Charters for a considerable amount of time, creating
+        a diverse array of marketing and advertising materials for them. This
+        includes both online projects and printed materials such as jackets,
+        hats, shirts, banners, rack cards, and posters.
+      </p>
+
+      <Image src={whale_shirts} alt="whale shirts" class="mb-8" />
+      <Image src={whale_van_banner} alt="whale van banner" class="mb-8" />
+      <Image src={whale_rack2} alt="whale rack2" class="mb-8" />
+      <Image src={whale_hat} alt="whale hat" class="mb-8" />
+      <Image src={whale_web} alt="whale web" class="mb-8" />
+
+      <!-- <h4 class="font-bold text-lg mt-6 mb-2">Hypothesis</h4>
+      <p class="mb-2">
+        The original design of the publishing platform was heavily branded
+        without the flexibility to allow other companies to easily create a
+        version of their own on top of the software. A new design was required
+        to enable white-labeling. Also, during the redesign, every effort should
+        be made to identify and fix any areas of the app with poor usability.
+      </p>
+      <h4 class="font-bold text-lg mt-6 mb-2">Research</h4>
+      <p class="mb-2">
+        As part of a small team, I helped analyze hundreds support tickets to
+        discover areas where users were struggling or had questions with what to
+        do or would happen next. We also analyzed results of a large survey
+        asking customers to provide general feedback on the service.
+      </p>
+      <h4 class="font-bold text-lg mt-6 mb-2">Key Takeaways</h4>
+      <p class="mb-2">
+        <ul class="list-disc pl-5 space-y-2">
+          <li>There are too many choices per view.</li>
+          <li>
+            Users don't know what to do at key junctions in the publishing
+            process.
+          </li>
+        </ul>
+      </p>
+      <h4 class="font-bold text-lg mt-6 mb-2">Prototyping</h4>
+      <p class="mb-2">
+        I created an html prototype with Bootstrap that with an emphasis on
+        simplicity and making the most common actions visually prominent while
+        still supporting other possible flows. Along with the CEO I presented
+        this prototype to many prospective customers and investors. Based on
+        their feedback and questions I iterated on the prototype and tracked
+        reactions to changes.
+      </p>
+      <h4 class="font-bold text-lg mt-6 mb-2">Development</h4>
+      <p class="mb-2">
+        I worked closely with the development team to build out the production
+        versions - both the FastPencil (self-branded version) as well as the
+        white-label/ brandable version.
+      </p>
+      <h4 class="font-bold text-lg mt-6 mb-2">Outcome</h4>
+      <p class="mb-2">
+        FastPencil was successfully acquired by Courier Corporation in large
+        part based on the design and usability improvements that I made to the
+        web UI and experience.
+      </p> -->
+    </section>
+    <Back next="/juice" />
+  </div>
+</BaseThinner>
