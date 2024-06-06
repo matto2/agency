@@ -10,7 +10,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^3.0.1",
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/ts-plugin": "^1.8.0",
     "@fontsource-variable/montserrat": "^5.0.19",
