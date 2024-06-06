@@ -20,166 +20,171 @@ import diana from "../assets/diana.jpg";
 import bruce from "../assets/bruce.jpg";
 import jennine from "../assets/jennine.jpg";
 import { Icon } from "astro-icon/components";
+import Back2 from "../components/Back2.astro";
 ---
 
 <Base title="About">
   <div class="max-w-4xl mx-auto">
-    <h1 class="font-sans font-bold text-5xl my-8 mx-4 2xl:mx-0">About</h1>
-    <div class="flex flex-col sm:flex-row items-center sm:items-start">
-      <Image
-        src={mattbiopic}
-        alt="matt biopic"
-        class="rounded-full mx-auto max-w-xs sm:mr-8 mb-6"
-      />
+    <div class="mx-4 2xl:mx-0">
+      <Back2 />
+      <h1 class="font-sans font-bold text-5xl my-8">About</h1>
+      <div class="flex flex-col sm:flex-row items-center sm:items-start">
+        <Image
+          src={mattbiopic}
+          alt="matt biopic"
+          class="rounded-full mx-auto max-w-xs sm:mr-8 mb-6"
+        />
 
-      <section class="mb-8 sm:mb-0 mx-4 2xl:mx-0">
-        <h2 class="font-sans text-xl font-semibold mb-2">
-          Welcome to Matt O'Leary Design!
-        </h2>
-        <p class="mb-4">
-          With a passion for design that spans over 20 years, I have dedicated
-          my career to transforming ideas into visually stunning and effective
-          solutions. My journey in design began while working at a print shop
-          and a buddy said “let’s publish a surf magazine!” That humble
-          beginning led to stints at a couple of marketing agencies, as an
-          in-house designer for a large retailer, plus product design roles at
-          several start-ups and established companies where I was responsible
-          for designing, testing, and elevating the user experience of digital
-          products. Throughout this time, I have nurtured my own design
-          business, taking good care of the creative needs of my clients.
-          <!-- Here's my <a
+        <section class="mb-8 sm:mb-0 mx-4 2xl:mx-0">
+          <h2 class="font-sans text-xl font-semibold mb-2">
+            Welcome to Matt O'Leary Design!
+          </h2>
+          <p class="mb-4">
+            With a passion for design that spans over 20 years, I have dedicated
+            my career to transforming ideas into visually stunning and effective
+            solutions. My journey in design began while working at a print shop
+            and a buddy said “let’s publish a surf magazine!” That humble
+            beginning led to stints at a couple of marketing agencies, as an
+            in-house designer for a large retailer, plus product design roles at
+            several start-ups and established companies where I was responsible
+            for designing, testing, and elevating the user experience of digital
+            products. Throughout this time, I have nurtured my own design
+            business, taking good care of the creative needs of my clients.
+            <!-- Here's my <a
             href="/MatthewOLeary-Resume.pdf"
             class="underline text-indigo-600 hover:text-indigo-800">resume</a
           >. -->
+          </p>
+        </section>
+      </div>
+
+      <section class="mb-8 mx-4 2xl:mx-0">
+        <h2 class="text-xl font-sans font-semibold mb-2">What I Offer</h2>
+        <p class="mb-4">
+          I specialize in providing bespoke design services tailored to meet
+          your unique needs. Whether you're a startup looking to establish a
+          brand identity, a small business in need of a website makeover, or an
+          organization aiming to enhance your visual communications, I am here
+          to help. I’m adept at combining my creativity with technical and
+          practical know-how to bring your vision to life.
+        </p>
+        <ul class="list-disc list-outside ml-4">
+          <li class="mb-2">
+            <span class="font-sans font-bold">Branding & Identity:</span> Crafting
+            memorable and impactful brands from the ground up.
+          </li>
+          <li class="mb-2">
+            <span class="font-sans font-bold">Graphic Design:</span> Creating eye-catching
+            designs for print and digital media.
+          </li>
+          <li class="mb-2">
+            <span class="font-sans font-bold">Web Design:</span> Building responsive,
+            user-friendly websites that drive engagement and sales (eCommerce).
+          </li>
+          <li class="mb-2">
+            <span class="font-sans font-bold">UX/UI Design:</span> Designing intuitive
+            interfaces that enhance user experience.
+          </li>
+        </ul>
+        <p>
+          See all <a
+            href="/services"
+            class="underline text-indigo-600 hover:text-indigo-800">services</a
+          >
         </p>
       </section>
+
+      <section class="mb-8 mx-4 2xl:mx-0">
+        <h2 class="text-xl font-sans font-semibold mb-2">Why Choose Me?</h2>
+        <p class="mb-4">
+          Choosing Matt O’Leary Design means working directly with me on every
+          aspect of your project. This personalized approach ensures clear
+          communication, attention to detail, and a deep understanding of your
+          vision and goals. I am committed to delivering high-quality designs
+          that exceed expectations and help your brand stand out in a crowded
+          marketplace. Additionally, I follow a mini-agency model where if I can
+          leverage my contacts to expand creative jobs as needed.
+        </p>
+        <p>
+          Check out my favorite <a
+            href="/about/tools"
+            class="underline text-indigo-600 hover:text-indigo-800">tools</a
+          >
+        </p>
+      </section>
+      <section class="mb-8 mx-4 2xl:mx-0">
+        <h2 class="text-xl font-sans font-semibold mb-6">
+          Brands I've Worked With/For
+        </h2>
+        <LogoField />
+      </section>
+
+      <section class="mb-8 mx-4 2xl:mx-0">
+        <h2 class="text-xl font-sans font-semibold mb-2">
+          What People Are Saying
+        </h2>
+        <p class="mb-4">
+          I've had the pleasure to work with some amazing people. Here's what
+          some of them had to say:
+        </p>
+        <Testimonial
+          quote="Matt is an incredibly designer who works hard to identify/solve for customers' pain points. His designs for critical and heavily used functionality were well received and had a lasting impact on the product adoption."
+          img={abishek}
+          alt="Abishek Aurora picture"
+          person="Abishek Aurora"
+          title="Director of Product"
+          company="Credit Karma"
+        />
+
+        <Testimonial
+          quote="I worked with Matt on a variety of packaging and communication material design and production projects. Matt is very knowledgeable as well as personable, guiding the process to ensure expected creative outcomes."
+          img={diana}
+          alt="Diana picture"
+          person="Diana (DeVincenzi) McClean"
+          title="Director of Marketing and Communications"
+          company="Mission Produce"
+        />
+
+        <Testimonial
+          quote="Matt is a very creative individual. His knowledge of design as well as production techniques and crafts is invaluable and enables him to participate from start to finish on every project. From book covers to website and page design, Matt's creative sense is remarkable and invaluable."
+          img={bruce}
+          alt="Bruce Butterfield picture"
+          person="Bruce Butterfield"
+          title="CEO and Founder"
+          company="The Wittfield Group"
+        />
+
+        <Testimonial
+          quote="I find it refreshing to work with someone who knows how to tackle big projects while staying calm, focused and creative all while delivering outstanding work."
+          img={jennine}
+          alt="Jennine Dureau picture"
+          person="Jennine Dureau"
+          title="Marketing Manager"
+          company="TurboTax"
+        />
+      </section>
+      <!-- <AllTools /> -->
+
+      <section class="mb-8 mx-4 2xl:mx-0">
+        <h2 class="text-xl font-sans font-semibold mb-2">
+          Let's Create Something Beautiful
+        </h2>
+        <p class="mb-4">
+          I'm always excited to take on new challenges and bring creative ideas
+          to life. If you're looking for a dedicated designer who will treat
+          your project with the same care and passion as you do, look no
+          further. Let's collaborate to create something beautiful and impactful
+          together.
+        </p>
+        <p class="mb-2 font-semibold">
+          Reach out to discuss your project or to learn more about how I can
+          help your business thrive.
+        </p>
+
+        <!-- <h2 class="text-xl font-sans font-semibold mb-2">Contact Information:</h2> -->
+
+        <!-- <Contact /> -->
+      </section>
     </div>
-
-    <section class="mb-8 mx-4 2xl:mx-0">
-      <h2 class="text-xl font-sans font-semibold mb-2">What I Offer</h2>
-      <p class="mb-4">
-        I specialize in providing bespoke design services tailored to meet your
-        unique needs. Whether you're a startup looking to establish a brand
-        identity, a small business in need of a website makeover, or an
-        organization aiming to enhance your visual communications, I am here to
-        help. I’m adept at combining my creativity with technical and practical
-        know-how to bring your vision to life.
-      </p>
-      <ul class="list-disc list-outside ml-4">
-        <li class="mb-2">
-          <span class="font-sans font-bold">Branding & Identity:</span> Crafting
-          memorable and impactful brands from the ground up.
-        </li>
-        <li class="mb-2">
-          <span class="font-sans font-bold">Graphic Design:</span> Creating eye-catching
-          designs for print and digital media.
-        </li>
-        <li class="mb-2">
-          <span class="font-sans font-bold">Web Design:</span> Building responsive,
-          user-friendly websites that drive engagement and sales (eCommerce).
-        </li>
-        <li class="mb-2">
-          <span class="font-sans font-bold">UX/UI Design:</span> Designing intuitive
-          interfaces that enhance user experience.
-        </li>
-      </ul>
-      <p>
-        See all <a
-          href="/services"
-          class="underline text-indigo-600 hover:text-indigo-800">services</a
-        >
-      </p>
-    </section>
-
-    <section class="mb-8 mx-4 2xl:mx-0">
-      <h2 class="text-xl font-sans font-semibold mb-2">Why Choose Me?</h2>
-      <p class="mb-4">
-        Choosing Matt O’Leary Design means working directly with me on every
-        aspect of your project. This personalized approach ensures clear
-        communication, attention to detail, and a deep understanding of your
-        vision and goals. I am committed to delivering high-quality designs that
-        exceed expectations and help your brand stand out in a crowded
-        marketplace. Additionally, I follow a mini-agency model where if I can
-        leverage my contacts to expand creative jobs as needed.
-      </p>
-      <p>
-        Check out my favorite <a
-          href="/tools"
-          class="underline text-indigo-600 hover:text-indigo-800">tools</a
-        >
-      </p>
-    </section>
-    <section class="mb-8 mx-4 2xl:mx-0">
-      <h2 class="text-xl font-sans font-semibold mb-6">
-        Brands I've Worked With/For
-      </h2>
-      <LogoField />
-    </section>
-
-    <section class="mb-8 mx-4 2xl:mx-0">
-      <h2 class="text-xl font-sans font-semibold mb-2">
-        What People Are Saying
-      </h2>
-      <p class="mb-4">
-        I've had the pleasure to work with some amazing people. Here's what some
-        of them had to say:
-      </p>
-      <Testimonial
-        quote="Matt is an incredibly designer who works hard to identify/solve for customers' pain points. His designs for critical and heavily used functionality were well received and had a lasting impact on the product adoption."
-        img={abishek}
-        alt="Abishek Aurora picture"
-        person="Abishek Aurora"
-        title="Director of Product"
-        company="Credit Karma"
-      />
-
-      <Testimonial
-        quote="I worked with Matt on a variety of packaging and communication material design and production projects. Matt is very knowledgeable as well as personable, guiding the process to ensure expected creative outcomes."
-        img={diana}
-        alt="Diana picture"
-        person="Diana (DeVincenzi) McClean"
-        title="Director of Marketing and Communications"
-        company="Mission Produce"
-      />
-
-      <Testimonial
-        quote="Matt is a very creative individual. His knowledge of design as well as production techniques and crafts is invaluable and enables him to participate from start to finish on every project. From book covers to website and page design, Matt's creative sense is remarkable and invaluable."
-        img={bruce}
-        alt="Bruce Butterfield picture"
-        person="Bruce Butterfield"
-        title="CEO and Founder"
-        company="The Wittfield Group"
-      />
-
-      <Testimonial
-        quote="I find it refreshing to work with someone who knows how to tackle big projects while staying calm, focused and creative all while delivering outstanding work."
-        img={jennine}
-        alt="Jennine Dureau picture"
-        person="Jennine Dureau"
-        title="Marketing Manager"
-        company="TurboTax"
-      />
-    </section>
-    <!-- <AllTools /> -->
-
-    <section class="mb-8 mx-4 2xl:mx-0">
-      <h2 class="text-xl font-sans font-semibold mb-2">
-        Let's Create Something Beautiful
-      </h2>
-      <p class="mb-4">
-        I'm always excited to take on new challenges and bring creative ideas to
-        life. If you're looking for a dedicated designer who will treat your
-        project with the same care and passion as you do, look no further. Let's
-        collaborate to create something beautiful and impactful together.
-      </p>
-      <p class="mb-2 font-semibold">
-        Reach out to discuss your project or to learn more about how I can help
-        your business thrive.
-      </p>
-
-      <!-- <h2 class="text-xl font-sans font-semibold mb-2">Contact Information:</h2> -->
-
-      <!-- <Contact /> -->
-    </section>
   </div>
 </Base>

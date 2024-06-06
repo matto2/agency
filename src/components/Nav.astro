@@ -24,15 +24,16 @@ import Logo from "./Logo.astro";
 
       navLinks.forEach((link) => {
         const linkPath = new URL(link.href).pathname;
-        const normalizePath = (path) => path.replace(/\/+$/, "");
 
-        // Match exact paths or subpaths for 'Work' link
-        if (linkPath === "/" && currentPath.startsWith("/work")) {
+        // Clear all active classes first
+        link.classList.remove("active");
+
+        // Set active class based on current path
+        if (
+          (linkPath === "/" && currentPath === "/") ||
+          (currentPath.startsWith(linkPath) && linkPath !== "/")
+        ) {
           link.classList.add("active");
-        } else if (normalizePath(linkPath) === normalizePath(currentPath)) {
-          link.classList.add("active");
-        } else {
-          link.classList.remove("active");
         }
       });
     };
