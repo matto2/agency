@@ -8,10 +8,22 @@ import Logo from "./Logo.astro";
   </div>
   <div class="flex justify-center items-center">
     <div class="flex items-center space-x-4 text-slate-500 text-lg font-sans">
-      <a href="/" class="hover:text-black cursor-pointer">Work</a>
-      <a href="/about" class="hover:text-black cursor-pointer">About</a>
-      <a href="/services" class="hover:text-black cursor-pointer">Services</a>
-      <a href="/contact" class="hover:text-black cursor-pointer">Contact</a>
+      <a href="/" data-link="work" class="hover:text-black cursor-pointer"
+        >Work</a
+      >
+      <a href="/about" data-link="about" class="hover:text-black cursor-pointer"
+        >About</a
+      >
+      <a
+        href="/services"
+        data-link="services"
+        class="hover:text-black cursor-pointer">Services</a
+      >
+      <a
+        href="/contact"
+        data-link="contact"
+        class="hover:text-black cursor-pointer">Contact</a
+      >
     </div>
   </div>
 </nav>
@@ -24,30 +36,23 @@ import Logo from "./Logo.astro";
 
       navLinks.forEach((link) => {
         const linkPath = new URL(link.href).pathname;
+        const dataLink = link.getAttribute("data-link");
 
-        // Clear all active classes first
         link.classList.remove("active");
 
-        // Set active class based on current path
-        if (
-          (linkPath === "/" && currentPath === "/") ||
-          (currentPath.startsWith(linkPath) && linkPath !== "/")
-        ) {
+        if (currentPath.startsWith(`/${dataLink}`)) {
+          link.classList.add("active");
+        } else if (linkPath === currentPath) {
           link.classList.add("active");
         }
       });
     };
 
-    // Initial activation
     setActiveNavLink();
 
-    // Handle view transitions
     document.addEventListener("astro:after-swap", setActiveNavLink);
-
-    // Handle navigation changes for SPA routing
     window.addEventListener("popstate", setActiveNavLink);
 
-    // Monkey patch history methods to detect navigation changes
     const originalPushState = history.pushState;
     history.pushState = function (...args) {
       originalPushState.apply(this, args);
