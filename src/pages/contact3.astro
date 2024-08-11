@@ -38,18 +38,24 @@ import Back2 from "../components/Back2.astro";
           />
         </div>
         <div class="mb-4">
-          <label class="block text-gray-700 font-bold mb-2"></label>
-          Email
+          <label class="block text-gray-700 font-bold mb-2"> Email</label>
+          <input
+            type="email"
+            name="email"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600"
+            required
+          />
         </div>
-        <input
-          type="email"
-          name="email"
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600"
-          required
-        />
+
         <div class="mb-4">
-          <label>Message <textarea name="message"></textarea></label>
+          <label class="block text-gray-700 font-bold mb-2">Message</label>
+          <textarea
+            name="message"
+            rows="4"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600 resize-y"
+            required></textarea>
         </div>
+
         <div class="mb-4">
           <button type="submit">Send</button>
         </div>
