@@ -28,29 +28,19 @@ import Back2 from "../components/Back2.astro";
           </label>
         </p>
 
-        <p>
-          <label
-            >Name
-            <input type="text" name="name" /></label
-          >
-        </p>
-        <p>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2">Name</label>
+          <input type="text" name="name" />
+        </div>
+        <div class="mb-4">
           <label>Email <input type="email" name="email" /></label>
-        </p>
-        <!-- <p>
-          <label
-            >Your Role: <select name="role[]" multiple>
-              <option value="leader">Leader</option>
-              <option value="follower">Follower</option>
-            </select></label
-          >
-        </p> -->
-        <p>
+        </div>
+        <div class="mb-4">
           <label>Message <textarea name="message"></textarea></label>
-        </p>
-        <p>
+        </div>
+        <div class="mb-4">
           <button type="submit">Send</button>
-        </p>
+        </div>
       </form>
 
       <!-- <Contact /> -->
