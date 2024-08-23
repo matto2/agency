@@ -10,74 +10,71 @@ import Back2 from "../components/Back2.astro";
     <Back2 />
     <div class="max-w-2xl mx-auto">
       <h1 class="font-sans font-bold text-5xl my-8">Contact</h1>
-      <p class="mb-0 text-lg">
-        Reach out to discuss your project today. <p class="mb-4">
-          Call or text: <a href="tel:8312752566" class="text-indigo-600"
-            >831-275-2566</a
-          > Or send message here:
-        </p>
+      <p class="mb-4 text-lg">
+        Let's discuss your project today! Use form below or call/text
+        <a href="tel:8312752566" class="text-indigo-600">831-275-2566</a>
       </p>
-      <form
-        name="contact and subscribe"
-        method="POST"
-        netlify-honeypot="bot-field"
-        data-netlify="true"
-        class="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl mb-12"
-      >
-        <p class="hidden">
-          <label>
-            Don't fill this out if you're human: <input name="bot-field" />
-          </label>
-        </p>
-
-        <div class="mb-4">
-          <label class="block text-gray-700 font-bold mb-2">Name</label>
-          <input
-            type="text"
-            name="name"
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600"
-            required
-          />
-        </div>
-        <div class="mb-4">
-          <label class="block text-gray-700 font-bold mb-2">Email</label>
-          <input
-            type="email"
-            name="email"
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600"
-            required
-          />
-        </div>
-        <div class="mb-4">
-          <label class="block text-gray-700 font-bold mb-2">Message</label>
-          <textarea
-            name="message"
-            rows="4"
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600 resize-y"
-            required></textarea>
-        </div>
-
-        <div class="mb-4">
-          <input
-            type="checkbox"
-            name="my-checkbox"
-            class="w-4 h-4 checked:bg-indigo-600 checked:border-indigo-600"
-          />
-          <label class="text-gray-700 font-regular mb-2 ml-2"
-            >Subscribe to our newsletter</label
-          >
-        </div>
-
-        <div class="mb-4">
-          <button
-            type="submit"
-            class="rounded-full bg-indigo-600 px-8 py-3 text-xl font-semibold text-white shadow-sm hover:bg-indigo-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >Send</button
-          >
-        </div>
-      </form>
-
-      <!-- <Contact /> -->
     </div>
+    <form
+      name="contact and subscribe"
+      method="POST"
+      netlify-honeypot="bot-field"
+      data-netlify="true"
+      class="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl mb-12"
+    >
+      <p class="hidden">
+        <label>
+          Don't fill this out if you're human: <input name="bot-field" />
+        </label>
+      </p>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2">Name</label>
+        <input
+          type="text"
+          name="name"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2">Email</label>
+        <input
+          type="email"
+          name="email"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2">Message</label>
+        <textarea
+          name="message"
+          rows="4"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600 resize-y"
+          required></textarea>
+      </div>
+
+      <div class="mb-4">
+        <input
+          type="checkbox"
+          name="my-checkbox"
+          class="w-4 h-4 checked:bg-indigo-600 checked:border-indigo-600"
+        />
+        <label class="text-gray-700 font-regular mb-2 ml-2"
+          >Subscribe to our newsletter</label
+        >
+      </div>
+
+      <div class="mb-4">
+        <button
+          type="submit"
+          class="rounded-full bg-indigo-600 px-8 py-3 text-xl font-semibold text-white shadow-sm hover:bg-indigo-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >Send</button
+        >
+      </div>
+    </form>
+
+    <!-- <Contact /> -->
   </section>
 </Base>
