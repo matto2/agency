@@ -6,10 +6,46 @@ import Footer from "../components/Footer.astro";
 // Supports weights 100-900
 import "@fontsource-variable/montserrat";
 // import { ViewTransitions } from "astro:transitions";
+import { SEO } from "astro-seo";
 ---
 
 <html lang="en">
   <head>
+    <SEO
+  title="Custom Graphic & Web Design | Matthew O'Leary Design"
+  description="Matthew O'Leary offers expert custom graphic and web design services tailored for startups, small businesses, and organizations. Bringing visions to life with creativity and technical expertise."
+  openGraph={{
+    basic: {
+      title: "Custom Graphic & Web Design | Matthew O'Leary Design",
+      type: "website",
+      image: "https://mattoleary.design/images/og-image.jpg", // Replace with your actual OG image URL
+    }
+  }}
+  extend={{
+    // extending the default link tags
+    link: [{ rel: "icon", href: "/favicon.ico" }],
+    // extending the default meta tags
+    meta: [
+      {
+        name: "description",
+        content: "Matthew O'Leary offers expert custom graphic and web design services tailored for startups, small businesses, and organizations. Bringing visions to life with creativity and technical expertise.",
+      },
+      {
+        name: "og:image",
+        content: "https://mattoleary.design/images/og-image.jpg", // Replace with your actual OG image URL
+      },
+      {
+        name: "og:title",
+        content: "Custom Graphic & Web Design | Matthew O'Leary Design",
+      },
+      {
+        name: "og:description",
+        content: "Matthew O'Leary offers expert custom graphic and web design services tailored for startups, small businesses, and organizations. Bringing visions to life with creativity and technical expertise.",
+      },
+    ],
+  }}
+/>
+
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
