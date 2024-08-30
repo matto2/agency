@@ -12,40 +12,42 @@ import { SEO } from "astro-seo";
 <html lang="en">
   <head>
     <SEO
-  title="Custom Graphic & Web Design | Matthew O'Leary Design"
-  description="Matthew O'Leary offers expert custom graphic and web design services tailored for startups, small businesses, and organizations. Bringing visions to life with creativity and technical expertise."
-  openGraph={{
-    basic: {
-      title: "Custom Graphic & Web Design | Matthew O'Leary Design",
-      type: "website",
-      image: "https://mattoleary.design/images/og-image.jpg", // Replace with your actual OG image URL
-    }
-  }}
-  extend={{
-    // extending the default link tags
-    link: [{ rel: "icon", href: "/favicon.ico" }],
-    // extending the default meta tags
-    meta: [
-      {
-        name: "description",
-        content: "Matthew O'Leary offers expert custom graphic and web design services tailored for startups, small businesses, and organizations. Bringing visions to life with creativity and technical expertise.",
-      },
-      {
-        name: "og:image",
-        content: "https://mattoleary.design/images/og-image.jpg", // Replace with your actual OG image URL
-      },
-      {
-        name: "og:title",
-        content: "Custom Graphic & Web Design | Matthew O'Leary Design",
-      },
-      {
-        name: "og:description",
-        content: "Matthew O'Leary offers expert custom graphic and web design services tailored for startups, small businesses, and organizations. Bringing visions to life with creativity and technical expertise.",
-      },
-    ],
-  }}
-/>
-<link rel="sitemap" href="/sitemap-index.xml" />
+      title="Custom Graphic & Web Design | Matthew O'Leary Design"
+      description="Matthew O'Leary offers expert custom graphic and web design services tailored for startups, small businesses, and organizations. Bringing visions to life with creativity and technical expertise."
+      openGraph={{
+        basic: {
+          title: "Custom Graphic & Web Design | Matthew O'Leary Design",
+          type: "website",
+          image: "https://mattoleary.design/images/og-image.jpg", // Replace with your actual OG image URL
+        },
+      }}
+      extend={{
+        // extending the default link tags
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        // extending the default meta tags
+        meta: [
+          {
+            name: "description",
+            content:
+              "Matthew O'Leary offers expert custom graphic and web design services tailored for startups, small businesses, and organizations. Bringing visions to life with creativity and technical expertise.",
+          },
+          {
+            name: "og:image",
+            content: "https://mattoleary.design/images/og-image.jpg", // Replace with your actual OG image URL
+          },
+          {
+            name: "og:title",
+            content: "Custom Graphic & Web Design | Matthew O'Leary Design",
+          },
+          {
+            name: "og:description",
+            content:
+              "Matthew O'Leary offers expert custom graphic and web design services tailored for startups, small businesses, and organizations. Bringing visions to life with creativity and technical expertise.",
+          },
+        ],
+      }}
+    />
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -55,14 +57,16 @@ import { SEO } from "astro-seo";
     <title>{title}</title>
     <!-- <ViewTransitions /> -->
   </head>
-  <body class="bg-stone-100 mx-auto">
+  <body
+    class="bg-stone-100 mx-auto bg-gradient-top-left, bg-gradient-top-right"
+  >
     <div class="flex flex-col h-screen justify-between">
       <header class="max-w-7xl mx-auto"><Nav /></header>
 
       <main class="mb-auto max-w-7xl mx-auto">
         <slot />
       </main>
-      <div class="bg-stone-200">
+      <div class="bg-blue-100">
         <footer class="max-w-7xl mx-auto">
           <Footer />
         </footer>
