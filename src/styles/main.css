@@ -58,3 +58,21 @@ h1 {
   background: radial-gradient(circle at bottom right, #D6FFD9, transparent);
 }
             
+
+.gradient-background {
+  background: linear-gradient(285deg,#e0f1f9,#fffdfd,#ffffff,#e9f9f9,#f8f4fe,#ffffff);
+  background-size: 360% 360%;
+  animation: gradient-animation 30s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -7,6 +7,8 @@ import Footer from "../components/Footer.astro";
 import "@fontsource-variable/montserrat";
 // import { ViewTransitions } from "astro:transitions";
 import { SEO } from "astro-seo";
+import { Image } from "astro:assets";
+import background from "../assets/background.png";
 ---
 
 <html lang="en">
@@ -56,9 +58,7 @@ import { SEO } from "astro-seo";
     <title>{title}</title>
     <!-- <ViewTransitions /> -->
   </head>
-  <body
-    class="bg-stone-100 mx-auto bg-gradient-top-left, bg-gradient-top-right"
-  >
+  <body class="gradient-background">
     <div class="flex flex-col h-screen justify-between">
       <header class="max-w-7xl mx-auto"><Nav /></header>
 
