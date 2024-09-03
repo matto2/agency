@@ -6,7 +6,7 @@ import Back2 from "../components/Back2.astro";
 ---
 
 <Base title="Contact">
-  <section class="mx-4 2xl:mx-0 w-full">
+  <section class="mx-4 2xl:mx-0 min-w-full">
     <Back2 />
     <div class="max-w-2xl mx-auto w-full">
       <h1 class="font-sans font-bold text-5xl my-8">Contact</h1>
@@ -22,7 +22,7 @@ import Back2 from "../components/Back2.astro";
     method="POST"
     netlify-honeypot="bot-field"
     data-netlify="true"
-    class="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl mb-12"
+    class="bg-white mx-auto p-6 rounded-lg shadow-lg sm:w-[450px] md:w-[640px] mb-12"
   >
     <p class="hidden">
       <label>
@@ -76,6 +76,7 @@ import Back2 from "../components/Back2.astro";
       >
     </div>
   </form>
+  <p class="mb-8 text-lg">1093 Broadway Ave #251, Seaside, CA 93955-9998</p>
 
   <!-- <Contact /> -->
 </Base>
