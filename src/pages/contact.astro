@@ -9,76 +9,77 @@ import Back2 from "../components/Back2.astro";
   <section class="mx-4 2xl:mx-0 min-w-full">
     <Back2 />
     <div class="max-w-2xl mx-auto w-full">
-      <h1 class="font-sans font-bold text-5xl my-8">Contact</h1>
-      <p class="mb-4 text-lg">
-        Call or text
-        <a href="tel:8312752566" class="text-indigo-600">831-275-2566 </a><br />
-        Or use the form below:
+      <h1 class="font-sans font-semibold text-5xl my-6">Contact Us!</h1>
+      <p class="text-lg font-bold">
+        Reach out for a free consultation.
+        <p class="mb-6 text-lg">
+          Call or text
+          <a href="tel:8312752566" class="text-indigo-600">831-275-2566, </a>
+          or use the form below:
+        </p>
       </p>
     </div>
+    <form
+      name="contact and subscribe"
+      method="POST"
+      netlify-honeypot="bot-field"
+      data-netlify="true"
+      class="bg-white p-6 rounded-lg shadow-lg sm:w-[450px] md:w-[640px] mb-4"
+    >
+      <p class="hidden">
+        <label>
+          Don't fill this out if you're human: <input name="bot-field" />
+        </label>
+      </p>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2">Name</label>
+        <input
+          type="text"
+          name="name"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2">Email</label>
+        <input
+          type="email"
+          name="email"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2">Message</label>
+        <textarea
+          name="message"
+          rows="4"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600 resize-y"
+          required></textarea>
+      </div>
+
+      <div class="mb-4">
+        <input
+          type="checkbox"
+          name="my-checkbox"
+          class="w-4 h-4 checked:bg-indigo-600 checked:border-indigo-600"
+        />
+        <label class="text-gray-700 font-regular mb-2 ml-2"
+          >Subscribe to our newsletter</label
+        >
+      </div>
+
+      <div class="mb-4">
+        <button
+          type="submit"
+          class="rounded-full bg-indigo-600 px-8 py-3 text-xl font-semibold text-white shadow-sm hover:bg-indigo-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >Send</button
+        >
+      </div>
+    </form>
+    <p class="mb-8 text-lg">1093 Broadway Ave #251, Seaside, CA 93955-9998</p>
+
+    <!-- <Contact /> -->
   </section>
-  <form
-    name="contact and subscribe"
-    method="POST"
-    netlify-honeypot="bot-field"
-    data-netlify="true"
-    class="bg-white mx-4 p-6 rounded-lg shadow-lg sm:w-[450px] md:w-[640px] mb-4"
-  >
-    <p class="hidden">
-      <label>
-        Don't fill this out if you're human: <input name="bot-field" />
-      </label>
-    </p>
-
-    <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2">Name</label>
-      <input
-        type="text"
-        name="name"
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600"
-        required
-      />
-    </div>
-    <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2">Email</label>
-      <input
-        type="email"
-        name="email"
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600"
-        required
-      />
-    </div>
-    <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2">Message</label>
-      <textarea
-        name="message"
-        rows="4"
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-600 resize-y"
-        required></textarea>
-    </div>
-
-    <div class="mb-4">
-      <input
-        type="checkbox"
-        name="my-checkbox"
-        class="w-4 h-4 checked:bg-indigo-600 checked:border-indigo-600"
-      />
-      <label class="text-gray-700 font-regular mb-2 ml-2"
-        >Subscribe to our newsletter</label
-      >
-    </div>
-
-    <div class="mb-4">
-      <button
-        type="submit"
-        class="rounded-full bg-indigo-600 px-8 py-3 text-xl font-semibold text-white shadow-sm hover:bg-indigo-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-        >Send</button
-      >
-    </div>
-  </form>
-  <p class="mb-8 text-lg mx-4">
-    1093 Broadway Ave #251, Seaside, CA 93955-9998
-  </p>
-
-  <!-- <Contact /> -->
 </Base>
