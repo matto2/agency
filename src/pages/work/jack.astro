@@ -1,0 +1,41 @@
+---
+import BaseThinner from "../../layouts/BaseThinner.astro";
+import { Image } from "astro:assets";
+import jack from "../../assets/jack.png";
+import Back from "../../components/Back.astro";
+
+const title = "Jack Pitts Photography";
+---
+
+<BaseThinner title="Jack Pitts Photography">
+  <div class="mx-4 2xl:mx-0">
+    <Back next="/work/coastal" />
+    <section class="mb-8">
+      <h1 class="font-sans font-bold text-5xl my-8">{title}</h1>
+      <p class="mb-6">
+        For this project, I had the pleasure of designing and developing a
+        custom website for Jack Pitts, a talented photographer based in San
+        Francisco. The site showcases his stunning photography through a clean,
+        modern design that emphasizes his portfolio with full-screen galleries
+        and seamless navigation. Using Astro and Tailwind CSS, I created a fast,
+        responsive website optimized for both desktop and mobile viewing. The
+        project was especially rewarding as it allowed me to bring Jack’s
+        creative vision to life while ensuring a smooth user experience.
+        Throughout the process, I collaborated closely with Jack to ensure that
+        the design matched his aesthetic and professional goals.
+      </p>
+      <p class="mb-6">
+        Visit the site:
+        <a
+          href="https://jackpittsphoto.com/"
+          class="text-indigo-600 hover:text-indigo-800 hover:underline"
+          >Jack Pitts Photography</a
+        >.
+      </p>
+      <a href="https://jackpittsphoto.com">
+        <Image src={jack} alt="coastal image" />
+      </a>
+    </section>
+    <Back next="/work/coastal" />
+  </div>
+</BaseThinner>
