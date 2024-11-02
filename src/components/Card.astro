@@ -6,12 +6,14 @@ import { Image } from "astro:assets";
 <div class="my-8 w-full">
   <a href={link}>
     <div
-      class="max-w-xl rounded overflow-hidden shadow-lg bg-slate-50 hover:scale-105"
+      class="max-w-xl rounded overflow-hidden shadow-lg bg-slate-50 hover:scale-105 transition-all duration-200"
     >
-      <Image src={img} class="w-full" alt={alt} />
+      <Image src={img} class="transition-all duration-200" alt={alt} />
       <div class="px-4 py-3 font-sans">
         <div class="font-semibold from-neutral-700">{title}</div>
       </div>
     </div>
   </a>
 </div>
+
+<!-- class="w-full grayscale hover:grayscale-0 transition-all duration-200" -->
