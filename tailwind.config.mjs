@@ -26,7 +26,7 @@ module.exports = withAnimations({
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
         ],
-        montserrat: ['"Montserrat Variable"', 'sans-serif'],
+        onest: ['"Onest Variable"', 'sans-serif'],
       },
     },
   },
@@ -37,11 +37,11 @@ module.exports = withAnimations({
           fontFamily: theme('fontFamily.sans'),
         },
         '.font-semibold': {
-          fontFamily: theme('fontFamily.montserrat'),
+          fontFamily: theme('fontFamily.onest'),
           fontWeight: theme('fontWeight.semibold'),
         },
         '.font-bold': {
-          fontFamily: theme('fontFamily.montserrat'),
+          fontFamily: theme('fontFamily.onest'),
           fontWeight: theme('fontWeight.bold'),
         },
       };
