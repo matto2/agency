@@ -1,7 +1,7 @@
-const { withAnimations } = require('animated-tailwindcss');
-const defaultTheme = require('tailwindcss/defaultTheme');
+import { withAnimations } from 'animated-tailwindcss';
+import defaultTheme from 'tailwindcss/defaultTheme';
 
-module.exports = withAnimations({
+export default withAnimations({
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
@@ -12,21 +12,7 @@ module.exports = withAnimations({
         'gradient-bottom-right': 'radial-gradient(circle at bottom right, #D6FFD9, transparent)',
       },
       fontFamily: {
-        sans: [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          '"Segoe UI"',
-          'Roboto',
-          '"Helvetica Neue"',
-          'Arial',
-          '"Noto Sans"',
-          'sans-serif',
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-          '"Noto Color Emoji"',
-        ],
-        onest: ['"Onest Variable"', 'sans-serif'],
+        sans: ['"Onest"', 'sans-serif'], // Use Onest as the primary font
       },
     },
   },
@@ -35,14 +21,6 @@ module.exports = withAnimations({
       const newUtilities = {
         '.font-sans': {
           fontFamily: theme('fontFamily.sans'),
-        },
-        '.font-semibold': {
-          fontFamily: theme('fontFamily.onest'),
-          fontWeight: theme('fontWeight.semibold'),
-        },
-        '.font-bold': {
-          fontFamily: theme('fontFamily.onest'),
-          fontWeight: theme('fontWeight.bold'),
         },
       };
       addUtilities(newUtilities, ['responsive', 'hover']);

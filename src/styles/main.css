@@ -1,66 +1,78 @@
 body {
-    background: #FAFAF9;
-    color: #555;
+  background: #fafaf9;
+  color: #555;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Onest Variable', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Onest Variable", sans-serif;
 }
 
 h1 {
-    font-size: 4em;
-    font-weight: 600;
+  font-size: 4em;
+  font-weight: 600;
 }
 
 .strong {
-    font-weight: 600;
+  font-weight: 600;
 }
 
-    header {
-      width: 100%;
-    }
+header {
+  width: 100%;
+}
 
-    footer {
-        width: 100%;
-      }
-  
-      .bold-text {
-        font-weight: 700;
-        font-family: sans-serif;/* Ensuring the bold version of the font is used */
-      }     
+footer {
+  width: 100%;
+}
 
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border-width: 0;
-      }
+.bold-text {
+  font-weight: 700;
+  font-family: sans-serif; /* Ensuring the bold version of the font is used */
+}
 
-      /* Define gradient backgrounds */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Define gradient backgrounds */
 .bg-gradient-top-left {
-  background: radial-gradient(circle at top left, #FFD6E8, transparent);
+  background: radial-gradient(circle at top left, #ffd6e8, transparent);
 }
 
 .bg-gradient-top-right {
-  background: radial-gradient(circle at top right, #D6EFFF, transparent);
+  background: radial-gradient(circle at top right, #d6efff, transparent);
 }
 
 .bg-gradient-bottom-left {
-  background: radial-gradient(circle at bottom left, #FFECD6, transparent);
+  background: radial-gradient(circle at bottom left, #ffecd6, transparent);
 }
 
 .bg-gradient-bottom-right {
-  background: radial-gradient(circle at bottom right, #D6FFD9, transparent);
+  background: radial-gradient(circle at bottom right, #d6ffd9, transparent);
 }
-            
 
 .gradient-background {
-  background: linear-gradient(285deg,#e0f1f9,#fffdfd,#ffffff,#e9f9f9,#f8f4fe,#ffffff);
+  background: linear-gradient(
+    285deg,
+    #e0f1f9,
+    #fffdfd,
+    #ffffff,
+    #e9f9f9,
+    #f8f4fe,
+    #ffffff
+  );
   background-size: 360% 440%;
   animation: gradient-animation 30s ease infinite;
 }
