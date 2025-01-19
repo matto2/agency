@@ -16,7 +16,7 @@
     "@fontsource-variable/montserrat": "^5.0.19",
     "@fontsource-variable/onest": "^5.1.0",
     "@fontsource/prata": "^5.1.0",
-    "astro": "^5.1.1",
+    "astro": "^5.1.7",
     "astro-icon": "^1.1.0",
     "astro-seo": "^0.8.4",
     "tailwindcss": "^3.4.3"
