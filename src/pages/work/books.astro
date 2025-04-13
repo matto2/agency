@@ -23,7 +23,7 @@ const title = "Book Covers";
   <section class="mx-4 2xl:mx-0">
     <Back next="/work/kiteworks" />
     <h1 class="font-sans font-bold text-5xl my-8">{title}</h1>
-    <p class="mb-2 max-w-4xl">
+    <p class="mb-2 max-w-4xl" style="white-space:">
       While at FastPencil I had the opportunity to work with many talented
       authors on their book projects. We'd start with a kick-off meeting to go
       over the story and to get a vibe for what they were looking for. Next I'd
@@ -118,6 +118,7 @@ const title = "Book Covers";
       >
         <Image src={third} alt="Third Times a Charm" class="w-full" />
       </a>
+
       <a
         data-fslightbox="gallery"
         data-caption="prego book cover"
@@ -138,6 +139,7 @@ const title = "Book Covers";
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const openLightboxButton = document.getElementById("openLightboxButton");
+
       openLightboxButton.addEventListener("click", function () {
         fsLightbox.open();
       });

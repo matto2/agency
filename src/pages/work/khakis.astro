@@ -26,12 +26,12 @@ const title = "Khakis of Carmel";
         fashion photo shoots featuring newly arrived clothing and also updated
         the eCommerce (Shopify) website.
       </p>
+      <!-- <Image src={khakis1} alt="khakis" /> -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <a
           data-fslightbox="gallery"
           data-caption="Khakis of Carmel ad image 1"
           href="/khakis1.png"
-          id="openLightboxButton"
         >
           <Image src={khakis1} alt="khakis1" class="w-full" />
         </a>
@@ -48,34 +48,34 @@ const title = "Khakis of Carmel";
           href="/khakis3.png"
         >
           <Image src={khakis3} alt="khakis3" class="w-full" />
-        </a>
-        <a
-          data-fslightbox="gallery"
-          data-caption="Khakis of Carmel ad image 4"
-          href="/khakis4.png"
-        >
-          <Image src={khakis4} alt="khakis4" class="w-full" />
-        </a>
-        <a
-          data-fslightbox="gallery"
-          data-caption="Khakis of Carmel ad image 5"
-          href="/khakis5.png"
-        >
-          <Image src={khakis5} alt="khakis5" class="w-full" />
-        </a>
-        <a
-          data-fslightbox="gallery"
-          data-caption="Khakis of Carmel ad image 6"
-          href="/khakis6.png"
-        >
-          <Image src={khakis6} alt="khakis6" class="w-full" />
-        </a>
-        <a
-          data-fslightbox="gallery"
-          data-caption="Khakis of Carmel ad image 7"
-          href="/khakis7.png"
-        >
-          <Image src={khakis7} alt="khakis7" class="w-full" />
+          <a
+            data-fslightbox="gallery"
+            data-caption="Khakis of Carmel ad image 4"
+            href="/khakis4.png"
+          >
+            <Image src={khakis4} alt="khakis4" class="w-full" />
+          </a>
+          <a
+            data-fslightbox="gallery"
+            data-caption="Khakis of Carmel ad image 5"
+            href="/khakis5.png"
+          >
+            <Image src={khakis5} alt="khakis5" class="w-full" />
+          </a>
+          <a
+            data-fslightbox="gallery"
+            data-caption="Khakis of Carmel ad image 6"
+            href="/khakis6.png"
+          >
+            <Image src={khakis6} alt="khakis6" class="w-full" />
+          </a>
+          <a
+            data-fslightbox="gallery"
+            data-caption="Khakis of Carmel ad image 7"
+            href="/khakis7.png"
+          >
+            <Image src={khakis7} alt="khakis6" class="w-full" />
+          </a>
         </a>
         <a
           data-fslightbox="gallery"
@@ -95,20 +95,4 @@ const title = "Khakis of Carmel";
     </section>
     <Back next="/work/linguid" />
   </div>
-  <script>
-    declare global {
-      interface Window {
-        fsLightbox: {
-          open: (index?: number) => void;
-        };
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const lightboxTrigger = document.getElementById("lightbox-trigger");
-      lightboxTrigger?.addEventListener("click", () => {
-        window.fsLightbox?.open(0);
-      });
-    });
-  </script>
 </BaseThinner>
