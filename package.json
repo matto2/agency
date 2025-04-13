@@ -11,14 +11,15 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.3.0",
-    "@astrojs/tailwind": "^6.0.1",
+    "@astrojs/tailwind": "^6.0.2",
     "@astrojs/ts-plugin": "^1.10.4",
     "@fontsource-variable/montserrat": "^5.0.19",
     "@fontsource-variable/onest": "^5.1.0",
     "@fontsource/prata": "^5.1.0",
-    "astro": "^5.5.4",
+    "astro": "^5.6.1",
     "astro-icon": "^1.1.0",
     "astro-seo": "^0.8.4",
+    "photoswipe": "^5.4.4",
     "tailwindcss": "^3.4.3"
   },
   "devDependencies": {

@@ -4,20 +4,44 @@ import { Image } from "astro:assets";
 ---
 
 <div class="my-8 w-full">
-  <a href={link}>
-    <div class="max-w-xl rounded overflow-hidden shadow-lg bg-slate-50">
-      <!-- Outer container to control overflow and clipping -->
-      <div class="overflow-hidden">
-        <!-- Image with only the zoom effect on hover -->
+  <div class="max-w-xl rounded overflow-hidden shadow-lg bg-slate-50">
+    <!-- Outer container to control overflow and clipping -->
+    <div class="overflow-hidden relative group">
+      <!-- Navigation link wraps the entire card -->
+      <a href={link} class="block">
         <Image
           src={img}
           class="w-full hover:scale-105 transition-all duration-200"
           alt={alt}
         />
-      </div>
-      <div class="px-4 py-3 font-sans">
-        <div class="font-semibold from-neutral-700">{title}</div>
-      </div>
+      </a>
+      <!-- Preview button appears on hover -->
+      <button
+        class="absolute bottom-2 right-2 bg-white/90 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer"
+        data-pswp-src={img.src}
+        data-pswp-width={img.width}
+        data-pswp-height={img.height}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-5 h-5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+          ></path>
+        </svg>
+      </button>
     </div>
-  </a>
+    <div class="px-4 py-3 font-sans">
+      <a href={link} class="block">
+        <div class="font-semibold from-neutral-700">{title}</div>
+      </a>
+    </div>
+  </div>
 </div>

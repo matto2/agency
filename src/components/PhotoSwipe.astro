@@ -1,0 +1,49 @@
+<script>
+  import PhotoSwipe from "photoswipe";
+  import PhotoSwipeLightbox from "photoswipe/lightbox";
+  import "photoswipe/style.css";
+
+  function initPhotoSwipe() {
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: ".photo-gallery",
+      children: "button",
+      pswpModule: PhotoSwipe,
+      showHideAnimationType: "fade",
+      bgOpacity: 0.9,
+      padding: { top: 20, bottom: 20, left: 20, right: 20 },
+      closeOnVerticalDrag: true,
+    });
+
+    lightbox.init();
+    return lightbox;
+  }
+
+  // Initialize on first load
+  let lightbox = initPhotoSwipe();
+
+  // Re-initialize on page transitions
+  document.addEventListener("astro:page-load", () => {
+    if (lightbox) {
+      lightbox.destroy();
+    }
+    lightbox = initPhotoSwipe();
+  });
+
+  // Cleanup on page transitions
+  document.addEventListener("astro:before-preparation", () => {
+    if (lightbox) {
+      lightbox.destroy();
+    }
+  });
+</script>
+
+<style>
+  /* Only keep the essential styles for the gallery items */
+  .photo-gallery button {
+    transition: opacity 0.3s ease;
+  }
+
+  .photo-gallery button:hover {
+    opacity: 0.9;
+  }
+</style>
