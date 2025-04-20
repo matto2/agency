@@ -1,5 +1,6 @@
 ---
-import BaseThinner from "../../layouts/BaseThinner.astro";
+import Base from "../../layouts/Base.astro";
+import ThinnerContent from "../../components/ThinnerContent.astro";
 import { Image } from "astro:assets";
 import kiteworks from "../../assets/kiteworks.jpg";
 import Back from "../../components/Back.astro";
@@ -8,36 +9,39 @@ import openbanking from "../../assets/openbanking.png";
 const title = "Open Banking";
 ---
 
-<BaseThinner title="Open Banking">
-  <div class="mx-4 2xl:mx-0">
-    <Back next="/work/livepricecheck" />
-    <section class="mb-8">
-      <h1 class="font-sans font-bold text-5xl my-8">{title}</h1>
-      <p class="mb-6 mt-2">
-        The Open Banking demo site was a side project within the greater Axway
-        organization. It was created by a small, collaborative, and
-        cross-functional team led by Eyal Sivan (Mr Open Banking) and I was
-        tapped to be the designer. The site features real APIs but with a
-        made-up, representative bank and was built to demonstrate to mid-sized
-        banks the power of the Axway API platform.
-      </p>
-      <Image src={openbanking} alt="open banking website image" class="" />
-      <p class="mt-6">
-        Here's a <a
-          href="https://www.youtube.com/watch?v=XeM6cRA4hBA"
-          target="_blank"
-          class="text-indigo-700 hover:text-indigo-900 hover:underline"
-          >demo showing the open banking reference site in action</a
-        >
-        <h4 class="font-bold text-lg mt-6 mb-2">Outcome</h4>
-        <p class="mb-2">
-          A majority of the banks that have had a personal demo (as of the time
-          of this writing) have signed up for an Open Banking Proof-of-Concept
-          engagement with Axway. They are using the front- and back-end that we
-          built (but they'll be adding their own bank name and branding).
+<Base title="Open Banking">
+  <ThinnerContent>
+    <div class="mx-4 2xl:mx-0">
+      <Back next="/work/livepricecheck" />
+      <section class="mb-8">
+        <h1 class="font-sans font-bold text-5xl my-8">{title}</h1>
+        <p class="mb-6 mt-2">
+          The Open Banking demo site was a side project within the greater Axway
+          organization. It was created by a small, collaborative, and
+          cross-functional team led by Eyal Sivan (Mr Open Banking) and I was
+          tapped to be the designer. The site features real APIs but with a
+          made-up, representative bank and was built to demonstrate to mid-sized
+          banks the power of the Axway API platform.
         </p>
-      </p>
-    </section>
-    <Back next="/work/livepricecheck" />
-  </div>
-</BaseThinner>
+        <Image src={openbanking} alt="open banking website image" class="" />
+        <p class="mt-6">
+          Here's a <a
+            href="https://www.youtube.com/watch?v=XeM6cRA4hBA"
+            target="_blank"
+            class="text-indigo-700 hover:text-indigo-900 hover:underline"
+            >demo showing the open banking reference site in action</a
+          >
+          <h4 class="font-bold text-lg mt-6 mb-2">Outcome</h4>
+          <p class="mb-2">
+            A majority of the banks that have had a personal demo (as of the
+            time of this writing) have signed up for an Open Banking
+            Proof-of-Concept engagement with Axway. They are using the front-
+            and back-end that we built (but they'll be adding their own bank
+            name and branding).
+          </p>
+        </p>
+      </section>
+      <Back next="/work/livepricecheck" />
+    </div>
+  </ThinnerContent>
+</Base>

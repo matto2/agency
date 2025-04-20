@@ -3,27 +3,33 @@ import Logo from "./Logo.astro";
 import NavSocials from "./NavSocials.astro";
 ---
 
-<nav class="mt-4 lg:flex lg:justify-between lg:items-center mx-4 2xl:mx-0">
+<nav
+  class="mt-4 lg:flex lg:justify-between lg:items-center mx-4 2xl:mx-0 relative z-50"
+>
   <div class="text-center lg:flex lg:items-center">
     <Logo />
   </div>
   <div class="flex justify-center items-center lg:ml-auto">
-    <div class="flex items-center space-x-4 text-slate-500 text-lg font-sans">
-      <a href="/" data-link="work" class="hover:text-black cursor-pointer"
-        >Work</a
+    <div class="flex items-center space-x-4 text-slate-700 text-lg font-sans">
+      <a
+        href="/"
+        data-link="work"
+        class="hover:text-black cursor-pointer font-medium">Work</a
       >
-      <a href="/about" data-link="about" class="hover:text-black cursor-pointer"
-        >About</a
+      <a
+        href="/about"
+        data-link="about"
+        class="hover:text-black cursor-pointer font-medium">About</a
       >
       <a
         href="/services"
         data-link="services"
-        class="hover:text-black cursor-pointer">Services</a
+        class="hover:text-black cursor-pointer font-medium">Services</a
       >
       <a
         href="/contact"
         data-link="contact"
-        class="hover:text-black cursor-pointer">Contact</a
+        class="hover:text-black cursor-pointer font-medium">Contact</a
       >
       <!-- NavSocials visible only on medium and larger screens -->
       <div class="hidden lg:flex lg:ml-4">

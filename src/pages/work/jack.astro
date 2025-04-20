@@ -1,5 +1,6 @@
 ---
-import BaseThinner from "../../layouts/BaseThinner.astro";
+import Base from "../../layouts/Base.astro";
+import ThinnerContent from "../../components/ThinnerContent.astro";
 import { Image } from "astro:assets";
 import jack from "../../assets/jack.png";
 import Back from "../../components/Back.astro";
@@ -7,8 +8,8 @@ import Back from "../../components/Back.astro";
 const title = "Jack Pitts Photography";
 ---
 
-<BaseThinner title="Jack Pitts Photography">
-  <div class="mx-4 2xl:mx-0">
+<Base title="Jack Pitts Photography">
+  <ThinnerContent>
     <Back next="/work/coastal" />
     <section class="mb-8">
       <h1 class="font-sans font-bold text-5xl my-8">{title}</h1>
@@ -19,7 +20,7 @@ const title = "Jack Pitts Photography";
         modern design that emphasizes his portfolio with full-screen galleries
         and seamless navigation. Using Astro and Tailwind CSS, I created a fast,
         responsive website optimized for both desktop and mobile viewing. The
-        project was especially rewarding as it allowed me to bring Jack’s
+        project was especially rewarding as it allowed me to bring Jack's
         creative vision to life while ensuring a smooth user experience.
         Throughout the process, I collaborated closely with Jack to ensure that
         the design matched his aesthetic and professional goals.
@@ -37,5 +38,5 @@ const title = "Jack Pitts Photography";
       </a>
     </section>
     <Back next="/work/coastal" />
-  </div>
-</BaseThinner>
+  </ThinnerContent>
+</Base>

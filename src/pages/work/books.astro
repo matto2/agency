@@ -1,5 +1,6 @@
 ---
-import BaseThinner from "../../layouts/BaseThinner.astro";
+import Base from "../../layouts/Base.astro";
+import ThinnerContent from "../../components/ThinnerContent.astro";
 import { Image } from "astro:assets";
 import Back from "../../components/Back.astro";
 import healer from "../../assets/healer.png";
@@ -16,14 +17,14 @@ import till from "../../assets/till.jpg";
 import together from "../../assets/together.jpg";
 import torque from "../../assets/torque.jpg";
 
-const title = "Book Covers";
+const title = "Book Design";
 ---
 
-<BaseThinner title={title}>
-  <section class="mx-4 2xl:mx-0">
+<Base title={title}>
+  <ThinnerContent>
     <Back next="/work/kiteworks" />
     <h1 class="font-sans font-bold text-5xl my-8">{title}</h1>
-    <p class="mb-2 max-w-4xl" style="white-space:">
+    <p class="mb-2 max-w-4xl">
       While at FastPencil I had the opportunity to work with many talented
       authors on their book projects. We'd start with a kick-off meeting to go
       over the story and to get a vibe for what they were looking for. Next I'd
@@ -40,109 +41,46 @@ const title = "Book Covers";
     </p>
 
     <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-      <a
-        data-fslightbox="gallery"
-        data-caption="torque book cover"
-        href="/torque.jpg"
-        id="openLightboxButton"
-      >
+      <div>
         <Image src={torque} alt="Torque" class="w-full" />
-      </a>
-      <a
-        data-fslightbox="gallery"
-        data-caption="500 miles book cover"
-        href="/miles.jpg"
-      >
+      </div>
+      <div>
         <Image src={miles} alt="500 Miles" class="w-full" />
-      </a>
-      <a
-        data-fslightbox="gallery"
-        data-caption="together book cover"
-        href="/together.jpg"
-      >
+      </div>
+      <div>
         <Image src={together} alt="Together" class="w-full" />
-      </a>
-      <a
-        data-fslightbox="gallery"
-        data-caption="till book cover"
-        href="/till.jpg"
-      >
+      </div>
+      <div>
         <Image src={till} alt="Till" class="w-full" />
-      </a>
-      <a
-        data-fslightbox="gallery"
-        data-caption="shakespeare book cover"
-        href="/shakespeare.jpg"
-      >
+      </div>
+      <div>
         <Image src={shakespeare} alt="Shakespeare" class="w-full" />
-      </a>
-      <a
-        data-fslightbox="gallery"
-        data-caption="homework book cover"
-        href="/homework.jpg"
-      >
+      </div>
+      <div>
         <Image src={homework} alt="Homework" class="w-full" />
-      </a>
-      <a
-        data-fslightbox="gallery"
-        data-caption="gullibills book cover"
-        href="/gullibills.jpg"
-      >
+      </div>
+      <div>
         <Image src={gullibills} alt="Gullibills" class="w-full" />
-      </a>
-      <a
-        data-fslightbox="gallery"
-        data-caption="conversations book cover"
-        href="/conversations.jpg"
-      >
+      </div>
+      <div>
         <Image src={conversations} alt="Conversations" class="w-full" />
-      </a>
-      <a
-        data-fslightbox="gallery"
-        data-caption="healer book cover"
-        href="/healer.png"
-      >
+      </div>
+      <div>
         <Image src={healer} alt="Healer" class="w-full" />
-      </a>
-      <a
-        data-fslightbox="gallery"
-        data-caption="travel to tomorrow book cover"
-        href="/travel.jpg"
-      >
+      </div>
+      <div>
         <Image src={travel} alt="Travel to Tomorrow" class="w-full" />
-      </a>
-      <a
-        data-fslightbox="gallery"
-        data-caption="third times a charm book cover"
-        href="/third.jpg"
-      >
+      </div>
+      <div>
         <Image src={third} alt="Third Times a Charm" class="w-full" />
-      </a>
-
-      <a
-        data-fslightbox="gallery"
-        data-caption="prego book cover"
-        href="/prego.jpg"
-      >
+      </div>
+      <div>
         <Image src={prego} alt="Prego" class="w-full" />
-      </a>
-      <a
-        data-fslightbox="gallery"
-        data-caption="kills book cover"
-        href="/kills.jpg"
-      >
+      </div>
+      <div>
         <Image src={kills} alt="Kills" class="w-full" />
-      </a>
+      </div>
     </div>
-  </section>
+  </ThinnerContent>
   <Back next="/work/kiteworks" />
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const openLightboxButton = document.getElementById("openLightboxButton");
-
-      openLightboxButton.addEventListener("click", function () {
-        fsLightbox.open();
-      });
-    });
-  </script>
-</BaseThinner>
+</Base>

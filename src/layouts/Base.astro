@@ -3,8 +3,6 @@ const { title } = Astro.props;
 import "../styles/main.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
-import PhotoSwipe from "../components/PhotoSwipe.astro";
-// Supports weights 100-900
 // Supports weights 100-900
 import "@fontsource-variable/onest";
 // import "@fontsource/prata";
@@ -60,7 +58,28 @@ import { SEO } from "astro-seo";
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class="gradient-background">
+  <body>
+    <!-- Gradient background -->
+    <div class="absolute top-0 left-0 right-0 w-screen h-[50vh] -z-10">
+      <!-- Left orange blob -->
+      <div
+        class="absolute -top-20 -left-[200px] w-[800px] h-[800px] bg-gradient-to-b from-orange-400/30 via-orange-400/5 to-transparent rounded-full blur-3xl"
+      >
+      </div>
+
+      <!-- Middle yellow blob -->
+      <div
+        class="absolute -top-20 left-1/3 w-[700px] h-[700px] bg-gradient-to-b from-yellow-300/20 via-yellow-300/5 to-transparent rounded-full blur-3xl"
+      >
+      </div>
+
+      <!-- Right purple blob -->
+      <div
+        class="absolute -top-20 right-[-200px] w-[800px] h-[800px] bg-gradient-to-b from-purple-400/30 via-purple-400/5 to-transparent rounded-full blur-3xl"
+      >
+      </div>
+    </div>
+
     <div class="flex flex-col h-screen justify-between">
       <header class="max-w-7xl mx-auto"><Nav /></header>
 
@@ -77,6 +96,5 @@ import { SEO } from "astro-seo";
       data-goatcounter="https://mattolearydesign.goatcounter.com/count"
       async
       src="//gc.zgo.at/count.js"></script>
-    <PhotoSwipe />
   </body>
 </html>

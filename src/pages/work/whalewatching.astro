@@ -1,5 +1,6 @@
 ---
-import BaseThinner from "../../layouts/BaseThinner.astro";
+import Base from "../../layouts/Base.astro";
+import ThinnerContent from "../../components/ThinnerContent.astro";
 import { Image } from "astro:assets";
 import Back from "../../components/Back.astro";
 import whale_shirts from "../../assets/whale_shirts.png";
@@ -12,10 +13,10 @@ import Breadcrumb from "../../components/Breadcrumb.astro";
 const title = "Santa Cruz Whale Watching";
 ---
 
-<BaseThinner title="Santa Cruz Whale Watching">
-  <div class="mx-4 2xl:mx-0">
+<Base title="Santa Cruz Whale Watching">
+  <ThinnerContent>
     <!-- <Breadcrumb /> -->
-    <Back next="/work/khakis" />
+    <Back next="/work/linguid" />
     <section class="mb-8">
       <h1 class="font-sans font-bold text-5xl my-8">{title}</h1>
       <p class="mb-6 mt-2">
@@ -33,6 +34,6 @@ const title = "Santa Cruz Whale Watching";
       <Image src={whale_hat} alt="whale hat" class="mb-8" />
       <Image src={whale_web} alt="whale web" class="mb-8" />
     </section>
-    <Back next="/work/khakis" />
-  </div>
-</BaseThinner>
+    <Back next="/work/linguid" />
+  </ThinnerContent>
+</Base>
