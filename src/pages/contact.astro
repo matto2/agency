@@ -34,90 +34,91 @@ import Back2 from "../components/Back2.astro";
       </p>
     </div>
   </section>
+  <div class="mx-auto max-w-2xl">
+    <form
+      name="contact and subscribe"
+      method="POST"
+      netlify-honeypot="bot-field"
+      data-netlify="true"
+      class="bg-white p-6 rounded-lg shadow-lg sm:w-[450px] md:w-[640px] mb-12"
+    >
+      <p class="hidden">
+        <label>
+          Don't fill this out if you're human: <input name="bot-field" />
+        </label>
+      </p>
 
-  <form
-    name="contact and subscribe"
-    method="POST"
-    netlify-honeypot="bot-field"
-    data-netlify="true"
-    class="bg-white p-6 rounded-lg shadow-lg sm:w-[450px] md:w-[640px] mb-12"
-  >
-    <p class="hidden">
-      <label>
-        Don't fill this out if you're human: <input name="bot-field" />
-      </label>
-    </p>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2">Name</label>
+        <input
+          type="text"
+          name="name"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-700"
+          required
+        />
+      </div>
 
-    <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2">Name</label>
-      <input
-        type="text"
-        name="name"
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-700"
-        required
-      />
-    </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2">Email</label>
+        <input
+          type="email"
+          name="email"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-700"
+          required
+        />
+      </div>
 
-    <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2">Email</label>
-      <input
-        type="email"
-        name="email"
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-700"
-        required
-      />
-    </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2">Phone</label>
+        <input
+          type="tel"
+          name="phone"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-700"
+          required
+        />
+      </div>
 
-    <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2">Phone</label>
-      <input
-        type="tel"
-        name="phone"
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-700"
-        required
-      />
-    </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2">Message</label>
+        <textarea
+          name="message"
+          rows="4"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-700 resize-y"
+          required></textarea>
+      </div>
 
-    <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2">Message</label>
-      <textarea
-        name="message"
-        rows="4"
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-indigo-700 resize-y"
-        required></textarea>
-    </div>
+      <div class="mb-4">
+        <input
+          type="checkbox"
+          name="newsletter"
+          class="w-4 h-4 checked:bg-indigo-700 checked:border-indigo-700"
+        />
+        <label class="text-gray-700 font-regular mb-2 ml-2"
+          >Subscribe to our newsletter</label
+        >
+      </div>
 
-    <div class="mb-4">
-      <input
-        type="checkbox"
-        name="newsletter"
-        class="w-4 h-4 checked:bg-indigo-700 checked:border-indigo-700"
-      />
-      <label class="text-gray-700 font-regular mb-2 ml-2"
-        >Subscribe to our newsletter</label
-      >
-    </div>
+      <div class="mb-4">
+        <input
+          type="checkbox"
+          name="sms-consent"
+          required
+          class="w-4 h-4 checked:bg-indigo-700 checked:border-indigo-700"
+        />
+        <label class="text-gray-700 font-regular mb-2 ml-2">
+          I agree to receive SMS messages related to this inquiry. Message and
+          data rates may apply. Reply STOP to unsubscribe.
+        </label>
+      </div>
 
-    <div class="mb-4">
-      <input
-        type="checkbox"
-        name="sms-consent"
-        required
-        class="w-4 h-4 checked:bg-indigo-700 checked:border-indigo-700"
-      />
-      <label class="text-gray-700 font-regular mb-2 ml-2">
-        I agree to receive SMS messages related to this inquiry. Message and
-        data rates may apply. Reply STOP to unsubscribe.
-      </label>
-    </div>
-
-    <div class="mb-4">
-      <button
-        type="submit"
-        class="rounded-full bg-indigo-700 px-8 py-3 text-xl font-semibold text-white shadow-sm hover:bg-indigo-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
-      >
-        Send
-      </button>
-    </div>
-  </form>
+      <div class="mb-4">
+        <button
+          type="submit"
+          class="rounded-full bg-indigo-700 px-8 py-3 text-xl font-semibold text-white shadow-sm hover:bg-indigo-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
+        >
+          Send
+        </button>
+      </div>
+    </form>
+  </div>
 </Base>

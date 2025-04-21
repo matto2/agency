@@ -7,5 +7,8 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://mattoleary.design",
-  integrations: [tailwind(), icon(), sitemap()]
+  integrations: [tailwind(), icon(), sitemap()],
+  experimental: {
+    viewTransitions: true
+  }
 });

@@ -12,6 +12,7 @@ import { SEO } from "astro-seo";
 
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <SEO
       title="Custom Graphic & Web Design | Matthew O'Leary Design"
       description="Matthew O'Leary offers expert custom graphic and web design services tailored for startups, small businesses, and organizations. Bringing visions to life with creativity and technical expertise."
@@ -52,38 +53,16 @@ import { SEO } from "astro-seo";
 
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
 
     <title>{title}</title>
     <ViewTransitions />
   </head>
   <body>
-    <!-- Gradient background -->
-    <div class="absolute top-0 left-0 right-0 w-screen h-[50vh] -z-10">
-      <!-- Left orange blob -->
-      <div
-        class="absolute -top-20 -left-[200px] w-[800px] h-[800px] bg-gradient-to-b from-orange-400/30 via-orange-400/5 to-transparent rounded-full blur-3xl"
-      >
-      </div>
+    <div class="flex flex-col h-screen justify-between w-full">
+      <header class="max-w-7xl mx-auto w-full"><Nav /></header>
 
-      <!-- Middle yellow blob -->
-      <div
-        class="absolute -top-20 left-1/3 w-[700px] h-[700px] bg-gradient-to-b from-yellow-300/20 via-yellow-300/5 to-transparent rounded-full blur-3xl"
-      >
-      </div>
-
-      <!-- Right purple blob -->
-      <div
-        class="absolute -top-20 right-[-200px] w-[800px] h-[800px] bg-gradient-to-b from-purple-400/30 via-purple-400/5 to-transparent rounded-full blur-3xl"
-      >
-      </div>
-    </div>
-
-    <div class="flex flex-col h-screen justify-between">
-      <header class="max-w-7xl mx-auto"><Nav /></header>
-
-      <main class="mb-auto max-w-7xl mx-auto">
+      <main class="mb-auto max-w-7xl mx-auto w-full" transition:animate="fade">
         <slot />
       </main>
       <div class="bg-slate-700">
