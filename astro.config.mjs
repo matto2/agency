@@ -8,7 +8,5 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://mattoleary.design",
   integrations: [tailwind(), icon(), sitemap()],
-  experimental: {
-    viewTransitions: true
-  }
+
 });
