@@ -62,8 +62,13 @@ import { SEO } from "astro-seo";
     <div class="flex flex-col h-screen justify-between w-full">
       <header class="max-w-7xl mx-auto w-full"><Nav /></header>
 
-      <main class="mb-auto max-w-7xl mx-auto w-full" transition:animate="fade">
-        <slot />
+      <main
+        class="mb-auto w-full flex justify-center"
+        transition:animate="fade"
+      >
+        <div class="w-full max-w-7xl px-4">
+          <slot />
+        </div>
       </main>
       <div class="bg-slate-700">
         <footer class="max-w-7xl mx-auto">
