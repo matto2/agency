@@ -10,7 +10,7 @@ import Socials from "./Socials.astro";
     <div class="mt-6 min-w-96">
       <FooterContact />
     </div>
-    <div class="mt-6 mb-4 font-sans font-semibold">
+    <div class="mt-6 mb-4 font-sans font-semibold leading-relaxed">
       <p>
         <a
           href="/"
@@ -27,19 +27,11 @@ import Socials from "./Socials.astro";
       </p>
       <p>
         <a
-          href="/services"
-          class="text-base text-indigo-50 hover:text-indigo-200 hover:underline mb-2"
-          >Services</a
-        >
-      </p>
-      <p>
-        <a
           href="/contact"
           class="text-base text-indigo-50 hover:text-indigo-200 hover:underline mb-2"
           >Contact</a
         >
       </p>
-      <Socials />
     </div>
     <div class="mt-6 min-w-96">
       <p class="font-sans font-semibold text-slate-400">Other Links</p>
@@ -100,9 +92,11 @@ import Socials from "./Socials.astro";
       <script>
         document
           .getElementById("copyright")
-          .appendChild(document.createTextNode(new Date().getFullYear()));
+          .appendChild(
+            document.createTextNode(new Date().getFullYear().toString())
+          );
       </script>
     </span>
-    Matthew O’Leary
+    Matthew O'Leary
   </div>
 </footer>

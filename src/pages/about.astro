@@ -23,11 +23,12 @@ import bruce from "../assets/bruce.jpg";
 import jennine from "../assets/jennine.jpg";
 import { Icon } from "astro-icon/components";
 import Back2 from "../components/Back2.astro";
+import ServiceCard from "../components/ServiceCard.astro";
 ---
 
 <Base title="About">
   <div class="max-w-4xl mx-auto">
-    <div class="mx-4 2xl:mx-0">
+    <div class="mx-1 md:mx-4 2xl:mx-0">
       <Back2 />
       <h1 class="font-sans font-bold text-5xl my-8">About</h1>
       <div class="flex flex-col sm:flex-row items-center sm:items-start">
@@ -38,83 +39,75 @@ import Back2 from "../components/Back2.astro";
         />
 
         <section class="mb-8 sm:mb-0 mx-4 2xl:mx-0">
-          <h2 class="font-sans text-xl font-semibold mb-2">
-            Welcome to Matt O’Leary Design!
-          </h2>
           <p class="mb-4 md:text-xl">
-            I’m a seasoned designer with a passion for creating visually
-            compelling and effective marketing solutions. My experience spans
-            marketing agencies, in-house design for a large retailer, and
-            working with startups, where I’ve developed impactful branding and
-            graphic design for digital and print media. I specialize in
-            optimizing websites and marketing materials for conversion, using
-            strategic design, SEO principles, and lead generation tactics to
-            drive engagement. By blending creativity with data-driven marketing
-            strategies, I help businesses enhance their brand and connect with
-            their customers.
-            <!-- <a
-              href="/MatthewOLeary-Resume.pdf"
-              class="underline text-indigo-700 hover:text-indigo-900">resume</a
-            >. -->
+            I've worked across agencies, in-house teams, and startups, handling
+            everything from brand development and campaign design to production
+            design and prepress. I have experience adapting conceptual designs
+            for print, packaging, and signage, and fine-tuning creative
+            workflows for consistency and efficiency. Whether I'm managing
+            creative services, building out a design system, or optimizing a
+            landing page, I focus on delivering work that's both effective and
+            execution-ready.
+          </p>
+          <p class="mb-4 md:text-xl">
+            When I'm not designing, I'm probably in the ocean. I've been surfing
+            since I was a kid and still get out whenever I can. I love exploring
+            the outdoors with my family, and I paint and play music (fiddle and
+            ukulele) in my spare time. You can see some of my artwork at <a
+              href="https://olearystudios.com"
+              class="underline text-indigo-700 hover:text-indigo-900"
+              target="_blank"
+              rel="noopener">olearystudios.com</a
+            >.
           </p>
         </section>
       </div>
 
       <section class="mb-8 mx-4 2xl:mx-0">
-        <h2 class="text-xl font-sans font-semibold mb-2">What I Offer</h2>
-        <p class="mb-4">
-          I specialize in providing bespoke design services tailored to meet
-          your unique needs. Whether you're a startup looking to establish a
-          brand identity, a small business in need of a website makeover, or an
-          organization aiming to enhance your visual communications, I am here
-          to help. I’m adept at combining my creativity with technical and
-          practical know-how to bring your vision to life.
-        </p>
-        <ul class="list-disc list-outside ml-4">
-          <li class="mb-2">
-            <span class="font-sans font-bold">Branding & Identity:</span> Crafting
-            memorable and impactful brands from the ground up.
-          </li>
-          <li class="mb-2">
-            <span class="font-sans font-bold">Graphic Design:</span> Creating eye-catching
-            designs for print and digital media.
-          </li>
-          <li class="mb-2">
-            <span class="font-sans font-bold">Web Design:</span> Building responsive,
-            user-friendly websites that drive engagement and sales (eCommerce).
-          </li>
-          <li class="mb-2">
-            <span class="font-sans font-bold">UX/UI Design:</span> Designing intuitive
-            interfaces that enhance user experience.
-          </li>
-        </ul>
-        <p>
-          See all <a
-            href="/services"
-            class="underline text-indigo-700 hover:text-indigo-900">services</a
-          >
-        </p>
+        <div class="flex flex-col md:flex-row gap-6">
+          <div class="bg-white rounded-lg shadow p-3 md:p-6 flex-1">
+            <h2 class="text-xl font-sans font-semibold mb-2">Capabilities</h2>
+            <ul class="list-disc list-inside text-lg">
+              <li>Web design and development</li>
+              <li>Brand development</li>
+              <li>Packaging</li>
+              <li>Prepress / adapting designs for print</li>
+              <li>Social Media</li>
+              <li>Photography</li>
+              <li>Photo Editing</li>
+              <li>User Experience Design</li>
+              <li>Advertisements</li>
+              <li>Books/Magazines</li>
+              <li>Marketing Communications</li>
+              <li>Email Marketing</li>
+              <li>SEO Optimization</li>
+              <li>Workflow automation</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg shadow p-3 md:p-6 flex-1">
+            <h2 class="text-xl font-sans font-semibold mb-2">Tools</h2>
+            <ul class="list-disc list-inside text-lg">
+              <li>Adobe Creative Suite</li>
+              <li>Figma</li>
+              <li>Miro</li>
+              <li>Astro</li>
+              <li>Tailwind</li>
+              <li>Visual Studio Code</li>
+              <li>GitHub</li>
+              <li>Netlify</li>
+              <li>ChatGPT</li>
+              <li>Cursor</li>
+              <li>Microsoft Office</li>
+              <li>Google Workspace</li>
+              <li>Notion</li>
+              <li>Stripe</li>
+              <li>Wordpress</li>
+              <li>Shopify</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
-      <section class="mb-8 mx-4 2xl:mx-0">
-        <h2 class="text-xl font-sans font-semibold mb-2">Why Choose Me?</h2>
-        <p class="mb-4">
-          With 15+ years of design experience across marketing agencies,
-          mid-sized businesses, and startups, I bring a well-rounded perspective
-          to every project. Choosing Matt O’Leary Design means working directly
-          with me on every aspect of your project. This personalized approach
-          ensures clear communication, attention to detail, and a deep
-          understanding of your vision and goals. Additionally, I follow a
-          mini-agency model where if I can leverage my contacts to expand
-          creative jobs as needed.
-        </p>
-        <p>
-          Check out my favorite <a
-            href="/about/tools"
-            class="underline text-indigo-700 hover:text-indigo-900">tools</a
-          >
-        </p>
-      </section>
       <section class="mb-8 mx-4 2xl:mx-0">
         <h2 class="text-xl font-sans font-semibold mb-6">
           Brands I've Worked With/For

@@ -22,19 +22,10 @@ import NavSocials from "./NavSocials.astro";
         class="hover:text-black cursor-pointer font-medium">About</a
       >
       <a
-        href="/services"
-        data-link="services"
-        class="hover:text-black cursor-pointer font-medium">Services</a
-      >
-      <a
         href="/contact"
         data-link="contact"
         class="hover:text-black cursor-pointer font-medium">Contact</a
       >
-      <!-- NavSocials visible only on medium and larger screens -->
-      <div class="hidden lg:flex lg:ml-4">
-        <NavSocials />
-      </div>
     </div>
   </div>
 </nav>
@@ -46,15 +37,16 @@ import NavSocials from "./NavSocials.astro";
       const currentPath = window.location.pathname;
 
       navLinks.forEach((link) => {
-        const linkPath = new URL(link.href).pathname;
-        const dataLink = link.getAttribute("data-link");
+        const anchor = link as HTMLAnchorElement;
+        const linkPath = new URL(anchor.href).pathname;
+        const dataLink = anchor.getAttribute("data-link");
 
-        link.classList.remove("active");
+        anchor.classList.remove("active");
 
         if (currentPath.startsWith(`/${dataLink}`)) {
-          link.classList.add("active");
+          anchor.classList.add("active");
         } else if (linkPath === currentPath) {
-          link.classList.add("active");
+          anchor.classList.add("active");
         }
       });
     };
