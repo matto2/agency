@@ -11,19 +11,6 @@ export default withAnimations({
         'gradient-bottom-left': 'radial-gradient(circle at bottom left, #FFECD6, transparent)',
         'gradient-bottom-right': 'radial-gradient(circle at bottom right, #D6FFD9, transparent)',
       },
-      fontFamily: {
-        sans: ['"Onest"', 'sans-serif'], // Use Onest as the primary font
-      },
     },
   },
-  plugins: [
-    function ({ addUtilities, theme }) {
-      const newUtilities = {
-        '.font-sans': {
-          fontFamily: theme('fontFamily.sans'),
-        },
-      };
-      addUtilities(newUtilities, ['responsive', 'hover']);
-    },
-  ],
 });
