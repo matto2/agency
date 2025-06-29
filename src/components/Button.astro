@@ -4,6 +4,20 @@ const { text, class: className = "" } = Astro.props;
 
 <button
   type="button"
-  class={`rounded-full bg-orange-500 px-8 py-3 text-lg font-semibold text-white shadow-sm hover:bg-orange-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 ${className}`}
-  >{text}</button
+  class={`rounded-full bg-orange-500 px-8 py-3 text-lg font-semibold text-white shadow-sm hover:bg-orange-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 flex items-center justify-center gap-2 ${className}`}
 >
+  {text}
+  <svg
+    class="w-5 h-5"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M9 5l7 7-7 7"></path>
+  </svg>
+</button>
