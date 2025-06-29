@@ -16,12 +16,13 @@ import jack from "../assets/jack.png";
 import kamari from "../assets/kamari.jpg";
 import coastalcard from "../assets/coastalcard.png";
 import linguidcard from "../assets/linguidcard.png";
+import packaging_222 from "../assets/packaging_222.jpg";
 ---
 
 <Base title="Matthew O'Leary - Home">
   <section class="px-4 2xl:px-0">
     <h1
-      class="text-2xl md:text-5xl text-indigo-700 font-bold py-8 animate-raise"
+      class="text-4xl md:text-5xl xl:text-6xl text-indigo-700 font-bold py-8 animate-raise text-center"
     >
       Designer & Creative Professional
     </h1>
@@ -38,14 +39,14 @@ import linguidcard from "../assets/linguidcard.png";
     </p>
     <div class="flex flex-col md:flex-row gap-3 md:gap-4 mb-8">
       <a href="/about" class="w-full md:w-auto">
-        <Button text="More About Me" class="w-full" />
+        <Button text="More about me" class="w-full" />
       </a>
       <a href="/MatthewOLearyResume.pdf" class="w-full md:w-auto">
         <button
           type="button"
           class="w-full rounded-full border border-orange-500 px-8 py-3 text-xl font-semibold text-orange-500 bg-white shadow-sm hover:bg-orange-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
         >
-          Download Resume
+          Download resume
         </button>
       </a>
     </div>
@@ -114,6 +115,12 @@ import linguidcard from "../assets/linguidcard.png";
         alt="Whale Watching Shirts"
         title="Santa Cruz Whale Watching"
         link="/work/whalewatching"
+      />
+      <Card
+        img={packaging_222}
+        alt="Production Design Packaging"
+        title="Production Design"
+        link="/work/production-design"
       />
     </div>
     <!-- Removed bottom paragraphs about services and 'Reach out' CTA -->

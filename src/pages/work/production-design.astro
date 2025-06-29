@@ -1,0 +1,55 @@
+---
+import Base from "../../layouts/Base.astro";
+import ThinnerContent from "../../components/ThinnerContent.astro";
+import { Image } from "astro:assets";
+import Back from "../../components/Back.astro";
+import martinellis_fruitvirtues_hero from "../../assets/martinellis-fruitvirtues_377.jpg";
+import livlett from "../../assets/livlett_377.jpg";
+import loungelizard from "../../assets/loungelizard.jpg";
+import martinellis_377 from "../../assets/martinellis-377.jpg";
+import sol from "../../assets/sol.jpg";
+import spk_lemonade from "../../assets/spk-lemonade_377.jpg";
+
+const title = "Production Design";
+---
+
+<Base title={title}>
+  <ThinnerContent>
+    <Back next="/work/linguid" />
+    <section class="mb-8">
+      <h1 class="font-sans font-bold text-4xl sm:text-5xl my-8">{title}</h1>
+      <p class="mb-8 max-w-3xl">
+        For all these products (consumer packaged goods) I worked on while at
+        McDill Associates, I took the concept designs and adapted them for final
+        production/printing—following various dielines and printing constraints.
+        For the Fruit Virtues bottles, only one flavor was designed and I
+        created the line extension based on the one flavor.
+      </p>
+      <Image
+        src={martinellis_fruitvirtues_hero}
+        alt="Martinelli's Fruit Virtues Bottles"
+        class="mb-8 rounded-lg"
+      />
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <Image src={livlett} alt="Living Lettuce Label" class="rounded-lg" />
+        <Image
+          src={loungelizard}
+          alt="Lounge Lizard Packaging"
+          class="rounded-lg"
+        />
+        <Image
+          src={martinellis_377}
+          alt="Martinelli's Bottles"
+          class="rounded-lg"
+        />
+        <Image src={sol} alt="SOL Sunflower Beverage" class="rounded-lg" />
+        <Image
+          src={spk_lemonade}
+          alt="Martinelli's Sparkling Lemonade"
+          class="rounded-lg"
+        />
+      </div>
+    </section>
+    <Back next="/work/linguid" />
+  </ThinnerContent>
+</Base>
