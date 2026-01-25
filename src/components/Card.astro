@@ -3,19 +3,19 @@ const { img, alt, title, link } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
-<div class="my-8 w-full">
+<div class="my-8 w-full animate-on-scroll">
   <div
-    class="max-w-xl rounded-xl overflow-hidden shadow-lg bg-slate-50 transition-transform duration-200 hover:scale-105"
+    class="max-w-xl rounded-xl overflow-hidden bg-white/70 backdrop-blur-sm border border-white/50 shadow-md transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-indigo-500/10"
   >
     <!-- Outer container to control overflow and clipping -->
     <div class="overflow-hidden relative group">
       <a href={link} class="block">
-        <Image src={img} class="w-full" alt={alt} />
+        <Image src={img} class="w-full transition-transform duration-500 group-hover:scale-105" alt={alt} />
       </a>
     </div>
-    <div class="px-4 py-3 font-sans">
+    <div class="px-4 py-3">
       <a href={link} class="block">
-        <div class="font-semibold text-neutral-700">{title}</div>
+        <div class="font-semibold text-neutral-700 group-hover:text-indigo-700 transition-colors">{title}</div>
       </a>
     </div>
   </div>

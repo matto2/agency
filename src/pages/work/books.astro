@@ -18,11 +18,27 @@ import together from "../../assets/together.jpg";
 import torque from "../../assets/torque.jpg";
 
 const title = "Book Design";
+
+const books = [
+  { src: torque, alt: "Torque" },
+  { src: miles, alt: "500 Miles" },
+  { src: together, alt: "Together" },
+  { src: till, alt: "Till" },
+  { src: shakespeare, alt: "Shakespeare" },
+  { src: homework, alt: "Homework" },
+  { src: gullibills, alt: "Gullibills" },
+  { src: conversations, alt: "Conversations" },
+  { src: healer, alt: "Healer" },
+  { src: travel, alt: "Travel to Tomorrow" },
+  { src: third, alt: "Third Times a Charm" },
+  { src: prego, alt: "Prego" },
+  { src: kills, alt: "Kills" },
+];
 ---
 
 <Base title={title}>
   <ThinnerContent>
-    <h1 class="font-sans font-bold text-4xl sm:text-5xl my-8">{title}</h1>
+    <h1 class="font-heading font-bold text-4xl sm:text-5xl my-8">{title}</h1>
     <p class="mb-2 max-w-4xl">
       While at FastPencil I had the opportunity to work with many talented
       authors on their book projects. We'd start with a kick-off meeting to go
@@ -39,47 +55,42 @@ const title = "Book Design";
       > to chat about your next book project!
     </p>
 
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-      <div>
-        <Image src={torque} alt="Torque" class="w-full" />
-      </div>
-      <div>
-        <Image src={miles} alt="500 Miles" class="w-full" />
-      </div>
-      <div>
-        <Image src={together} alt="Together" class="w-full" />
-      </div>
-      <div>
-        <Image src={till} alt="Till" class="w-full" />
-      </div>
-      <div>
-        <Image src={shakespeare} alt="Shakespeare" class="w-full" />
-      </div>
-      <div>
-        <Image src={homework} alt="Homework" class="w-full" />
-      </div>
-      <div>
-        <Image src={gullibills} alt="Gullibills" class="w-full" />
-      </div>
-      <div>
-        <Image src={conversations} alt="Conversations" class="w-full" />
-      </div>
-      <div>
-        <Image src={healer} alt="Healer" class="w-full" />
-      </div>
-      <div>
-        <Image src={travel} alt="Travel to Tomorrow" class="w-full" />
-      </div>
-      <div>
-        <Image src={third} alt="Third Times a Charm" class="w-full" />
-      </div>
-      <div>
-        <Image src={prego} alt="Prego" class="w-full" />
-      </div>
-      <div>
-        <Image src={kills} alt="Kills" class="w-full" />
-      </div>
+    <div id="gallery" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      {books.map((book) => (
+        <a
+          href={book.src.src}
+          data-pswp-width={book.src.width}
+          data-pswp-height={book.src.height}
+          target="_blank"
+          class="block cursor-zoom-in transition-transform duration-300 hover:scale-105"
+        >
+          <Image src={book.src} alt={book.alt} class="w-full rounded-lg shadow-md" />
+        </a>
+      ))}
     </div>
   </ThinnerContent>
   <Back next="/work/kiteworks" />
 </Base>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.min.css" />
+
+
+<script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+  import 'photoswipe/style.css';
+
+  const initLightbox = () => {
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '#gallery',
+      children: 'a',
+      pswpModule: () => import('photoswipe'),
+    });
+    lightbox.init();
+  };
+
+  // Init on page load
+  initLightbox();
+
+  // Re-init on Astro page transitions
+  document.addEventListener('astro:page-load', initLightbox);
+</script>

@@ -3,7 +3,7 @@ const { title } = Astro.props;
 import "../styles/main.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
-// import "@fontsource/prata";
+import "@fontsource-variable/fraunces";
 import { ViewTransitions } from "astro:transitions";
 import { SEO } from "astro-seo";
 ---
@@ -55,7 +55,7 @@ import { SEO } from "astro-seo";
     <meta name="generator" content={Astro.generator} />
 
     <title>{title}</title>
-    <!-- <ViewTransitions /> -->
+    <ViewTransitions />
   </head>
   <body>
     <div class="flex flex-col h-screen justify-between w-full">
@@ -75,5 +75,32 @@ import { SEO } from "astro-seo";
         </footer>
       </div>
     </div>
-  </body>
+  <script>
+  // Scroll-triggered animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, observerOptions);
+
+  // Observe all elements with animate-on-scroll class
+  document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Re-run on page transitions
+  document.addEventListener('astro:page-load', () => {
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
+</body>
 </html>

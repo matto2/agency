@@ -94,9 +94,33 @@ import NavSocials from "./NavSocials.astro";
 </script>
 
 <style>
+  nav a:not([aria-label]) {
+    position: relative;
+    transition: color 0.2s ease;
+  }
+
+  nav a:not([aria-label])::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    transition: width 0.3s ease;
+  }
+
+  nav a:not([aria-label]):hover::after {
+    width: 100%;
+  }
+
   .active {
     font-weight: bold;
     color: #4f46e5;
     text-decoration-line: none;
+  }
+
+  .active::after {
+    width: 100% !important;
   }
 </style>

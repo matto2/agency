@@ -30,16 +30,16 @@ import ServiceCard from "../components/ServiceCard.astro";
 <Base title="About">
   <div class="max-w-4xl mx-auto">
     <div class="mx-1 md:mx-4 2xl:mx-0">
-      <h1 class="font-sans font-bold text-5xl my-8">About</h1>
+      <h1 class="font-heading font-bold text-5xl my-8">About</h1>
       <div class="flex flex-col sm:flex-row items-center sm:items-start">
         <Image
           src={newProfilePic}
           alt="matt profile picture"
-          class="rounded-full mx-auto max-w-xs sm:mr-8 mb-6"
+          class="rounded-full mx-auto max-w-xs sm:mr-8 mb-6 ring-4 ring-white shadow-xl animate-on-scroll"
         />
 
-        <section class="sm:mb-0 mx-4 2xl:mx-0">
-          <h2 class="text-2xl font-sans font-semibold mb-4">
+        <section class="sm:mb-0 mx-4 2xl:mx-0 animate-on-scroll">
+          <h2 class="text-2xl font-heading font-semibold mb-4">
             Hi, I'm Matthew 👋
           </h2>
           <p class="mb-4 md:text-xl">
@@ -68,8 +68,8 @@ import ServiceCard from "../components/ServiceCard.astro";
 
       <section class="mb-8 mx-4 2xl:mx-0 mt-0">
         <div class="flex flex-col md:flex-row gap-6">
-          <div class="bg-white rounded-lg shadow p-3 md:p-6 flex-1">
-            <h2 class="text-xl font-sans font-semibold mb-2">Capabilities</h2>
+          <div class="bg-white/70 backdrop-blur-sm border border-white/50 rounded-xl shadow-md p-4 md:p-6 flex-1 animate-on-scroll hover:shadow-lg transition-shadow">
+            <h2 class="text-xl font-heading font-semibold mb-2 text-indigo-700">Capabilities</h2>
             <ul class="list-disc list-outside text-lg pl-5 space-y-4">
               <li class="leading-snug">Web Design & Development / UX & UI Design</li>
               <li class="leading-snug">Brand & Marketing Design</li>
@@ -79,8 +79,8 @@ import ServiceCard from "../components/ServiceCard.astro";
               <li class="leading-snug">Workflow Automation</li>
             </ul>
           </div>
-          <div class="bg-white rounded-lg shadow p-3 md:p-6 flex-1">
-            <h2 class="text-xl font-sans font-semibold mb-2">Tools</h2>
+          <div class="bg-white/70 backdrop-blur-sm border border-white/50 rounded-xl shadow-md p-4 md:p-6 flex-1 animate-on-scroll hover:shadow-lg transition-shadow">
+            <h2 class="text-xl font-heading font-semibold mb-2 text-indigo-700">Tools</h2>
             <ul class="list-disc list-outside text-lg pl-5 space-y-4">
               <li class="leading-snug">Adobe Creative Suite (Photoshop, Illustrator, InDesign)</li>
               <li class="leading-snug">Figma & Miro</li>
@@ -95,14 +95,14 @@ import ServiceCard from "../components/ServiceCard.astro";
       </section>
 
       <section class="mb-8 mx-4 2xl:mx-0">
-        <h2 class="text-xl font-sans font-semibold mb-6">
+        <h2 class="text-xl font-heading font-semibold mb-6">
           Brands I've Worked With/For
         </h2>
         <LogoField />
       </section>
 
       <section class="mb-8 mx-4 2xl:mx-0">
-        <h2 class="text-xl font-sans font-semibold mb-2">
+        <h2 class="text-xl font-heading font-semibold mb-2">
           What People Are Saying
         </h2>
         <p class="mb-4">
