@@ -101,6 +101,24 @@ import { SEO } from "astro-seo";
       observer.observe(el);
     });
   });
+
+  // Style apostrophe in "I'm" with adjusted spacing
+  function styleApostrophes() {
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    const textNodes = [];
+    while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+    textNodes.forEach(node => {
+      if (node.nodeValue && /I'm/.test(node.nodeValue) && node.parentElement?.tagName !== 'SCRIPT' && node.parentElement?.tagName !== 'STYLE') {
+        const span = document.createElement('span');
+        span.innerHTML = node.nodeValue.replace(/I'm/g, 'I<span class="apos">\u2019</span>m');
+        node.parentNode?.replaceChild(span, node);
+      }
+    });
+  }
+
+  styleApostrophes();
+  document.addEventListener('astro:page-load', styleApostrophes);
 </script>
 </body>
 </html>

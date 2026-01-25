@@ -11,7 +11,7 @@
 
   /* Gradient text for hero headlines */
   .gradient-text {
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%);
+    background: linear-gradient(135deg, rgb(0, 7, 198) 0%, #4f46e5 50%, #7c3aed 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -53,6 +53,12 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Typographic apostrophe with adjusted spacing */
+.apos {
+  margin-left: 0.04em;
+  margin-right: -0.03em;
 }
 
 html, body {
