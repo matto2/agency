@@ -3,7 +3,7 @@ const { title } = Astro.props;
 import "../styles/main.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
-import "@fontsource-variable/fraunces";
+import "@fontsource-variable/archivo";
 import { ViewTransitions } from "astro:transitions";
 import { SEO } from "astro-seo";
 ---
@@ -13,11 +13,11 @@ import { SEO } from "astro-seo";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <SEO
-      title="Custom Graphic & Web Design | Matthew O'Leary Design"
-      description="Matthew O'Leary offers expert custom graphic and web design services tailored for startups, small businesses, and organizations. Bringing visions to life with creativity and technical expertise."
+      title="Custom Graphic & Web Design | Matthew O&rsquo;Leary Design"
+      description="Matthew O&rsquo;Leary offers expert custom graphic and web design services tailored for startups, small businesses, and organizations. Bringing visions to life with creativity and technical expertise."
       openGraph={{
         basic: {
-          title: "Custom Graphic & Web Design | Matthew O'Leary Design",
+          title: "Custom Graphic & Web Design | Matthew O&rsquo;Leary Design",
           type: "website",
           image: "https://mattoleary.design/images/og-image.jpg", // Replace with your actual OG image URL
         },
@@ -30,7 +30,7 @@ import { SEO } from "astro-seo";
           {
             name: "description",
             content:
-              "Matthew O'Leary offers expert custom graphic and web design services tailored for startups, small businesses, and organizations. Bringing visions to life with creativity and technical expertise.",
+              "Matthew O&rsquo;Leary offers expert custom graphic and web design services tailored for startups, small businesses, and organizations. Bringing visions to life with creativity and technical expertise.",
           },
           {
             name: "og:image",
@@ -38,12 +38,12 @@ import { SEO } from "astro-seo";
           },
           {
             name: "og:title",
-            content: "Custom Graphic & Web Design | Matthew O'Leary Design",
+            content: "Custom Graphic & Web Design | Matthew O&rsquo;Leary Design",
           },
           {
             name: "og:description",
             content:
-              "Matthew O'Leary offers expert custom graphic and web design services tailored for startups, small businesses, and organizations. Bringing visions to life with creativity and technical expertise.",
+              "Matthew O&rsquo;Leary offers expert custom graphic and web design services tailored for startups, small businesses, and organizations. Bringing visions to life with creativity and technical expertise.",
           },
         ],
       }}
@@ -109,9 +109,9 @@ import { SEO } from "astro-seo";
     while (walker.nextNode()) textNodes.push(walker.currentNode);
 
     textNodes.forEach(node => {
-      if (node.nodeValue && /I'm/.test(node.nodeValue) && node.parentElement?.tagName !== 'SCRIPT' && node.parentElement?.tagName !== 'STYLE') {
+      if (node.nodeValue && /I\u2019m/.test(node.nodeValue) && node.parentElement?.tagName !== 'SCRIPT' && node.parentElement?.tagName !== 'STYLE') {
         const span = document.createElement('span');
-        span.innerHTML = node.nodeValue.replace(/I'm/g, 'I<span class="apos">\u2019</span>m');
+        span.innerHTML = node.nodeValue.replace(/I\u2019m/g, 'I<span class="apos">\u2019</span>m');
         node.parentNode?.replaceChild(span, node);
       }
     });

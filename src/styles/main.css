@@ -11,7 +11,7 @@
 
   /* Gradient text for hero headlines */
   .gradient-text {
-    background: linear-gradient(135deg, rgb(0, 7, 198) 0%, #4f46e5 50%, #7c3aed 100%);
+    background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 50%, #8b5cf6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -89,9 +89,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Fraunces Variable", Georgia, serif;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-family: "Archivo Variable", system-ui, sans-serif;
+  font-weight: 500;
+  font-stretch: expanded;
+  letter-spacing: -0.01em;
 }
 
 h1 {
