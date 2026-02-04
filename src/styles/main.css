@@ -17,6 +17,8 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: animatedgradient 10s ease infinite alternate;
+    padding-bottom: 0.1em;
+    line-height: 1.1;
   }
 
   /* Scroll-triggered fade-in animation */
