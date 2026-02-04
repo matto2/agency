@@ -14,10 +14,11 @@ import lpc from "../assets/lpc.png";
 import fastpencilcard from "../assets/fastpencilcard.png";
 import juice from "../assets/juice.png";
 import whale_shirts from "../assets/whale_shirts.png";
-import kamari from "../assets/kamari.jpg";
+import jackThumb from "../assets/09_people.BUrkml1d.webp";
 import coastalcard from "../assets/coastalcard.png";
 import linguidcard from "../assets/linguidcard.png";
-import packaging_222 from "../assets/packaging_222.jpg";
+import martinellisThumb from "../assets/martinellis-thumb.webp";
+import walksantacruzThumb from "../assets/walksantacruz-thumb.png";
 
 // Profile photo
 import newProfilePic from "../assets/My-biopic_new-profile-pic.jpg";
@@ -62,6 +63,16 @@ import jennine from "../assets/jennine.jpg";
         <div class="bg-white/80 backdrop-blur-sm border border-white/50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow animate-on-scroll">
           <div class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-violet-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+            </svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-2">Design Adaptation</h3>
+          <p class="text-stone-600">Taking any design and adapting it for production—print collateral, packaging, large-format signage, or web-ready digital assets.</p>
+        </div>
+
+        <div class="bg-white/80 backdrop-blur-sm border border-white/50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow animate-on-scroll">
+          <div class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-violet-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
             </svg>
           </div>
@@ -77,16 +88,6 @@ import jennine from "../assets/jennine.jpg";
           </div>
           <h3 class="font-heading font-semibold text-xl mb-2">UX & Product Design</h3>
           <p class="text-stone-600">Creating intuitive interfaces for complex web applications. Background includes fintech dashboards, collaboration tools, and enterprise software.</p>
-        </div>
-
-        <div class="bg-white/80 backdrop-blur-sm border border-white/50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow animate-on-scroll">
-          <div class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-violet-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold text-xl mb-2">Brand Identity</h3>
-          <p class="text-stone-600">Developing visual systems that work across digital and print—from logos to packaging to marketing campaigns.</p>
         </div>
 
         <div class="bg-white/80 backdrop-blur-sm border border-white/50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow animate-on-scroll">
@@ -109,8 +110,9 @@ import jennine from "../assets/jennine.jpg";
       <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12 animate-on-scroll">Selected Work</h2>
 
       <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
+        <Card img={walksantacruzThumb} alt="Walk Santa Cruz" title="Walk Santa Cruz" link="/work/walksantacruz" />
         <Card img={linguidcard} alt="Linguid" title="Linguid" link="/work/linguid" />
-        <Card img={kamari} alt="Jack Pitts Photography" title="Jack Pitts Photography" link="/work/jack" />
+        <Card img={jackThumb} alt="Jack Pitts Photography" title="Jack Pitts Photography" link="/work/jack" />
         <Card img={coastalcard} alt="Coastal Nature Guides" title="Coastal Nature Guides" link="/work/coastal" />
         <Card img={books} alt="Book Covers" title="Book Covers" link="/work/books" />
         <Card img={kiteworkscard} alt="Kiteworks Web App" title="Kiteworks Web App" link="/work/kiteworks" />
@@ -119,7 +121,7 @@ import jennine from "../assets/jennine.jpg";
         <Card img={fastpencilcard} alt="FastPencil" title="FastPencil" link="/work/fastpencil" />
         <Card img={juice} alt="The Juice Magazine" title="The Juice Magazine" link="/work/juice" />
         <Card img={whale_shirts} alt="Santa Cruz Whale Watching" title="Santa Cruz Whale Watching" link="/work/whalewatching" />
-        <Card img={packaging_222} alt="Production Design" title="Production Design" link="/work/production-design" />
+        <Card img={martinellisThumb} alt="Production Design" title="Production Design" link="/work/production-design" />
       </div>
     </div>
   </section>

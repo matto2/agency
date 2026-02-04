@@ -3,12 +3,13 @@ import Base from "../../layouts/Base.astro";
 import ThinnerContent from "../../components/ThinnerContent.astro";
 import { Image } from "astro:assets";
 import Back from "../../components/Back.astro";
-import martinellis_fruitvirtues_hero from "../../assets/martinellis-fruitvirtues_377.jpg";
+import martinellisHero from "../../assets/Martinellis-bottles2.png";
 import livlett from "../../assets/livlett_377.jpg";
 import loungelizard from "../../assets/loungelizard.jpg";
 import martinellis_377 from "../../assets/martinellis-377.jpg";
 import sol from "../../assets/sol.jpg";
 import spk_lemonade from "../../assets/spk-lemonade_377.jpg";
+import martinellisThumb from "../../assets/martinellis-thumb.webp";
 
 const title = "Production Design";
 ---
@@ -25,8 +26,8 @@ const title = "Production Design";
         created the line extension based on the one flavor.
       </p>
       <Image
-        src={martinellis_fruitvirtues_hero}
-        alt="Martinelli&rsquo;s Fruit Virtues Bottles"
+        src={martinellisHero}
+        alt="Martinelli&rsquo;s Bottles"
         class="mb-8 rounded-lg"
       />
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -45,6 +46,11 @@ const title = "Production Design";
         <Image
           src={spk_lemonade}
           alt="Martinelli&rsquo;s Sparkling Lemonade"
+          class="rounded-lg"
+        />
+        <Image
+          src={martinellisThumb}
+          alt="Martinelli&rsquo;s Fruit Virtues"
           class="rounded-lg"
         />
       </div>
