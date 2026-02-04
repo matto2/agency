@@ -11,7 +11,7 @@
 
   /* Animated gradient text for hero headlines */
   .gradient-text {
-    background: linear-gradient(90deg, #5b21b6, #d97706, #0891b2, #5b21b6);
+    background: linear-gradient(90deg, #5b21b6, #3b82f6, #0891b2, #10b981, #0891b2, #3b82f6, #5b21b6);
     background-size: 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
