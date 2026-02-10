@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(perl -CSD -pi -e:*)",
+      "WebFetch(domain:nero-portfolio.webflow.io)",
+      "Bash(find:*)"
+    ]
+  }
+}
