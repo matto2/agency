@@ -1,0 +1,124 @@
+---
+import "../styles/main.css";
+import "@fontsource-variable/archivo";
+import Back2 from "../components/Back2.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="robots" content="noindex" />
+    <title>File Drop — Print-Ready Files. Fast.</title>
+  </head>
+  <body>
+    <main class="min-h-screen flex items-start justify-center px-4 py-16">
+      <div class="w-full max-w-xl">
+
+        <Back2 />
+
+        <h1 class="font-heading font-semibold text-4xl md:text-5xl text-gray-800 mb-2 leading-tight">
+          Print-Ready Files. Fast.
+        </h1>
+        <p class="text-gray-600 text-base mb-3 leading-relaxed">
+          Send me your file and a quick description. I&rsquo;ll review it and get back to you with a quote &mdash; most jobs are $50 flat and turned around next day.
+        </p>
+        <p class="text-gray-700 font-bold mb-10">
+          Questions?
+          <a href="mailto:matt@mattoleary.design" class="text-violet-800 hover:underline">matt@mattoleary.design</a>
+          &bull;
+          <a href="tel:8312752566" class="text-violet-800 hover:underline">831-275-2566</a>
+        </p>
+
+        <form
+          name="file-drop"
+          method="POST"
+          enctype="multipart/form-data"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="bg-white p-6 rounded-lg shadow-lg mb-10"
+        >
+          <input type="hidden" name="form-name" value="file-drop" />
+
+          <p class="hidden">
+            <label>
+              Don&rsquo;t fill this out if you&rsquo;re human: <input name="bot-field" />
+            </label>
+          </p>
+
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="name">Name</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-violet-800"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="email">Email</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-violet-800"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="phone">
+              Phone <span class="font-normal text-gray-500">(optional)</span>
+            </label>
+            <input
+              id="phone"
+              type="tel"
+              name="phone"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-violet-800"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="description">What needs fixing?</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="4"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-violet-800 resize-y"
+              required
+            ></textarea>
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-gray-700 font-bold mb-2" for="file">File</label>
+            <input
+              id="file"
+              type="file"
+              name="file"
+              accept=".ai,.pdf,.eps,.psd,.indd,.png,.jpg,.jpeg,.zip"
+              class="block w-full text-gray-700 text-sm file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-800 hover:file:bg-violet-100 cursor-pointer"
+              required
+            />
+            <p class="mt-1 text-xs text-gray-500">.ai .pdf .eps .psd .indd .png .jpg .zip</p>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full rounded-full bg-orange-500 px-8 py-3 text-lg font-semibold text-white shadow-sm hover:bg-orange-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 transition-colors"
+          >
+            Send File
+          </button>
+        </form>
+
+        <div class="space-y-3">
+          <p class="text-gray-600">Color separations quoted separately.</p>
+          <p class="text-gray-600">Based in Santa Cruz. 20+ years in production.</p>
+        </div>
+
+      </div>
+    </main>
+  </body>
+</html>
