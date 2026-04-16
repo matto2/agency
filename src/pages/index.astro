@@ -50,8 +50,9 @@ import jennine from "../assets/jennine.jpg";
           Design & Production
         </h1>
         <p class="text-xl md:text-2xl text-stone-600 leading-relaxed">
-          Full-spectrum creative producer — bringing ideas to life across
-          web, print, packaging, and everything in between.
+          Production designer with 20+ years delivering pixel-perfect,
+          brand-compliant assets across print, packaging, and digital — fast,
+          precise, and built for volume.
         </p>
       </div>
     </div>
@@ -88,6 +89,37 @@ import jennine from "../assets/jennine.jpg";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
+                d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-2">
+            Production Design
+          </h3>
+          <p class="text-stone-600">
+            Preparing print-ready files, mechanicals, and production-ready
+            artwork for print, packaging, and large-format. Expertise in
+            dielines, color management, variable data printing (VDP), vendor
+            coordination, and press-ready file delivery.
+          </p>
+        </div>
+
+        <div
+          class="bg-white/80 backdrop-blur-sm border border-white/50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow animate-on-scroll"
+        >
+          <div
+            class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-4"
+          >
+            <svg
+              class="w-6 h-6 text-violet-800"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
                 d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
               ></path>
             </svg>
@@ -96,9 +128,9 @@ import jennine from "../assets/jennine.jpg";
             Digital Marketing
           </h3>
           <p class="text-stone-600">
-            Designing for email campaigns, social media, and landing pages.
-            Strong understanding of conversion-focused design and user
-            engagement.
+            Designing brand-compliant assets for email campaigns, social media,
+            and landing pages. Experienced in template production and delivering
+            consistent assets at volume across multiple formats.
           </p>
         </div>
 
@@ -153,38 +185,8 @@ import jennine from "../assets/jennine.jpg";
             User Experience Design
           </h3>
           <p class="text-stone-600">
-            Creating intuitive interfaces for complex web applications.
-            Background includes fintech dashboards, collaboration tools, and
-            enterprise software.
-          </p>
-        </div>
-
-        <div
-          class="bg-white/80 backdrop-blur-sm border border-white/50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow animate-on-scroll"
-        >
-          <div
-            class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-4"
-          >
-            <svg
-              class="w-6 h-6 text-violet-800"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-              ></path>
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold text-xl mb-2">
-            Design Adaptation
-          </h3>
-          <p class="text-stone-600">
-            Taking any design and adapting it for production—print collateral,
-            packaging, large-format signage, or web-ready digital assets.
+            Interface design background spanning enterprise SaaS, fintech
+            dashboards, and browser extensions.
           </p>
         </div>
       </div>
@@ -209,6 +211,24 @@ import jennine from "../assets/jennine.jpg";
         class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2"
       >
         <Card
+          img={martinellisThumb}
+          alt="Production Design"
+          title="Production Design"
+          link="/work/production-design"
+        />
+        <Card
+          img={books}
+          alt="Book Design & Production"
+          title="Book Design & Production"
+          link="/work/books"
+        />
+        <Card
+          img={whale_shirts}
+          alt="Santa Cruz Whale Watching"
+          title="Santa Cruz Whale Watching"
+          link="/work/whalewatching"
+        />
+        <Card
           img={walksantacruzThumb}
           alt="Walk Santa Cruz"
           title="Walk Santa Cruz"
@@ -221,6 +241,18 @@ import jennine from "../assets/jennine.jpg";
           link="/work/wellness"
         />
         <Card
+          img={coastalcard}
+          alt="Coastal Nature Guides"
+          title="Coastal Nature Guides"
+          link="/work/coastal"
+        />
+        <Card
+          img={juice}
+          alt="The Juice Magazine"
+          title="The Juice Magazine"
+          link="/work/juice"
+        />
+        <Card
           img={linguidcard}
           alt="Linguid"
           title="Linguid"
@@ -231,18 +263,6 @@ import jennine from "../assets/jennine.jpg";
           alt="Jack Pitts Photography"
           title="Jack Pitts Photography"
           link="/work/jack"
-        />
-        <Card
-          img={coastalcard}
-          alt="Coastal Nature Guides"
-          title="Coastal Nature Guides"
-          link="/work/coastal"
-        />
-        <Card
-          img={books}
-          alt="Book Covers"
-          title="Book Covers"
-          link="/work/books"
         />
         <Card
           img={kiteworkscard}
@@ -261,24 +281,6 @@ import jennine from "../assets/jennine.jpg";
           alt="Live Price Check"
           title="Live Price Check"
           link="/work/livepricecheck"
-        />
-        <Card
-          img={juice}
-          alt="The Juice Magazine"
-          title="The Juice Magazine"
-          link="/work/juice"
-        />
-        <Card
-          img={whale_shirts}
-          alt="Santa Cruz Whale Watching"
-          title="Santa Cruz Whale Watching"
-          link="/work/whalewatching"
-        />
-        <Card
-          img={martinellisThumb}
-          alt="Production Design"
-          title="Production Design"
-          link="/work/production-design"
         />
       </div>
     </div>
@@ -300,11 +302,24 @@ import jennine from "../assets/jennine.jpg";
 
       <div class="prose prose-lg max-w-none text-stone-600 animate-on-scroll">
         <p class="mb-6">
+          My production expertise includes preparing files for offset and
+          digital printing, large-format signage, and packaging design. I create
+          die-lines, mechanicals, and production-ready artwork while
+          coordinating with vendors and conducting press checks for quality
+          assurance. I&rsquo;ve produced marketing collateral including banners,
+          rack cards, apparel graphics, and trade show materials. I&rsquo;m
+          also experienced in InDesign Data Merge — taking structured
+          spreadsheet data and flowing it into designed templates for variable
+          data printing (VDP), personalized mailers, and high-volume asset
+          production.
+        </p>
+
+        <p class="mb-6">
           I&rsquo;m a hands-on creative professional with deep expertise in
           Adobe Creative Suite (Illustrator, InDesign, Photoshop, Acrobat) and
-          modern web technologies. My background spans creative services
-          management, leading design teams, and executing projects from concept
-          through final delivery.
+          Microsoft Office Suite (Word, PowerPoint). My background spans
+          creative services management, leading design teams, and executing
+          projects from concept through final delivery.
         </p>
 
         <p class="mb-6">
@@ -317,29 +332,20 @@ import jennine from "../assets/jennine.jpg";
         </p>
 
         <p class="mb-6">
-          My production expertise includes preparing files for offset and
-          digital printing, large-format signage, and packaging design. I create
-          die-lines, mechanicals, and production-ready artwork while
-          coordinating with vendors and conducting press checks for quality
-          assurance. I&rsquo;ve produced marketing collateral including banners,
-          rack cards, apparel graphics, and trade show materials.
+          I leverage AI-assisted workflows including Claude, ChatGPT, and image
+          generation tools to accelerate creative output. Whether it&rsquo;s
+          project management, asset library organization, or cross-functional
+          collaboration, I bring both creative vision and technical execution to
+          every project.
         </p>
 
-        <p class="mb-6">
+        <p>
           In User Experience (UX) and User Interface (UI) design, I&rsquo;ve led
           projects for enterprise web applications, browser extensions, and SaaS
           platforms—conducting user research, taking ideas from whiteboard
           sketches to Figma prototypes, and maintaining design systems.
           I&rsquo;ve also designed book covers and managed brand standards
           across global teams.
-        </p>
-
-        <p>
-          I leverage AI-assisted workflows including Claude, ChatGPT, and image
-          generation tools to accelerate creative output. Whether it&rsquo;s
-          project management, asset library organization, or cross-functional
-          collaboration, I bring both creative vision and technical execution to
-          every project.
         </p>
       </div>
     </div>
