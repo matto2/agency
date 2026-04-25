@@ -1,0 +1,298 @@
+---
+import Base from "../../layouts/Base.astro";
+import ThinnerContent from "../../components/ThinnerContent.astro";
+import Back from "../../components/Back.astro";
+import { Image } from "astro:assets";
+import glamorHero from "../../assets/SunQueen-Glamor2.jpg";
+import bottleFlat from "../../assets/SunQueen_Bottle_v5_OL.jpg";
+import primaryCarton from "../../assets/Sunqueen_Carton_v5b_OL.jpg";
+import masterCarton from "../../assets/Sunqueen_master carton-200mL_v2_OL-NEW.jpg";
+
+const title = "Packaging Production";
+---
+
+<Base title={title}>
+  <ThinnerContent>
+    <section class="mb-16">
+
+      <!-- Header -->
+      <p class="text-sm font-semibold tracking-widest uppercase text-violet-800 mt-8 mb-2">
+        Case Study
+      </p>
+      <h1 class="font-heading font-bold text-4xl sm:text-5xl mb-6">{title}</h1>
+
+      <!-- Meta -->
+      <dl class="mb-10 text-sm space-y-2">
+        <div class="flex gap-3">
+          <dt class="font-semibold text-stone-500 uppercase tracking-wider w-28 flex-shrink-0">Client</dt>
+          <dd class="text-stone-800">Private Label Mineral Sunscreen &amp; Skincare Manufacturer</dd>
+        </div>
+        <div class="flex gap-3">
+          <dt class="font-semibold text-stone-500 uppercase tracking-wider w-28 flex-shrink-0">Deliverables</dt>
+          <dd class="text-stone-800">Outer Carton &nbsp;·&nbsp; Primary Carton &nbsp;·&nbsp; Bottle Label</dd>
+        </div>
+        <div class="flex gap-3">
+          <dt class="font-semibold text-stone-500 uppercase tracking-wider w-28 flex-shrink-0">Role</dt>
+          <dd class="text-stone-800">Production Designer</dd>
+        </div>
+        <div class="flex gap-3">
+          <dt class="font-semibold text-stone-500 uppercase tracking-wider w-28 flex-shrink-0">Result</dt>
+          <dd class="text-stone-800">On time &nbsp;·&nbsp; On budget &nbsp;·&nbsp; Press approved</dd>
+        </div>
+        <div class="flex gap-3">
+          <dt class="font-semibold text-stone-500 uppercase tracking-wider w-28 flex-shrink-0">Date</dt>
+          <dd class="text-stone-800">March 2026</dd>
+        </div>
+      </dl>
+
+      <!-- Hero -->
+      <Image
+        src={glamorHero}
+        alt="SunQueen mineral sunscreen packaging — glamour shot"
+        class="w-full rounded-lg mb-10"
+      />
+
+      <!-- Overview -->
+      <div class="max-w-3xl mb-12">
+        <h2 class="font-heading font-bold text-2xl mb-4">Overview</h2>
+        <p class="mb-4 text-stone-700 leading-relaxed">
+          A private label mineral sunscreen and skincare manufacturer contracted me to design and produce
+          three distinct print-ready packaging components for a new product line: an outer shipping carton,
+          a primary retail carton, and a wraparound bottle label. The work covered the full
+          design-to-production pipeline — from initial concept through FDA-compliant copy, dieline
+          adaptation, and final press-ready file delivery.
+        </p>
+        <p class="text-stone-700 leading-relaxed">
+          The engagement ran efficiently through three rounds of revisions per piece, finishing on
+          time and on budget. Client, manufacturer, and print vendors were all satisfied with the
+          final deliverables.
+        </p>
+      </div>
+
+      <!-- Challenge -->
+      <div class="max-w-3xl mb-12">
+        <h2 class="font-heading font-bold text-2xl mb-4">Challenge</h2>
+        <p class="mb-4 text-stone-700 leading-relaxed">
+          The brief arrived with minimal source material: a standalone logo, rough hand-sketched
+          layout concepts, and Word documents containing product copy and regulatory information.
+          There were no finished comps, no established type system, and no production templates
+          to work from.
+        </p>
+        <p class="text-stone-700 leading-relaxed">
+          All label copy — ingredient lists, usage instructions, warnings, and net weight — had to
+          meet FDA labeling requirements for cosmetic products. That meant accurate panel sizing,
+          compliant type sizes, and correct information hierarchy across two carton formats and a
+          cylinder wrap. Every layout decision had to serve both brand presentation and regulatory
+          compliance simultaneously.
+        </p>
+      </div>
+
+      <!-- Deliverables — full-width stacked -->
+      <div class="mb-12">
+        <h2 class="font-heading font-bold text-2xl mb-6">Deliverables</h2>
+        <div class="space-y-10">
+          <div>
+            <Image src={masterCarton} alt="Outer / Master Carton flat artwork" class="w-full rounded-lg" />
+            <p class="font-semibold text-sm text-stone-700 mt-3">Outer / Master Carton</p>
+            <p class="text-xs text-stone-500 mt-1">
+              Shipping-spec carton for the 200 mL SKU. Full dieline development,
+              brand graphics, and information panels set to manufacturer spec.
+            </p>
+          </div>
+          <div>
+            <Image src={primaryCarton} alt="Primary Retail Carton flat artwork" class="w-full rounded-lg" />
+            <p class="font-semibold text-sm text-stone-700 mt-3">Primary Retail Carton</p>
+            <p class="text-xs text-stone-500 mt-1">
+              Consumer-facing retail carton with full brand treatment, FDA-compliant
+              information panel, and press-ready color separation.
+            </p>
+          </div>
+          <div>
+            <Image src={bottleFlat} alt="Wraparound bottle label flat artwork" class="w-full rounded-lg" />
+            <p class="font-semibold text-sm text-stone-700 mt-3">Wraparound Bottle Label</p>
+            <p class="text-xs text-stone-500 mt-1">
+              Wraparound label for the primary bottle. Designed to the exact cylinder
+              circumference with correct overlap and bleed for the label printer.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Process -->
+      <div class="max-w-3xl mb-12">
+        <h2 class="font-heading font-bold text-2xl mb-4">Process</h2>
+        <p class="mb-4 text-stone-700 leading-relaxed">
+          Starting from the supplied logo and rough layout sketches, I built the typographic system,
+          established the color palette, and developed dieline templates for all three components.
+          Regulatory copy from the client's Word documents was typeset with production precision —
+          correct point sizes for principal display panel requirements, accurate net content
+          statements, and correctly ordered ingredient lists.
+        </p>
+        <p class="mb-4 text-stone-700 leading-relaxed">
+          Each piece went through three focused revision rounds. Feedback was incorporated cleanly
+          with no scope creep, and all files were supplied to the print vendors in their required
+          formats with correct color profiles, bleed, and trap settings.
+        </p>
+      </div>
+
+
+      <!-- 3D Visualizations -->
+      <div class="mb-12">
+        <h2 class="font-heading font-bold text-2xl mb-2">3D Client Visualizations</h2>
+        <p class="max-w-3xl text-stone-700 leading-relaxed mb-8">
+          Early in the project — before final art was complete — I built interactive 3D renderings
+          of the carton and bottle and delivered them to the client. These were not finished artwork;
+          they were visualization tools to help the client understand the spatial layout and panel
+          relationships before committing to a direction. Being able to rotate and inspect the
+          packaging in context made the review process faster and reduced the back-and-forth
+          that typically comes from evaluating flat print files alone.
+        </p>
+
+        <!-- Carton — inlined CSS 3D -->
+        <div class="mb-8">
+          <p class="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-3">
+            Primary Carton — Interactive 3D
+          </p>
+          <div class="sq-carton-wrap rounded-lg overflow-hidden">
+            <div class="sq-stage" id="sq-stage">
+              <div class="sq-shadow"></div>
+              <div class="sq-cube" id="sq-cube">
+                <div class="sq-face sq-front"><img src="/sunqueen-carton/front.png" alt="Carton front panel"></div>
+                <div class="sq-face sq-back"><img src="/sunqueen-carton/back.png" alt="Carton back panel"></div>
+                <div class="sq-face sq-right"><img src="/sunqueen-carton/side1.png" alt="Carton side panel"></div>
+                <div class="sq-face sq-left"><img src="/sunqueen-carton/side2.png" alt="Carton side panel"></div>
+                <div class="sq-face sq-top"><img src="/sunqueen-carton/top.png" alt="Carton top panel"></div>
+                <div class="sq-face sq-bottom"><img src="/sunqueen-carton/bottom.png" alt="Carton bottom panel"></div>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-stone-400 mt-2">Drag to rotate · Scroll to zoom</p>
+        </div>
+
+        <!-- Bottle — Three.js (large self-contained file, iframe is appropriate) -->
+        <div class="mb-8">
+          <p class="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-3">
+            Bottle — Interactive 3D
+          </p>
+          <div class="rounded-lg overflow-hidden" style="height: min(1000px, 90vh);">
+            <iframe
+              src="/sunqueen-bottle/index.html"
+              class="w-full h-full border-0"
+              title="SunQueen bottle — interactive 3D viewer"
+            ></iframe>
+          </div>
+          <p class="text-xs text-stone-400 mt-2">Drag to rotate · Scroll to zoom</p>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="max-w-3xl mb-12">
+        <h2 class="font-heading font-bold text-2xl mb-4">Result</h2>
+        <p class="text-stone-700 leading-relaxed">
+          All three packaging components were delivered press-ready within the project timeline and
+          budget. The client, the private label manufacturer, and the print vendors approved the files
+          without issue. The early-stage 3D visualizations were called out specifically as a value-add —
+          sharing them during the design process gave the client a way to understand the packaging
+          structure and panel layout long before final art or physical samples existed.
+        </p>
+      </div>
+
+    </section>
+    <Back next="/work/production-design" />
+  </ThinnerContent>
+</Base>
+
+<style>
+  .sq-carton-wrap {
+    --sq-w: 21.7vh;
+    --sq-h: 75vh;
+    --sq-d: 21.5vh;
+    height: min(1000px, 90vh);
+    background: #0b1220;
+  }
+  .sq-stage {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    perspective: 75vh;
+    touch-action: none;
+    position: relative;
+  }
+  .sq-cube {
+    position: relative;
+    width: var(--sq-w);
+    height: var(--sq-h);
+    transform-style: preserve-3d;
+    transform: scale(var(--sq-zoom, 1)) rotateX(var(--sq-rx, -10deg)) rotateY(var(--sq-ry, 25deg));
+  }
+  .sq-face {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+  .sq-face img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+  }
+  .sq-front  { width: var(--sq-w); height: var(--sq-h); transform: translate(-50%,-50%) translateZ(calc(var(--sq-d)/2)); }
+  .sq-back   { width: var(--sq-w); height: var(--sq-h); transform: translate(-50%,-50%) rotateY(180deg) translateZ(calc(var(--sq-d)/2)); }
+  .sq-right  { width: var(--sq-d); height: var(--sq-h); transform: translate(-50%,-50%) rotateY(90deg) translateZ(calc(var(--sq-w)/2)); }
+  .sq-left   { width: var(--sq-d); height: var(--sq-h); transform: translate(-50%,-50%) rotateY(-90deg) translateZ(calc(var(--sq-w)/2)); }
+  .sq-top    { width: var(--sq-w); height: var(--sq-d); transform: translate(-50%,-50%) rotateX(90deg) translateZ(calc(var(--sq-h)/2)); }
+  .sq-bottom { width: var(--sq-w); height: var(--sq-d); transform: translate(-50%,-50%) rotateX(-90deg) translateZ(calc(var(--sq-h)/2)); }
+  .sq-shadow {
+    position: absolute;
+    width: calc(var(--sq-w) * 1.1);
+    height: calc(var(--sq-d) * 0.45);
+    border-radius: 999px;
+    background: rgba(0,0,0,.45);
+    filter: blur(18px);
+    transform: translateY(calc(var(--sq-h)/2 + 90px));
+    pointer-events: none;
+  }
+</style>
+
+<script>
+  const stage = document.getElementById('sq-stage');
+  const cube = document.getElementById('sq-cube');
+  let rx = -10, ry = 25, zoom = 1;
+  let dragging = false, lastX = 0, lastY = 0;
+
+  function apply() {
+    cube.style.setProperty('--sq-rx', rx + 'deg');
+    cube.style.setProperty('--sq-ry', ry + 'deg');
+    cube.style.setProperty('--sq-zoom', String(zoom));
+  }
+
+  stage.addEventListener('pointerdown', e => {
+    dragging = true;
+    lastX = e.clientX;
+    lastY = e.clientY;
+    stage.setPointerCapture(e.pointerId);
+  });
+
+  stage.addEventListener('pointermove', e => {
+    if (!dragging) return;
+    ry += (e.clientX - lastX) * 0.4;
+    rx -= (e.clientY - lastY) * 0.3;
+    lastX = e.clientX;
+    lastY = e.clientY;
+    apply();
+  });
+
+  stage.addEventListener('pointerup', () => { dragging = false; });
+
+  stage.addEventListener('wheel', e => {
+    e.preventDefault();
+    zoom *= e.deltaY > 0 ? 0.95 : 1.05;
+    zoom = Math.max(0.5, Math.min(2, zoom));
+    apply();
+  }, { passive: false });
+
+  apply();
+</script>

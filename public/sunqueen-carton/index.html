@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SunQueen – 3D Spin</title>
+<style>
+:root {
+  --w:21.7vh;
+  --h:75vh;
+  --d:21.5vh;
+  --rx:-10deg;
+  --ry:25deg;
+  --zoom:1;
+}
+
+html,body{
+  height:100%;
+  margin:0;
+  background:#0b1220;
+  overflow:hidden;
+  font-family:system-ui,sans-serif;
+}
+
+.stage{
+  height:100%;
+  display:grid;
+  place-items:center;
+  perspective:75vh;
+  touch-action:none;
+}
+
+.cube{
+  position:relative;
+  width:var(--w);
+  height:var(--h);
+  transform-style:preserve-3d;
+  transform:scale(var(--zoom)) rotateX(var(--rx)) rotateY(var(--ry));
+}
+
+.face{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform-style:preserve-3d;
+  backface-visibility:hidden;
+}
+
+.face img{
+  width:100%;
+  height:100%;
+  display:block;
+  pointer-events:none;
+  user-select:none;
+}
+
+/* Geometry (no 2D rotations applied to artwork) */
+.front{ width:var(--w); height:var(--h); transform:translate(-50%,-50%) translateZ(calc(var(--d)/2)); }
+.back{ width:var(--w); height:var(--h); transform:translate(-50%,-50%) rotateY(180deg) translateZ(calc(var(--d)/2)); }
+
+.right{ width:var(--d); height:var(--h); transform:translate(-50%,-50%) rotateY(90deg) translateZ(calc(var(--w)/2)); }
+.left{ width:var(--d); height:var(--h); transform:translate(-50%,-50%) rotateY(-90deg) translateZ(calc(var(--w)/2)); }
+
+.top{ width:var(--w); height:var(--d); transform:translate(-50%,-50%) rotateX(90deg) translateZ(calc(var(--h)/2)); }
+.bottom{ width:var(--w); height:var(--d); transform:translate(-50%,-50%) rotateX(-90deg) translateZ(calc(var(--h)/2)); }
+
+.shadow{
+  position:absolute;
+  width:calc(var(--w)*1.1);
+  height:calc(var(--d)*0.45);
+  border-radius:999px;
+  background:rgba(0,0,0,.45);
+  filter:blur(18px);
+  transform:translateY(calc(var(--h)/2 + 90px));
+  pointer-events:none;
+}
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+<div class="shadow"></div>
+
+<div class="cube" id="cube">
+  <div class="face front"><img src="front.png"></div>
+  <div class="face back"><img src="back.png"></div>
+
+  <!-- front paint wraps to right -->
+  <div class="face right"><img src="side1.png"></div>
+  <div class="face left"><img src="side2.png"></div>
+
+  <div class="face top"><img src="top.png"></div>
+  <div class="face bottom"><img src="bottom.png"></div>
+</div>
+</div>
+
+<script>
+const stage=document.getElementById('stage');
+const cube=document.getElementById('cube');
+
+let rx=-10, ry=25, zoom=1;
+let dragging=false,lastX=0,lastY=0;
+
+function apply(){
+  cube.style.setProperty('--rx',rx+'deg');
+  cube.style.setProperty('--ry',ry+'deg');
+  cube.style.setProperty('--zoom',zoom);
+}
+
+stage.addEventListener('pointerdown',e=>{
+  dragging=true;
+  lastX=e.clientX;
+  lastY=e.clientY;
+  stage.setPointerCapture(e.pointerId);
+});
+
+stage.addEventListener('pointermove',e=>{
+  if(!dragging)return;
+  let dx=e.clientX-lastX;
+  let dy=e.clientY-lastY;
+  lastX=e.clientX;
+  lastY=e.clientY;
+  ry+=dx*0.4;
+  rx-=dy*0.3;
+  apply();
+});
+
+stage.addEventListener('pointerup',()=>dragging=false);
+
+stage.addEventListener('wheel',e=>{
+  e.preventDefault();
+  zoom*=e.deltaY>0?0.95:1.05;
+  zoom=Math.max(.5,Math.min(2,zoom));
+  apply();
+},{passive:false});
+
+apply();
+</script>
+</body>
+</html>
