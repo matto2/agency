@@ -10,7 +10,9 @@ import { Image } from "astro:assets";
     <!-- Outer container to control overflow and clipping -->
     <div class="overflow-hidden relative group">
       <a href={link} class="block">
-        <Image src={img} class="w-full" alt={alt} />
+        <div class="aspect-[4/3] overflow-hidden">
+          <Image src={img} class="w-full h-full object-cover" alt={alt} />
+        </div>
       </a>
     </div>
     <div class="px-4 py-3">
