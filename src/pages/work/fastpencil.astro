@@ -1,0 +1,31 @@
+---
+import Base from "../../layouts/Base.astro";
+import ThinnerContent from "../../components/ThinnerContent.astro";
+import { Image } from "astro:assets";
+import fastpencilcard from "../../assets/fastpencilcard.png";
+import Back from "../../components/Back.astro";
+
+const title = "FastPencil — Creative Lead";
+---
+
+<Base title={title}>
+  <ThinnerContent>
+    <section class="mb-8">
+      <h1 class="font-heading font-bold text-4xl sm:text-5xl my-8">{title}</h1>
+      <Image src={fastpencilcard} alt="FastPencil" class="mb-8 rounded-lg w-full" />
+
+      <p class="mb-6">
+        At FastPencil, a self-publishing platform, I served as Creative Lead — responsible for the visual identity, design systems, and marketing creative across the product and brand. I directed the look and feel of the platform and all customer-facing materials, working cross-functionally with product, marketing, and engineering teams.
+      </p>
+
+      <p class="mb-6">
+        My work included establishing the brand design system used across the web application, marketing site, email campaigns, and sales materials. I oversaw the production of all marketing assets and maintained brand consistency across channels as the platform scaled.
+      </p>
+
+      <p class="mb-6">
+        This role required balancing hands-on design work with creative direction — reviewing and guiding output from contractors and collaborating closely with marketing leadership to align creative with campaign strategy and business goals.
+      </p>
+    </section>
+    <Back next="/work/mcdill" />
+  </ThinnerContent>
+</Base>

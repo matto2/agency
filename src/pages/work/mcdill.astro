@@ -1,0 +1,34 @@
+---
+import Base from "../../layouts/Base.astro";
+import ThinnerContent from "../../components/ThinnerContent.astro";
+import Back from "../../components/Back.astro";
+
+const title = "McDill Associates — Design Manager";
+---
+
+<Base title={title}>
+  <ThinnerContent>
+    <section class="mb-8">
+      <h1 class="font-heading font-bold text-4xl sm:text-5xl my-8">{title}</h1>
+
+      <div class="bg-gradient-to-br from-violet-900 to-violet-700 rounded-xl p-10 mb-8 flex flex-col items-start justify-end min-h-48">
+        <div class="text-violet-300 text-sm font-semibold tracking-widest uppercase mb-2">Design Manager</div>
+        <div class="text-white font-heading font-bold text-3xl">McDill Associates</div>
+        <div class="text-violet-200 mt-2">Fresh Produce &amp; Food Brand Marketing</div>
+      </div>
+
+      <p class="mb-6">
+        McDill Associates was a full-service marketing and design agency on the Central Coast, deeply embedded in the fresh produce and agricultural industry. Clients included California Giant Berry Farms, Tanimura &amp; Antle, Litehouse Foods, and Martinelli's — brands with national retail distribution and real trade-show presence at PMA Fresh Summit.
+      </p>
+
+      <p class="mb-6">
+        As Design Manager, I led a team of designers across campaigns that spanned packaging, retail POS, trade-show graphics, direct mail, and microsites. The work was integrated — a produce launch might involve a PMA booth, a retail display system, a direct mail piece, and a microsite all hitting simultaneously — so keeping creative consistent across deliverables and deadlines was the job.
+      </p>
+
+      <p class="mb-6">
+        I managed designer assignments, reviewed work against brand standards, coordinated with print and production vendors, and served as the day-to-day creative point of contact for clients. The produce industry moves fast — seasonal campaigns have hard windows — so the team had to be organized and the work had to be right the first time.
+      </p>
+    </section>
+    <Back next="/work/axway" />
+  </ThinnerContent>
+</Base>

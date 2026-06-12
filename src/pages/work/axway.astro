@@ -1,0 +1,34 @@
+---
+import Base from "../../layouts/Base.astro";
+import ThinnerContent from "../../components/ThinnerContent.astro";
+import { Image } from "astro:assets";
+import axway from "../../assets/axway.svg";
+import Back from "../../components/Back.astro";
+
+const title = "Axway — Global Brand System";
+---
+
+<Base title={title}>
+  <ThinnerContent>
+    <section class="mb-8">
+      <h1 class="font-heading font-bold text-4xl sm:text-5xl my-8">{title}</h1>
+
+      <div class="bg-stone-100 rounded-xl p-10 mb-8 flex items-center justify-center">
+        <Image src={axway} alt="Axway" class="max-w-xs w-full" />
+      </div>
+
+      <p class="mb-6">
+        Axway is a global enterprise technology company specializing in API management and secure data exchange. I was brought in to bring visual consistency to a product suite that had grown through acquisition — multiple customer-facing systems, each built on a different framework, each looking like a different company.
+      </p>
+
+      <p class="mb-6">
+        The core challenge was that Axway's customer-facing products had grown through acquisition — several support systems and portals built on different frameworks, each with its own visual language. I unified the branding across all of them, starting with a consistent login screen and navigation header that established a shared identity regardless of what was running underneath. That single throughline brought coherence to a fragmented product experience.
+      </p>
+
+      <p class="mb-6">
+        The work required buy-in from multiple product teams, each with their own codebase and priorities — so the solution had to be practical to implement, not just visually correct.
+      </p>
+    </section>
+    <Back next="/work/mcdill" />
+  </ThinnerContent>
+</Base>

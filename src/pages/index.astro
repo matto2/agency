@@ -2,11 +2,13 @@
 import Base from "../layouts/Base.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
+import TextCard from "../components/TextCard.astro";
 import { Image } from "astro:assets";
 import Testimonial from "../components/Testimonial.astro";
 import LogoField from "../components/LogoField.astro";
 
 // Project images
+import fastpencilcard from "../assets/fastpencilcard.png";
 import books from "../assets/books.png";
 import kiteworkscard from "../assets/kiteworkscard.png";
 import openbankingcard from "../assets/openbankingcard.png";
@@ -31,7 +33,7 @@ import bruce from "../assets/bruce.jpg";
 import jennine from "../assets/jennine.jpg";
 ---
 
-<Base title="Matthew O’Leary - Designer & Production">
+<Base title="Matthew O’Leary — Creative Services Manager">
   <!-- HERO SECTION -->
   <section class="px-4 2xl:px-0 py-16 md:py-24">
     <div
@@ -48,11 +50,10 @@ import jennine from "../assets/jennine.jpg";
         <h1
           class="font-heading text-5xl md:text-6xl xl:text-7xl font-bold mb-6 gradient-text"
         >
-          Design & Production
+          Creative Services
         </h1>
         <p class="text-xl md:text-2xl text-stone-600 leading-relaxed">
-          I design and produce work across print, packaging, and digital —
-          from initial concept through press-ready delivery.
+          Creative services leader with 20+ years managing design teams and executing integrated campaigns across digital, print, and traditional channels — from strategy through production.
         </p>
       </div>
     </div>
@@ -72,7 +73,7 @@ import jennine from "../assets/jennine.jpg";
         Core Capabilities
       </h2>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <div
           class="bg-white/80 backdrop-blur-sm border border-white/50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow animate-on-scroll"
         >
@@ -89,18 +90,15 @@ import jennine from "../assets/jennine.jpg";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
               ></path>
             </svg>
           </div>
           <h3 class="font-heading font-semibold text-xl mb-2">
-            Production Design
+            Creative Team Management
           </h3>
           <p class="text-stone-600">
-            Preparing print-ready files, mechanicals, and production-ready
-            artwork for print, packaging, and large-format. Expertise in
-            dielines, color management, variable data printing (VDP), vendor
-            coordination, and press-ready file delivery.
+            Leading in-house creative teams and managing vendor and agency relationships to execute campaigns at scale. Experienced in resource allocation, project management, and maintaining brand consistency across all channels and deliverables.
           </p>
         </div>
 
@@ -128,9 +126,7 @@ import jennine from "../assets/jennine.jpg";
             Digital Marketing
           </h3>
           <p class="text-stone-600">
-            Designing brand-compliant assets for email campaigns, social media,
-            and landing pages. Experienced in template production and delivering
-            consistent assets at volume across multiple formats.
+            Planning and executing integrated campaigns across email, social media, and digital channels. Experienced in delivering brand-consistent assets at volume and coordinating multi-channel campaign rollouts.
           </p>
         </div>
 
@@ -157,7 +153,7 @@ import jennine from "../assets/jennine.jpg";
           <h3 class="font-heading font-semibold text-xl mb-2">Web Design</h3>
           <p class="text-stone-600">
             Designing and building responsive websites and web applications from
-            concept to launch. Experience with small business, e-commerce, and
+            concept to launch. Experience with healthcare, small business, e-commerce, and
             content-driven sites.
           </p>
         </div>
@@ -189,6 +185,37 @@ import jennine from "../assets/jennine.jpg";
             dashboards, and browser extensions.
           </p>
         </div>
+
+        <div
+          class="bg-white/80 backdrop-blur-sm border border-white/50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow animate-on-scroll"
+        >
+          <div
+            class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-4"
+          >
+            <svg
+              class="w-6 h-6 text-violet-800"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-2">
+            Production Design
+          </h3>
+          <p class="text-stone-600">
+            Preparing print-ready files, mechanicals, and production-ready
+            artwork for print, packaging, and large-format. Expertise in
+            dielines, color management, variable data printing (VDP), vendor
+            coordination, and press-ready file delivery.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -210,6 +237,48 @@ import jennine from "../assets/jennine.jpg";
       <div
         class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2"
       >
+        <TextCard
+          company="Axway"
+          role="Global Brand System"
+          description="Brand identity, campaign templates, and multi-channel marketing assets deployed across 100+ countries."
+          link="/work/axway"
+        />
+        <TextCard
+          company="McDill Associates"
+          role="Design Manager"
+          description="Led creative team on integrated campaigns for national produce and food brands — PMA trade shows, packaging, retail POS, and microsites."
+          link="/work/mcdill"
+        />
+        <Card
+          img={wellnessThumb}
+          alt="Wellness Medical Center"
+          title="Wellness Medical Center"
+          link="/work/wellness"
+        />
+        <Card
+          img={kiteworkscard}
+          alt="Kiteworks — Brand & Marketing"
+          title="Kiteworks — Brand & Marketing"
+          link="/work/kiteworks"
+        />
+        <Card
+          img={walksantacruzThumb}
+          alt="Walk Santa Cruz — Brand & Customer Experience"
+          title="Walk Santa Cruz — Brand & CX"
+          link="/work/walksantacruz"
+        />
+        <Card
+          img={openbankingcard}
+          alt="Open Banking"
+          title="Open Banking"
+          link="/work/openbanking"
+        />
+        <Card
+          img={fastpencilcard}
+          alt="FastPencil — Creative Lead"
+          title="FastPencil — Creative Lead"
+          link="/work/fastpencil"
+        />
         <Card
           img={packagingThumb}
           alt="Packaging Production — SunQueen"
@@ -227,24 +296,6 @@ import jennine from "../assets/jennine.jpg";
           alt="Book Design & Production"
           title="Book Design & Production"
           link="/work/books"
-        />
-        <Card
-          img={whale_shirts}
-          alt="Santa Cruz Whale Watching"
-          title="Santa Cruz Whale Watching"
-          link="/work/whalewatching"
-        />
-        <Card
-          img={walksantacruzThumb}
-          alt="Walk Santa Cruz"
-          title="Walk Santa Cruz"
-          link="/work/walksantacruz"
-        />
-        <Card
-          img={wellnessThumb}
-          alt="Wellness Medical Center"
-          title="Wellness Medical Center"
-          link="/work/wellness"
         />
         <Card
           img={coastalcard}
@@ -271,16 +322,10 @@ import jennine from "../assets/jennine.jpg";
           link="/work/jack"
         />
         <Card
-          img={kiteworkscard}
-          alt="Kiteworks Web App"
-          title="Kiteworks Web App"
-          link="/work/kiteworks"
-        />
-        <Card
-          img={openbankingcard}
-          alt="Open Banking"
-          title="Open Banking"
-          link="/work/openbanking"
+          img={whale_shirts}
+          alt="Santa Cruz Whale Watching"
+          title="Santa Cruz Whale Watching"
+          link="/work/whalewatching"
         />
         <Card
           img={lpc}
@@ -308,26 +353,15 @@ import jennine from "../assets/jennine.jpg";
 
       <div class="prose prose-lg max-w-none text-stone-600 animate-on-scroll">
         <p class="mb-6">
-          My work lives at the intersection of design and production. On the
-          design side, I&rsquo;ve worked on brand identity, book covers,
-          packaging, web interfaces, and UX for enterprise SaaS and fintech
-          products. On the production side, I prepare files for offset and
-          digital printing, large-format signage, and packaging — including
-          dielines, mechanicals, and variable data printing (VDP) for
-          high-volume campaigns.
+          I&rsquo;ve spent more than 20 years leading creative teams and managing end-to-end execution of marketing campaigns across healthcare, CPG, publishing, and technology. At McDill Design Group, I served as Design Manager — overseeing designers on brand activation campaigns for national CPG clients. At FastPencil, I was Creative Lead, directing visual identity and design systems for a self-publishing platform. Earlier, as Prepress Manager at West Marine, I led a production team responsible for catalog, retail, and marketing materials across a national footprint.
         </p>
 
         <p class="mb-6">
-          I&rsquo;m fluent in Adobe Creative Suite (Illustrator, InDesign,
-          Photoshop, Acrobat) and build responsive websites using modern
-          tools like Astro, Tailwind CSS, and JavaScript. I&rsquo;ve worked
-          across WordPress and Shopify, handled platform migrations, and
-          designed UI systems from Figma wireframes through to launch.
+          I specialize in maintaining brand consistency across high-volume, multi-channel campaigns — coordinating between internal creative teams, external agencies, and vendors to keep messaging aligned and timelines on track. My work spans digital marketing, email and social campaigns, print and packaging, web design, and content strategy, with the operational depth to manage resources and set quality standards at scale. I&rsquo;m experienced with project management tools including Asana and fluent in Adobe Creative Suite across all production stages.
         </p>
 
         <p>
-          Whether a project needs creative direction, hands-on production, or
-          both — I can take it from concept through delivery.
+          Whether a project calls for campaign strategy, vendor coordination, or hands-on creative leadership, I can guide it from concept through delivery.
         </p>
       </div>
     </div>
@@ -357,6 +391,15 @@ import jennine from "../assets/jennine.jpg";
       />
 
       <Testimonial
+        quote="I find it refreshing to work with someone who knows how to tackle big projects while staying calm, focused and creative all while delivering outstanding work."
+        img={jennine}
+        alt="Jennine Dureau"
+        person="Jennine Dureau"
+        title="Marketing Manager"
+        company="TurboTax"
+      />
+
+      <Testimonial
         quote="Matt is an incredibly designer who works hard to identify/solve for customers’ pain points. His designs for critical and heavily used functionality were well received and had a lasting impact on the product adoption."
         img={abishek}
         alt="Abishek Aurora"
@@ -372,15 +415,6 @@ import jennine from "../assets/jennine.jpg";
         person="Bruce Butterfield"
         title="CEO and Founder"
         company="The Wittfield Group"
-      />
-
-      <Testimonial
-        quote="I find it refreshing to work with someone who knows how to tackle big projects while staying calm, focused and creative all while delivering outstanding work."
-        img={jennine}
-        alt="Jennine Dureau"
-        person="Jennine Dureau"
-        title="Marketing Manager"
-        company="TurboTax"
       />
     </div>
   </section>
