@@ -6,7 +6,7 @@ export default withAnimations({
   theme: {
     extend: {
             fontFamily: {
-        heading: ['"Archivo Variable"', ...defaultTheme.fontFamily.sans],
+        heading: ['"Plus Jakarta Sans Variable"', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
         'gradient-top-left': 'radial-gradient(circle at top left, #FFD6E8, transparent)',

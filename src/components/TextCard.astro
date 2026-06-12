@@ -7,7 +7,7 @@ const { company, role, description, link } = Astro.props;
     class="max-xl rounded-xl overflow-hidden bg-white/70 backdrop-blur-sm border border-white/50 shadow-md transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-violet-500/10"
   >
     <a href={link} class="block">
-      <div class="aspect-[4/3] bg-gradient-to-br from-violet-900 via-violet-800 to-violet-600 flex flex-col items-start justify-end p-6">
+      <div class="aspect-[4/3] bg-gradient-to-br from-violet-900 via-violet-800 to-violet-600 flex flex-col items-start justify-start p-6">
         <div class="text-violet-300 text-xs font-semibold tracking-widest uppercase mb-1">{role}</div>
         <div class="text-white font-heading font-bold text-2xl leading-tight mb-2">{company}</div>
         <div class="text-violet-200 text-sm leading-snug">{description}</div>
