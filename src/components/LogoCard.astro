@@ -1,0 +1,23 @@
+---
+const { logo, alt, title, link } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div class="my-8 w-full animate-on-scroll">
+  <div
+    class="max-w-xl rounded-xl overflow-hidden bg-white/70 backdrop-blur-sm border border-white/50 shadow-md transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-violet-500/10"
+  >
+    <div class="overflow-hidden relative group">
+      <a href={link} class="block">
+        <div class="aspect-[4/3] bg-white flex items-center justify-center p-8">
+          <Image src={logo} alt={alt} class="max-h-32 w-auto object-contain" />
+        </div>
+      </a>
+    </div>
+    <div class="px-4 py-3">
+      <a href={link} class="block">
+        <div class="font-semibold text-neutral-700 hover:text-violet-800 transition-colors">{title}</div>
+      </a>
+    </div>
+  </div>
+</div>

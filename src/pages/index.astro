@@ -2,13 +2,15 @@
 import Base from "../layouts/Base.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
-import TextCard from "../components/TextCard.astro";
+import LogoCard from "../components/LogoCard.astro";
 import { Image } from "astro:assets";
 import Testimonial from "../components/Testimonial.astro";
 import LogoField from "../components/LogoField.astro";
 
 // Project images
 import fastpencilcard from "../assets/fastpencilcard.png";
+import axwayLogo from "../assets/axway.svg";
+import mcdillLogo from "../assets/mcdill-logo.png";
 import books from "../assets/books.png";
 import kiteworkscard from "../assets/kiteworkscard.png";
 import openbankingcard from "../assets/openbankingcard.png";
@@ -237,16 +239,16 @@ import jennine from "../assets/jennine.jpg";
       <div
         class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2"
       >
-        <TextCard
-          company="Axway"
-          role="Global Brand System"
-          description="Brand identity, campaign templates, and multi-channel marketing assets deployed across 100+ countries."
+        <LogoCard
+          logo={axwayLogo}
+          alt="Axway"
+          title="Axway — Global Brand System"
           link="/work/axway"
         />
-        <TextCard
-          company="McDill Associates"
-          role="Design Manager"
-          description="Led creative team on integrated campaigns for national produce and food brands — PMA trade shows, packaging, retail POS, and microsites."
+        <LogoCard
+          logo={mcdillLogo}
+          alt="McDill Associates"
+          title="McDill — Design Manager"
           link="/work/mcdill"
         />
         <Card

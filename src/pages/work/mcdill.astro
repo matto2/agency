@@ -2,8 +2,10 @@
 import Base from "../../layouts/Base.astro";
 import ThinnerContent from "../../components/ThinnerContent.astro";
 import Back from "../../components/Back.astro";
+import { Image } from "astro:assets";
+import mcdillLogo from "../../assets/mcdill-logo.png";
 
-const title = "McDill Associates — Design Manager";
+const title = "McDill — Design Manager";
 ---
 
 <Base title={title}>
@@ -11,10 +13,8 @@ const title = "McDill Associates — Design Manager";
     <section class="mb-8">
       <h1 class="font-heading font-bold text-4xl sm:text-5xl my-8">{title}</h1>
 
-      <div class="bg-gradient-to-br from-violet-900 to-violet-700 rounded-xl p-10 mb-8 flex flex-col items-start justify-end min-h-48">
-        <div class="text-violet-300 text-sm font-semibold tracking-widest uppercase mb-2">Design Manager</div>
-        <div class="text-white font-heading font-bold text-3xl">McDill Associates</div>
-        <div class="text-violet-200 mt-2">Fresh Produce &amp; Food Brand Marketing</div>
+      <div class="bg-white rounded-xl p-12 mb-8 flex items-center justify-center border border-stone-100">
+        <Image src={mcdillLogo} alt="McDill Associates" class="max-w-sm w-full" />
       </div>
 
       <p class="mb-6">
