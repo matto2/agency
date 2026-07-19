@@ -1,0 +1,99 @@
+---
+const { title, description, ogImage = "https://mattoleary.design/images/og-image.jpg" } = Astro.props;
+import "../styles/main.css";
+import Footer from "../components/Footer.astro";
+import "@fontsource-variable/plus-jakarta-sans";
+import { ClientRouter } from "astro:transitions";
+import { SEO } from "astro-seo";
+---
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <SEO
+      title={title}
+      description={description}
+      openGraph={{
+        basic: {
+          title: title,
+          type: "website",
+          image: ogImage,
+        },
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        meta: [
+          { name: "description", content: description },
+          { name: "og:image", content: ogImage },
+          { name: "og:title", content: title },
+          { name: "og:description", content: description },
+        ],
+      }}
+    />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <ClientRouter />
+  </head>
+  <body>
+    <div class="flex flex-col min-h-screen w-full">
+      <main class="mb-auto w-full flex justify-center" transition:animate="fade">
+        <div class="w-full max-w-7xl px-2 md:px-4">
+          <slot />
+        </div>
+      </main>
+      <div class="bg-slate-700">
+        <footer class="max-w-7xl mx-auto">
+          <Footer />
+        </footer>
+      </div>
+    </div>
+  <script>
+  // Scroll-triggered animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+
+  document.addEventListener('astro:page-load', () => {
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+  });
+
+  function styleApostrophes() {
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    const textNodes = [];
+    while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+    textNodes.forEach(node => {
+      if (node.nodeValue && /I’m/.test(node.nodeValue) && node.parentElement?.tagName !== 'SCRIPT' && node.parentElement?.tagName !== 'STYLE') {
+        const span = document.createElement('span');
+        span.innerHTML = node.nodeValue.replace(/I’m/g, 'I<span class="apos">’</span>m');
+        node.parentNode?.replaceChild(span, node);
+      }
+    });
+  }
+
+  styleApostrophes();
+  document.addEventListener('astro:page-load', styleApostrophes);
+</script>
+</body>
+</html>
