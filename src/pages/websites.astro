@@ -6,53 +6,102 @@ import coffeeShop from "../assets/coffee-shop.jpg";
 import walksantacruz from "../assets/walksantacruz.png";
 
 const title = "Websites for Santa Cruz Businesses | Matthew O’Leary";
-const description = "A complete website, hosting, and ongoing updates for $99/month, no tiers to decode.";
+const description = "A custom Santa Cruz business website, up to 5 pages, with hosting, support, and revisions included.";
 
 // Shared container so every section aligns to the same left/right edges.
 const container = "max-w-4xl mx-auto px-6 md:px-8";
 const sectionY = "py-16 md:py-20";
 
 const offerItems = [
-  "A complete website, up to 5 pages (Home, About, Services, Contact, and one more suited to your business — gallery, FAQ, testimonials, whatever fits)",
-  "Hosting, fast and secure",
-  "Small updates whenever you need them — new photos, hours, prices, text changes",
-  "One person to call or text — not a help ticket",
+  "Up to 5 pages total: Home, About, Services, Contact, plus one extra page that fits your business.",
+  "Built to be fast, secure, and accessible.",
+  "Hosting, updates, and support included.",
+  "A few revision rounds included so we can get it right.",
+  "Clear communication from start to finish.",
 ];
 
 const steps = [
   {
     number: "01",
-    title: "Quick call or text about your business.",
-    body: "What you do, who you serve, what's not working about your current setup (or the fact that you don't have one yet).",
+    title: "Quick call or Zoom.",
+    body: "We'll talk through your business and what your website needs. If it's easier, I can send over a short Google Form to collect the details instead.",
   },
   {
     number: "02",
-    title: "I build your new site.",
-    body: "If you've got a Wix, Squarespace, or WordPress site, I rebuild it — same information, none of the bloat, none of the plugins you're afraid to touch. Starting from scratch? I design something clean from the ground up.",
+    title: "I build the site.",
+    body: "I handle the design, layout, copy direction, and setup.",
   },
   {
     number: "03",
-    title: "You're live, and it's off your plate.",
-    body: "Hosting and small updates are covered from here on — you text me, I make the change, usually within 48 hours.",
+    title: "You launch with support.",
+    body: "Once the site is live, hosting, updates, and support are already handled.",
   },
 ];
 
 const faqs = [
   {
+    q: "How much does this cost?",
+    a: "$99/month on a 12-month term. That covers your site (up to 5 pages), hosting, updates, and support — no large upfront design fee.",
+  },
+  {
     q: "What if I want out before 12 months?",
     a: "You can buy out the remaining months at 50% of what's left on the term, and the site is yours to keep.",
   },
   {
-    q: "What's included in $99/mo?",
-    a: "The base plan covers your site (up to 5 pages), hosting, and small updates. Online booking, e-commerce, extra pages beyond 5, or a full redesign are quoted separately — you'll always know the price before I start.",
+    q: "Do I own the website?",
+    a: "This works like a subscription, similar to your current Wix or Squarespace plan — your site is built, hosted, and maintained as part of the monthly plan for the 12-month term. After that, you're free to cancel anytime at no extra charge: hosting stops, and I hand over your files.",
   },
   {
-    q: "Do I need to learn anything to update my site?",
-    a: "No. Text or email me what you want changed, and I make the update — usually within 48 hours.",
+    q: "Do I need to sign anything? How do I pay?",
+    a: "Yes — we'll sign a simple agreement covering the term and scope so everything's clear upfront. Payment is a recurring monthly charge, with no large lump sum due at signing.",
   },
   {
-    q: "What do I actually get for hosting?",
-    a: "A fast, secure site with no downtime worries — I handle the technical side entirely, so you don't have to think about it.",
+    q: "How long does this take?",
+    a: "Most sites go from kickoff to launch in about 2–3 weeks, depending on how quickly I get your content and feedback. I'll give you a firm timeline on our first call.",
+  },
+  {
+    q: "Do we need to meet on Zoom?",
+    a: "Not necessarily — a phone call works just as well. If you'd rather skip a live call altogether, I can send over a short Google Form so you can walk me through your business and goals at your own pace.",
+  },
+  {
+    q: "What do I get with this offer?",
+    a: "You get a custom website with up to 5 pages: Home, About, Services, Contact, and one additional page suited to your business, such as FAQ, Testimonials, or Gallery. The site is built to be fast, secure, accessible, and easy to maintain, with hosting, support, and a few revision rounds included.",
+  },
+  {
+    q: "What counts as extra?",
+    a: "More complex sites, additional pages, custom features, ecommerce, integrations, or major content/copy help are not included in the base offer and will be quoted separately.",
+  },
+  {
+    q: "How many revisions are included?",
+    a: "A few revision rounds are included so we can make the site strong without turning the project into endless revisions. If the project grows beyond that scope, additional work is billed separately.",
+  },
+  {
+    q: "Will my site be accessible?",
+    a: "I build sites with accessibility in mind so they’re easier for more people to use. That means thoughtful structure, readable design, and a smooth experience on desktop and mobile.",
+  },
+  {
+    q: "Will my site show up on Google?",
+    a: "Every site is built with on-page SEO fundamentals — clean structure, fast load times, proper metadata, and mobile-friendliness — so search engines can find and index it. This plan doesn't include ongoing SEO campaigns or paid ad management, but the technical foundation is solid from day one.",
+  },
+  {
+    q: "Can you work with my current website?",
+    a: "I don't edit or patch your existing Wix, Squarespace, or WordPress site directly — I build a brand new site from scratch that replaces it, using the same information and content as a starting point. Once your new site is live, you can cancel your old builder's subscription — you won't need it anymore.",
+  },
+  {
+    q: "What if I already have a domain name?",
+    a: "Even better. I’ll build the new site on a staging URL so you can review it before anything goes live. Once you approve it, I point your existing domain’s DNS to the new site, and it goes live under the domain you already own — no need to buy a new one or change registrars.",
+  },
+  {
+    q: "Do I need to provide everything?",
+    a: "No. If you have photos, copy, or branding, great. If not, I can help fill in the gaps.",
+  },
+  {
+    q: "I don't have good photos — what do I do?",
+    a: "That's common, and it won't hold up your launch. We can work with what you have, source stock photography, or I can point you toward a local photographer if you want something custom.",
+  },
+  {
+    q: "What happens after launch?",
+    a: "Hosting, updates, and support are included, so you’re not left on your own.",
   },
 ];
 ---
@@ -74,14 +123,22 @@ const faqs = [
           </div>
         </div>
         <div class="w-full min-[960px]:w-2/5 order-2 min-[960px]:order-1 text-center min-[960px]:text-left">
-          <p class="text-sm font-semibold tracking-widest uppercase text-violet-800 mb-4 animate-on-scroll">
-            Websites for Santa Cruz Businesses
-          </p>
-          <h1 class="font-heading font-bold text-4xl min-[960px]:text-5xl text-stone-900 mb-6 leading-tight animate-on-scroll">
-            Your website, built brand new or refreshed —<br />for one flat price
+          <h1 class="font-heading font-bold text-4xl min-[960px]:text-5xl text-stone-900 mb-4 leading-tight animate-on-scroll">
+            A better website for your Santa Cruz business.
           </h1>
+          <div class="flex items-center justify-center min-[960px]:justify-start gap-3 mb-6 animate-on-scroll">
+            <p class="font-heading font-bold text-3xl text-stone-900">
+              $99<span class="text-lg font-semibold text-stone-500">/month</span>
+            </p>
+            <span class="text-xs font-semibold tracking-widest uppercase bg-violet-100 text-violet-800 px-3 py-1.5 rounded-full">
+              12-Month Plan
+            </span>
+          </div>
+          <p class="text-lg min-[960px]:text-xl text-stone-600 mb-6 leading-relaxed animate-on-scroll">
+            For businesses that don&rsquo;t have a site yet, or already have a Wix, WordPress, or Squarespace site that needs updating but just feels like one more thing on your plate.
+          </p>
           <p class="text-lg min-[960px]:text-xl text-stone-600 mb-8 leading-relaxed animate-on-scroll">
-            Got a Wix or Squarespace site you&rsquo;ve been avoiding? Or nothing but a Facebook page? Either way — I&rsquo;ll build (or rebuild) something clean and simple, then take care of it for you.
+            Up to 5 pages, built to be fast, secure, accessible, and ready to convert — with hosting, support, and a straightforward revision process included.
           </p>
           <div class="flex justify-center min-[960px]:justify-start animate-on-scroll">
             <a href="#consultation" class="w-full sm:w-auto">
@@ -101,22 +158,17 @@ const faqs = [
           The Offer
         </p>
         <h2 class="font-heading text-3xl md:text-4xl font-bold mb-3 animate-on-scroll">
-          One offer. No surprises.
+          One offer. Clear scope. No surprises.
         </h2>
         <p class="text-lg text-stone-600 mb-12 animate-on-scroll">
-          This is the whole thing — no tiers to decode.
+          This is a website package for local businesses that want something professional, without a drawn-out process.
         </p>
       </div>
 
       <div class="bg-white/80 backdrop-blur-sm border border-white/50 rounded-2xl shadow-lg p-8 md:p-10 animate-on-scroll">
-        <div class="flex flex-wrap items-baseline justify-between gap-3 mb-6">
-          <p class="font-heading font-bold text-4xl md:text-5xl">
-            $99<span class="text-xl md:text-2xl font-semibold text-stone-500">/month</span>
-          </p>
-          <span class="text-xs font-semibold tracking-widest uppercase bg-violet-100 text-violet-800 px-3 py-1.5 rounded-full">
-            12-Month Term
-          </span>
-        </div>
+        <p class="text-sm font-semibold tracking-widest uppercase text-violet-800 mb-6">
+          Included
+        </p>
 
         <ul class="space-y-4 mb-8">
           {offerItems.map((item) => (
@@ -135,7 +187,7 @@ const faqs = [
         </ul>
 
         <p class="text-stone-600 border-t border-stone-200 pt-6">
-          Want more — online booking, e-commerce, a bigger redesign? I&rsquo;ll quote that separately. The $99/mo base always covers your site, hosting, and upkeep.
+          If you want your website handled and off your plate, this is a solid fit.
         </p>
 
         <a href="#consultation" class="block mt-8">
@@ -145,14 +197,14 @@ const faqs = [
     </div>
   </section>
 
-  <!-- CASE STUDY -->
+  <!-- WORK -->
   <section class={`${sectionY} bg-stone-100/50`}>
     <div class={container}>
       <p class="text-sm font-semibold tracking-widest uppercase text-violet-800 mb-4 text-center animate-on-scroll">
-        Case Study
+        Work
       </p>
       <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12 animate-on-scroll">
-        Walk Santa Cruz
+        Work: Santa Cruz
       </h2>
 
       <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 animate-on-scroll">
@@ -164,8 +216,11 @@ const faqs = [
           />
         </a>
         <div class="w-full md:w-1/2">
+          <p class="text-lg text-stone-600 mb-4 leading-relaxed">
+            I rebuilt this site for a local business that needed a cleaner, more credible online presence.
+          </p>
           <p class="text-lg text-stone-600 mb-6 leading-relaxed">
-            I run my own tour business on a site built exactly this way — fast-loading, hand-coded, no bloat. If you&rsquo;ve ever waited on a slow Wix or Squarespace site to load on your phone, this is the alternative.
+            The goal was simple: make the business easier to trust, easier to understand, and easier to contact.
           </p>
           <a
             href="https://walksantacruz.com"
@@ -188,14 +243,11 @@ const faqs = [
       <p class="text-sm font-semibold tracking-widest uppercase text-violet-800 mb-4 text-center animate-on-scroll">
         How It Works
       </p>
-      <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-4 animate-on-scroll">
-        No matter where you&rsquo;re starting from
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12 animate-on-scroll">
+        No matter where you&rsquo;re starting from, here&rsquo;s how the process goes.
       </h2>
-      <p class="text-lg text-stone-600 text-center mb-12 animate-on-scroll">
-        A site you already dread logging into, or nothing yet at all — either way, here&rsquo;s how it goes.
-      </p>
 
-      <div class="space-y-8 mb-12">
+      <div class="space-y-8">
         {steps.map((step) => (
           <div class="flex gap-6 items-start animate-on-scroll">
             <span class="font-heading font-bold text-3xl text-violet-200 flex-shrink-0 w-16">
@@ -207,12 +259,6 @@ const faqs = [
             </div>
           </div>
         ))}
-      </div>
-
-      <div class="bg-violet-50 border-l-4 border-violet-800 rounded-r-lg p-6 animate-on-scroll">
-        <p class="text-stone-700 leading-relaxed">
-          <span class="font-semibold">Already have a site you&rsquo;re scared to touch?</span> That&rsquo;s normal — and it&rsquo;s exactly the kind of mess I take off your hands. I rebuild it clean, and you never have to log into a website builder again.
-        </p>
       </div>
     </div>
   </section>
@@ -249,7 +295,7 @@ const faqs = [
           Get My Free Consultation
         </h2>
         <p class="text-lg text-stone-600 mb-10 animate-on-scroll">
-          Tell me a bit about your business and I&rsquo;ll follow up to talk it through — no pressure, no obligation.
+          Tell me a bit about your business and I&rsquo;ll follow up to talk through the next step.
         </p>
       </div>
 
