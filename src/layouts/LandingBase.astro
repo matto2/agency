@@ -54,6 +54,12 @@ import { SEO } from "astro-seo";
       </div>
     </div>
   <script>
+  // Reloading the page should start at the top, not wherever the browser last had you scrolled to
+  if (performance.getEntriesByType('navigation')[0]?.type === 'reload') {
+    history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+  }
+
   // Scroll-triggered animations
   const observerOptions = {
     threshold: 0.1,
