@@ -6,6 +6,7 @@ import LogoCard from "../components/LogoCard.astro";
 import { Image } from "astro:assets";
 import Testimonial from "../components/Testimonial.astro";
 import LogoField from "../components/LogoField.astro";
+import { Icon } from "astro-icon/components";
 
 // Project images
 import fastpencilcard from "../assets/fastpencilcard.png";
@@ -15,15 +16,12 @@ import books from "../assets/books.png";
 import kiteworkscard from "../assets/kiteworkscard.png";
 import openbankingcard from "../assets/openbankingcard.png";
 import lpc from "../assets/lpc.png";
-import wellnessThumb from "../assets/wellness-thumb.png";
 import juice from "../assets/juice.png";
-import whale_shirts from "../assets/whale_shirts.png";
-import jackThumb from "../assets/09_people.BUrkml1d.webp";
-import coastalcard from "../assets/coastalcard.png";
-import linguidcard from "../assets/linguidcard.png";
 import martinellisThumb from "../assets/martinellis-fruitvirtues_377.jpg";
-import walksantacruzThumb from "../assets/walksantacruz-thumb.png";
 import packagingThumb from "../assets/SunQueen-Glamor2.jpg";
+import westmarineLogo from "../assets/westmarine.svg";
+import caMagazineThumb from "../assets/california-magazine-placeholder.svg";
+import jackWebsite from "../assets/jack-website.webp";
 
 // Profile photo
 import newProfilePic from "../assets/My-biopic_new-profile-pic.jpg";
@@ -35,7 +33,7 @@ import bruce from "../assets/bruce.jpg";
 import jennine from "../assets/jennine.jpg";
 ---
 
-<Base title="Matthew O’Leary — Graphic & Web Design">
+<Base title="Matthew O’Leary — Graphic Designer & Production Manager">
   <!-- HERO SECTION -->
   <section class="px-4 2xl:px-0 py-16 md:py-24">
     <div
@@ -52,10 +50,13 @@ import jennine from "../assets/jennine.jpg";
         <h1
           class="font-heading text-4xl md:text-5xl xl:text-6xl font-bold mb-6 gradient-text"
         >
-          Graphic & Web Design
+          Graphic Designer & Production Manager
         </h1>
-        <p class="text-xl md:text-2xl text-stone-600 leading-relaxed">
-          Twenty years designing and building — websites, packaging, print production, and retail campaigns, from concept to delivery.
+        <p class="text-xl md:text-2xl text-stone-600 leading-relaxed mb-4">
+          Editorial, print, packaging and marketing design — from concept through press-ready production.
+        </p>
+        <p class="text-lg md:text-xl text-stone-500 leading-relaxed">
+          20+ years creating polished, on-brand work for publications, consumer brands and enterprise marketing teams.
         </p>
       </div>
     </div>
@@ -92,15 +93,15 @@ import jennine from "../assets/jennine.jpg";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
               ></path>
             </svg>
           </div>
           <h3 class="font-heading font-semibold text-xl mb-2">
-            Web Design & Development
+            Editorial & Publication Design
           </h3>
           <p class="text-stone-600">
-            Websites built with Astro and Tailwind — booking integrations, SEO, content, launch to maintenance.
+            Magazine layouts, books, covers, typography, page systems and image placement.
           </p>
         </div>
 
@@ -125,10 +126,10 @@ import jennine from "../assets/jennine.jpg";
             </svg>
           </div>
           <h3 class="font-heading font-semibold text-xl mb-2">
-            Print Production & File Prep
+            Print Production & Prepress
           </h3>
           <p class="text-stone-600">
-            Dielines, press-ready mechanicals, color profiles, trap and bleed — packaging, signage, large-format, multi-SKU rollouts.
+            Press-ready files, preflight (PDF/X), proofing, color management, paper specification, vendor coordination and quality control.
           </p>
         </div>
 
@@ -152,9 +153,9 @@ import jennine from "../assets/jennine.jpg";
               ></path>
             </svg>
           </div>
-          <h3 class="font-heading font-semibold text-xl mb-2">Packaging Design</h3>
+          <h3 class="font-heading font-semibold text-xl mb-2">Packaging & Collateral</h3>
           <p class="text-stone-600">
-            CPG packaging, product tags, and branded materials from concept through press. FDA-compliant copy, multi-format product extensions.
+            CPG packaging, dielines, color separations, FDA-compliant copy, branded collateral and multi-SKU rollouts.
           </p>
         </div>
 
@@ -178,10 +179,10 @@ import jennine from "../assets/jennine.jpg";
             </svg>
           </div>
           <h3 class="font-heading font-semibold text-xl mb-2">
-            Retail & Campaign Design
+            Brand & Marketing Design
           </h3>
           <p class="text-stone-600">
-            In-store signage, POP collateral, and seasonal campaigns for consumer brands in fashion, food & beverage, and lifestyle.
+            Campaigns, retail signage, presentations, digital assets and template-driven visual systems.
           </p>
         </div>
 
@@ -201,15 +202,15 @@ import jennine from "../assets/jennine.jpg";
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
               ></path>
             </svg>
           </div>
           <h3 class="font-heading font-semibold text-xl mb-2">
-            Illustration & Apparel Graphics
+            Web & Digital Design
           </h3>
           <p class="text-stone-600">
-            Custom illustration for tags, collateral, tee graphics, and branded merchandise — digital and print-ready.
+            Websites, landing pages and product UI.
           </p>
         </div>
       </div>
@@ -234,40 +235,10 @@ import jennine from "../assets/jennine.jpg";
         class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2"
       >
         <Card
-          img={packagingThumb}
-          alt="Packaging Production — SunQueen"
-          title="Packaging Production"
-          link="/work/sunqueen"
-        />
-        <Card
-          img={martinellisThumb}
-          alt="Production Design"
-          title="Production Design"
-          link="/work/production-design"
-        />
-        <Card
-          img={whale_shirts}
-          alt="Santa Cruz Whale Watching"
-          title="Santa Cruz Whale Watching"
-          link="/work/whalewatching"
-        />
-        <LogoCard
-          logo={mcdillLogo}
-          alt="McDill Associates"
-          title="McDill — Packaging & Production"
-          link="/work/mcdill"
-        />
-        <LogoCard
-          logo={axwayLogo}
-          alt="Axway"
-          title="Axway — Global Brand System"
-          link="/work/axway"
-        />
-        <Card
-          img={fastpencilcard}
-          alt="FastPencil"
-          title="FastPencil — Product & Print Design"
-          link="/work/fastpencil"
+          img={caMagazineThumb}
+          alt="California Magazine — Editorial Design & Production"
+          title="California Magazine — Editorial Design & Production"
+          link="/work/california-magazine"
         />
         <Card
           img={books}
@@ -276,16 +247,40 @@ import jennine from "../assets/jennine.jpg";
           link="/work/books"
         />
         <Card
-          img={walksantacruzThumb}
-          alt="Walk Santa Cruz — Brand & Customer Experience"
-          title="Walk Santa Cruz — Brand & CX"
-          link="/work/walksantacruz"
-        />
-        <Card
           img={juice}
           alt="The Juice Magazine"
           title="The Juice Magazine"
           link="/work/juice"
+        />
+        <Card
+          img={packagingThumb}
+          alt="Packaging Production — SunQueen"
+          title="Packaging Production"
+          link="/work/sunqueen"
+        />
+        <LogoCard
+          logo={mcdillLogo}
+          alt="McDill Associates"
+          title="McDill — Packaging & Production"
+          link="/work/mcdill"
+        />
+        <LogoCard
+          logo={westmarineLogo}
+          alt="West Marine"
+          title="West Marine — Catalog Prepress"
+          link="/work/westmarine"
+        />
+        <Card
+          img={fastpencilcard}
+          alt="FastPencil"
+          title="FastPencil — Product & Print Design"
+          link="/work/fastpencil"
+        />
+        <LogoCard
+          logo={axwayLogo}
+          alt="Axway"
+          title="Axway — Global Brand System"
+          link="/work/axway"
         />
         <Card
           img={kiteworkscard}
@@ -300,34 +295,22 @@ import jennine from "../assets/jennine.jpg";
           link="/work/openbanking"
         />
         <Card
-          img={wellnessThumb}
-          alt="Wellness Medical Center"
-          title="Wellness Medical Center"
-          link="/work/wellness"
-        />
-        <Card
-          img={coastalcard}
-          alt="Coastal Nature Guides"
-          title="Coastal Nature Guides"
-          link="/work/coastal"
-        />
-        <Card
-          img={linguidcard}
-          alt="Linguid"
-          title="Linguid"
-          link="/work/linguid"
-        />
-        <Card
-          img={jackThumb}
-          alt="Jack Pitts Photography"
-          title="Jack Pitts Photography"
-          link="/work/jack"
-        />
-        <Card
           img={lpc}
           alt="Live Price Check"
           title="Live Price Check"
           link="/work/livepricecheck"
+        />
+        <Card
+          img={martinellisThumb}
+          alt="Production Design"
+          title="Production Design"
+          link="/work/production-design"
+        />
+        <Card
+          img={jackWebsite}
+          alt="Websites for Small Businesses"
+          title="Websites for Small Businesses"
+          link="/websites"
         />
       </div>
     </div>
@@ -349,7 +332,7 @@ import jennine from "../assets/jennine.jpg";
 
       <div class="prose prose-lg max-w-none text-stone-600 animate-on-scroll">
         <p class="mb-6">
-          Twenty years designing, building, and producing. I design and build websites — Astro, Tailwind, booking integrations, SEO — and handle print and packaging production end to end. Staff roles at McDill Associates (food &amp; bev packaging production), FastPencil (product and print design for a self-publishing platform), and West Marine (prepress). Freelance: websites for small businesses, FDA-compliant packaging for private label brands, retail signage for a fashion boutique.
+          Graphic designer and production manager with 20+ years across magazine publishing, CPG packaging and enterprise marketing. I&rsquo;m currently designing and producing California magazine for the Cal Alumni Association — InDesign layouts, imagery, ad preflight, proofing and printer coordination through press. Earlier staff roles: print production manager at McDill Associates (packaging for Costco, Martinelli&rsquo;s and Rainbow Light), creative lead at FastPencil (50+ book covers and interiors a year), prepress manager at West Marine (800+ page national catalogs), and senior designer at Axway, Kiteworks and Wiser Solutions. I also design and build websites when a project calls for it.
         </p>
       </div>
     </div>
@@ -388,7 +371,7 @@ import jennine from "../assets/jennine.jpg";
       />
 
       <Testimonial
-        quote="Matt is an incredibly designer who works hard to identify/solve for customers’ pain points. His designs for critical and heavily used functionality were well received and had a lasting impact on the product adoption."
+        quote="Matt is an incredible designer who works hard to identify/solve for customers’ pain points. His designs for critical and heavily used functionality were well received and had a lasting impact on the product adoption."
         img={abishek}
         alt="Abishek Aurora"
         person="Abishek Aurora"
@@ -437,19 +420,17 @@ import jennine from "../assets/jennine.jpg";
       <h2
         class="font-heading text-3xl md:text-4xl font-bold mb-6 animate-on-scroll"
       >
-        Let&rsquo;s Work Together
+        Looking for an experienced designer who understands production?
       </h2>
       <p class="text-xl text-stone-600 mb-8 animate-on-scroll">
-        Ready to start your next project? I&rsquo;d love to hear from you.
+        I&rsquo;m available for full-time, contract and project-based graphic design and production roles — hybrid or onsite in the SF Bay Area, Santa Cruz and Monterey, or remote.
       </p>
       <div
         class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-on-scroll"
       >
-        <a href="/contact" class="w-full sm:w-auto">
-          <Button text="Get in touch" class="w-full" />
-        </a>
         <a
-          href="tel:8312752566"
+          href="/MattOLeary_Resume.pdf"
+          target="_blank"
           class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-violet-800 hover:text-violet-900 transition-colors"
         >
           <svg
@@ -462,10 +443,21 @@ import jennine from "../assets/jennine.jpg";
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
             ></path>
           </svg>
-          831-275-2566
+          View Resume
+        </a>
+        <a
+          href="https://www.linkedin.com/in/matt-oleary/"
+          target="_blank"
+          class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-violet-800 hover:text-violet-900 transition-colors"
+        >
+          <Icon name="linkedin" class="w-5 h-5 mr-2" />
+          LinkedIn
+        </a>
+        <a href="/contact" class="w-full sm:w-auto">
+          <Button text="Contact Me" class="w-full" />
         </a>
       </div>
     </div>

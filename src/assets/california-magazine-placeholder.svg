@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="caGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5b21b6" />
+      <stop offset="100%" stop-color="#2e1065" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#caGradient)" />
+  <text x="400" y="270" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="88" fill="#ffffff">California</text>
+  <text x="400" y="330" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="24" letter-spacing="6" fill="#c4b5fd">MAGAZINE</text>
+  <line x1="320" y1="360" x2="480" y2="360" stroke="#c4b5fd" stroke-width="2" />
+  <text x="400" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" letter-spacing="2" fill="#ddd6fe">EDITORIAL DESIGN &amp; PRODUCTION</text>
+</svg>

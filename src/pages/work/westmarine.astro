@@ -1,0 +1,83 @@
+---
+import Base from "../../layouts/Base.astro";
+import ThinnerContent from "../../components/ThinnerContent.astro";
+import Back from "../../components/Back.astro";
+import { Image } from "astro:assets";
+// TODO: swap for a real catalog spread scan
+import heroPlaceholder from "../../assets/westmarine-placeholder.svg";
+
+const title = "West Marine — Catalog Prepress";
+const tagline = "Prepress • Imposition • Color management • 800+ page catalogs";
+---
+
+<Base title={title}>
+  <ThinnerContent>
+    <section class="mb-16">
+
+      <!-- Header -->
+      <p class="text-sm font-semibold tracking-widest uppercase text-violet-800 mt-8 mb-2">
+        Case Study
+      </p>
+      <h1 class="font-heading font-bold text-4xl sm:text-5xl mb-3">{title}</h1>
+      <p class="text-lg text-stone-500 mb-6">{tagline}</p>
+
+      <!-- Meta -->
+      <dl class="mb-10 text-sm space-y-2">
+        <div class="flex gap-3">
+          <dt class="font-semibold text-stone-500 uppercase tracking-wider w-28 flex-shrink-0">Role</dt>
+          <dd class="text-stone-800">Prepress Manager, West Marine, Watsonville CA, 2002–2008</dd>
+        </div>
+      </dl>
+
+      <!-- Hero -->
+      <Image
+        src={heroPlaceholder}
+        alt="West Marine catalog prepress — placeholder"
+        class="w-full rounded-lg mb-10"
+      />
+
+      <!-- Overview -->
+      <div class="max-w-3xl mb-12">
+        <h2 class="font-heading font-bold text-2xl mb-4">Overview</h2>
+        <p class="text-stone-700 leading-relaxed">
+          Built and managed press-ready files for West Marine&rsquo;s national catalogs — 800+ pages
+          per edition, plus seasonal and regional versions. Owned the prepress workflow: preflight,
+          color management, trapping, imposition and plate-ready delivery, working directly with the
+          printer to keep error rates under 1% across every edition. Also produced in-store signage
+          and retail collateral for 300+ stores.
+        </p>
+      </div>
+
+      <!-- Production details -->
+      <div class="max-w-3xl mb-12">
+        <h2 class="font-heading font-bold text-2xl mb-4">Production details</h2>
+        <dl class="text-sm space-y-2">
+          <div class="flex gap-3">
+            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-40 flex-shrink-0">Page count</dt>
+            <dd class="text-stone-800">TBD</dd>
+          </div>
+          <div class="flex gap-3">
+            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-40 flex-shrink-0">Editions per year</dt>
+            <dd class="text-stone-800">TBD</dd>
+          </div>
+          <div class="flex gap-3">
+            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-40 flex-shrink-0">Print run</dt>
+            <dd class="text-stone-800">TBD</dd>
+          </div>
+          <div class="flex gap-3">
+            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-40 flex-shrink-0">Printer</dt>
+            <dd class="text-stone-800">TBD</dd>
+          </div>
+          <div class="flex gap-3">
+            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-40 flex-shrink-0">Workflow</dt>
+            <dd class="text-stone-800">TBD</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- TODO: add catalog scan gallery -->
+
+    </section>
+    <Back next="/work/fastpencil" />
+  </ThinnerContent>
+</Base>

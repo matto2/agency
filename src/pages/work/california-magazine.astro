@@ -1,0 +1,89 @@
+---
+import Base from "../../layouts/Base.astro";
+import ThinnerContent from "../../components/ThinnerContent.astro";
+import Back from "../../components/Back.astro";
+import { Image } from "astro:assets";
+// TODO: replace placeholder thumbnail once a real cover/spread is available
+import coverPlaceholder from "../../assets/california-magazine-placeholder.svg";
+
+const title = "California Magazine — Editorial Design & Production";
+const tagline = "Editorial design • InDesign • Production management • Prepress";
+---
+
+<Base title={title}>
+  <ThinnerContent>
+    <section class="mb-16">
+
+      <!-- Header -->
+      <p class="text-sm font-semibold tracking-widest uppercase text-violet-800 mt-8 mb-2">
+        Case Study
+      </p>
+      <h1 class="font-heading font-bold text-4xl sm:text-5xl mb-3">{title}</h1>
+      <p class="text-lg text-stone-500 mb-6">{tagline}</p>
+
+      <!-- Meta -->
+      <dl class="mb-10 text-sm space-y-2">
+        <div class="flex gap-3">
+          <dt class="font-semibold text-stone-500 uppercase tracking-wider w-28 flex-shrink-0">Role</dt>
+          <dd class="text-stone-800">Graphic Designer &amp; Production Manager (contract), Cal Alumni Association, 2026–present</dd>
+        </div>
+      </dl>
+
+      <!-- Hero -->
+      <Image
+        src={coverPlaceholder}
+        alt="California magazine — placeholder cover"
+        class="w-full rounded-lg mb-10"
+      />
+
+      <!-- Overview -->
+      <div class="max-w-3xl mb-12">
+        <h2 class="font-heading font-bold text-2xl mb-4">Overview</h2>
+        <p class="text-stone-700 leading-relaxed">
+          California is the Cal Alumni Association&rsquo;s quarterly magazine. I design and produce
+          each issue: building the InDesign layout, placing and refining imagery, and keeping visual
+          consistency across editorial pages, ads and inserts. On the production side I manage the
+          relationship with the printer (Quad) end to end — preflighting ad materials, delivering
+          press-ready files, running proof and approval cycles with the Creative Director and
+          editorial team, and signing off final proofs — then produce the web and promotional assets
+          after print.
+        </p>
+      </div>
+
+      <!-- Production details -->
+      <div class="max-w-3xl mb-12">
+        <h2 class="font-heading font-bold text-2xl mb-4">Production details</h2>
+        <dl class="text-sm space-y-2">
+          <div class="flex gap-3">
+            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-32 flex-shrink-0">Trim size</dt>
+            <dd class="text-stone-800">TBD</dd>
+          </div>
+          <div class="flex gap-3">
+            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-32 flex-shrink-0">Page count</dt>
+            <dd class="text-stone-800">TBD</dd>
+          </div>
+          <div class="flex gap-3">
+            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-32 flex-shrink-0">Print run</dt>
+            <dd class="text-stone-800">TBD</dd>
+          </div>
+          <div class="flex gap-3">
+            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-32 flex-shrink-0">Paper</dt>
+            <dd class="text-stone-800">TBD</dd>
+          </div>
+          <div class="flex gap-3">
+            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-32 flex-shrink-0">Printer</dt>
+            <dd class="text-stone-800">TBD</dd>
+          </div>
+          <div class="flex gap-3">
+            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-32 flex-shrink-0">Schedule</dt>
+            <dd class="text-stone-800">TBD</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- TODO: add spread gallery once issue samples are available -->
+
+    </section>
+    <Back next="/work/books" />
+  </ThinnerContent>
+</Base>

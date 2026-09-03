@@ -1,9 +1,27 @@
 ---
 import LandingBase from "../layouts/LandingBase.astro";
 import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
 import { Image } from "astro:assets";
 import coffeeShop from "../assets/coffee-shop.jpg";
 import jackPhoto from "../assets/jack.webp";
+
+// Recent sites
+import whaleShirts from "../assets/whale_shirts.png";
+import walksantacruzThumb from "../assets/walksantacruz-thumb.png";
+import wellnessThumb from "../assets/wellness-thumb.png";
+import coastalcard from "../assets/coastalcard.png";
+import linguidcard from "../assets/linguidcard.png";
+import jackThumb from "../assets/09_people.BUrkml1d.webp";
+
+const recentSites = [
+  { img: whaleShirts, alt: "Santa Cruz Whale Watching", title: "Santa Cruz Whale Watching", link: "/work/whalewatching" },
+  { img: walksantacruzThumb, alt: "Walk Santa Cruz — Brand & Customer Experience", title: "Walk Santa Cruz — Brand & CX", link: "/work/walksantacruz" },
+  { img: wellnessThumb, alt: "Wellness Medical Center", title: "Wellness Medical Center", link: "/work/wellness" },
+  { img: coastalcard, alt: "Coastal Nature Guides", title: "Coastal Nature Guides", link: "/work/coastal" },
+  { img: linguidcard, alt: "Linguid", title: "Linguid", link: "/work/linguid" },
+  { img: jackThumb, alt: "Jack Pitts Photography", title: "Jack Pitts Photography", link: "/work/jack" },
+];
 
 const title = "Websites for Santa Cruz Businesses | Matthew O’Leary";
 const description = "A custom Santa Cruz business website, up to 5 pages, with hosting, support, and revisions included.";
@@ -254,6 +272,24 @@ const faqs = [
           </a>
           — walksantacruz.com
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT SITES -->
+  <section class={sectionY}>
+    <div class={container}>
+      <p class="text-sm font-semibold tracking-widest uppercase text-violet-800 mb-4 text-center animate-on-scroll">
+        Recent Work
+      </p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12 animate-on-scroll">
+        Recent Sites
+      </h2>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-2 justify-items-center">
+        {recentSites.map((site) => (
+          <Card img={site.img} alt={site.alt} title={site.title} link={site.link} />
+        ))}
       </div>
     </div>
   </section>
