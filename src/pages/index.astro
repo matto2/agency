@@ -22,6 +22,7 @@ import packagingThumb from "../assets/SunQueen-Glamor2.jpg";
 import westmarineLogo from "../assets/westmarine.svg";
 import caMagazineThumb from "../assets/california-magazine-placeholder.svg";
 import jackWebsite from "../assets/jack-website.webp";
+import jackThumb from "../assets/09_people.BUrkml1d.webp";
 
 // Profile photo
 import newProfilePic from "../assets/My-biopic_new-profile-pic.jpg";
@@ -35,7 +36,7 @@ import jennine from "../assets/jennine.jpg";
 
 <Base title="Matthew O’Leary — Graphic Designer & Production Manager">
   <!-- HERO SECTION -->
-  <section class="px-4 2xl:px-0 py-16 md:py-24">
+  <section class="px-4 2xl:px-0 pt-16 pb-6 md:pt-24 md:pb-8">
     <div
       class="flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-5xl mx-auto"
     >
@@ -52,18 +53,15 @@ import jennine from "../assets/jennine.jpg";
         >
           Graphic Designer & Production Manager
         </h1>
-        <p class="text-xl md:text-2xl text-stone-600 leading-relaxed mb-4">
+        <p class="text-xl md:text-2xl text-stone-600 leading-relaxed">
           Editorial, print, packaging and marketing design — from concept through press-ready production.
-        </p>
-        <p class="text-lg md:text-xl text-stone-500 leading-relaxed">
-          20+ years creating polished, on-brand work for publications, consumer brands and enterprise marketing teams.
         </p>
       </div>
     </div>
   </section>
 
   <!-- SKILLS SECTION -->
-  <section class="px-4 2xl:px-0 pt-10 pb-16 md:pt-12 md:pb-20 bg-stone-100/50">
+  <section class="px-4 2xl:px-0 pt-4 pb-16 md:pt-6 md:pb-20 bg-stone-100/50">
     <div class="max-w-6xl mx-auto">
       <p
         class="text-sm font-semibold tracking-widest uppercase text-violet-800 mb-4 text-center animate-on-scroll"
@@ -234,12 +232,13 @@ import jennine from "../assets/jennine.jpg";
       <div
         class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2"
       >
-        <Card
+        <!-- TODO: re-add "California Magazine" card once real cover/spread graphics are ready -->
+        <!-- <Card
           img={caMagazineThumb}
           alt="California Magazine — Editorial Design & Production"
           title="California Magazine — Editorial Design & Production"
           link="/work/california-magazine"
-        />
+        /> -->
         <Card
           img={books}
           alt="Book Design & Production"
@@ -307,11 +306,18 @@ import jennine from "../assets/jennine.jpg";
           link="/work/production-design"
         />
         <Card
+          img={jackThumb}
+          alt="Jack Pitts Photography"
+          title="Jack Pitts Photography"
+          link="/work/jack"
+        />
+        <!-- TODO: re-add "Websites for Small Businesses" card (links to /websites) when ready -->
+        <!-- <Card
           img={jackWebsite}
           alt="Websites for Small Businesses"
           title="Websites for Small Businesses"
           link="/websites"
-        />
+        /> -->
       </div>
     </div>
   </section>
@@ -429,7 +435,7 @@ import jennine from "../assets/jennine.jpg";
         class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-on-scroll"
       >
         <a
-          href="/MattOLeary_Resume.pdf"
+          href="/MattOLeary_Resume_GraphicDesigner_ProductionManager.pdf"
           target="_blank"
           class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-violet-800 hover:text-violet-900 transition-colors"
         >
