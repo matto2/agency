@@ -3,11 +3,9 @@ import Base from "../../layouts/Base.astro";
 import ThinnerContent from "../../components/ThinnerContent.astro";
 import Back from "../../components/Back.astro";
 import { Image } from "astro:assets";
-// TODO: swap for a real catalog spread scan
-import heroPlaceholder from "../../assets/westmarine-placeholder.svg";
+import heroImage from "../../assets/WestMarine.jpg";
 
-const title = "West Marine — Catalog Prepress";
-const tagline = "Prepress • Imposition • Color management • 800+ page catalogs";
+const title = "West Marine";
 ---
 
 <Base title={title}>
@@ -18,61 +16,41 @@ const tagline = "Prepress • Imposition • Color management • 800+ page cata
       <p class="text-sm font-semibold tracking-widest uppercase text-violet-800 mt-8 mb-2">
         Case Study
       </p>
-      <h1 class="font-heading font-bold text-4xl sm:text-5xl mb-3">{title}</h1>
-      <p class="text-lg text-stone-500 mb-6">{tagline}</p>
-
-      <!-- Meta -->
-      <dl class="mb-10 text-sm space-y-2">
-        <div class="flex gap-3">
-          <dt class="font-semibold text-stone-500 uppercase tracking-wider w-28 flex-shrink-0">Role</dt>
-          <dd class="text-stone-800">Prepress Manager, West Marine, Watsonville CA, 2002–2008</dd>
-        </div>
-      </dl>
+      <h1 class="font-heading font-bold text-4xl sm:text-5xl mb-10">{title}</h1>
 
       <!-- Hero -->
       <Image
-        src={heroPlaceholder}
-        alt="West Marine catalog prepress — placeholder"
+        src={heroImage}
+        alt="West Marine catalog prepress"
         class="w-full rounded-lg mb-10"
       />
 
       <!-- Overview -->
       <div class="max-w-3xl mb-12">
         <h2 class="font-heading font-bold text-2xl mb-4">Overview</h2>
-        <p class="text-stone-700 leading-relaxed">
-          Built and managed press-ready files for West Marine&rsquo;s national catalogs — 800+ pages
-          per edition, plus seasonal and regional versions. Owned the prepress workflow: preflight,
-          color management, trapping, imposition and plate-ready delivery, working directly with the
-          printer to keep error rates under 1% across every edition. Also produced in-store signage
-          and retail collateral for 300+ stores.
+        <p class="mb-4 text-stone-700 leading-relaxed">
+          Before I arrived, West Marine&rsquo;s 25-person creative team was sending every page of their
+          monthly mailers and 600+ page annual catalog to an outside agency, waiting days for printed
+          proofs, marking them up, and FedExing them back. It was slow, expensive, and out of their
+          hands. I was hired to bring prepress in-house and save the company millions in agency fees.
         </p>
-      </div>
-
-      <!-- Production details -->
-      <div class="max-w-3xl mb-12">
-        <h2 class="font-heading font-bold text-2xl mb-4">Production details</h2>
-        <dl class="text-sm space-y-2">
-          <div class="flex gap-3">
-            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-40 flex-shrink-0">Page count</dt>
-            <dd class="text-stone-800">TBD</dd>
-          </div>
-          <div class="flex gap-3">
-            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-40 flex-shrink-0">Editions per year</dt>
-            <dd class="text-stone-800">TBD</dd>
-          </div>
-          <div class="flex gap-3">
-            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-40 flex-shrink-0">Print run</dt>
-            <dd class="text-stone-800">TBD</dd>
-          </div>
-          <div class="flex gap-3">
-            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-40 flex-shrink-0">Printer</dt>
-            <dd class="text-stone-800">TBD</dd>
-          </div>
-          <div class="flex gap-3">
-            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-40 flex-shrink-0">Workflow</dt>
-            <dd class="text-stone-800">TBD</dd>
-          </div>
-        </dl>
+        <p class="mb-4 text-stone-700 leading-relaxed">
+          Every page started coming through me before it went to press. I&rsquo;d read it the way an
+          editor reads a manuscript, except for the things that only show up in print: type consistency,
+          kerning, widows and orphans, rich blacks, neutral grays, four-color builds on small type, image
+          resolution and distortion, overset text. Then each page went out to PDF/X and through a custom
+          Enfocus PitStop Pro preflight profile I built to catch whatever my eyes had missed. Stakeholder
+          proofing rounds that used to take a week now took a few hours, and when everything was signed
+          off I uploaded the final files through the printer&rsquo;s portal.
+        </p>
+        <p class="mb-4 text-stone-700 leading-relaxed">
+          Three or four times a year I flew to the Midwest to press check the catalog, standing on the
+          pressroom floor with the operators as the first sheets came off. Those trips built the kind of
+          relationships with printers and paper and print brokers where a phone call solved a problem
+          before it became one. Seven years in, the team had a proofing system they could trust, real
+          control over how their work looked in print, and millions of dollars that stayed in the
+          building.
+        </p>
       </div>
 
       <!-- TODO: add catalog scan gallery -->
