@@ -4,7 +4,18 @@
       "Bash(npm run build:*)",
       "Bash(perl -CSD -pi -e:*)",
       "WebFetch(domain:nero-portfolio.webflow.io)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(npx:*)",
+      "Bash(npm install:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321/sunqueen-bottle/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321/sunqueen-carton/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4322/sunqueen-bottle/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4322/sunqueen-carton/)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git -C /Users/matthewoleary/Sites/agency log --oneline -20 -- src/components/Nav.astro src/components/Footer.astro src/pages/websites.astro)",
+      "Bash(git -C /Users/matthewoleary/Sites/agency log --oneline --all -i --grep=\"banner\\\\|need a new website\\\\|eyebrow\")"
     ]
   }
 }
