@@ -3,10 +3,9 @@ import Base from "../../layouts/Base.astro";
 import ThinnerContent from "../../components/ThinnerContent.astro";
 import Back from "../../components/Back.astro";
 import { Image } from "astro:assets";
-// TODO: replace placeholder thumbnail once a real cover/spread is available
-import coverPlaceholder from "../../assets/california-magazine-placeholder.svg";
+import heroImage from "../../assets/Berkeley_glade_afternoon.jpg";
 
-const title = "California Magazine — Editorial Design & Production";
+const title = "Higher-Education Editorial & Publication Design";
 const tagline = "Editorial design • InDesign • Production management • Prepress";
 ---
 
@@ -31,8 +30,8 @@ const tagline = "Editorial design • InDesign • Production management • Pre
 
       <!-- Hero -->
       <Image
-        src={coverPlaceholder}
-        alt="California magazine — placeholder cover"
+        src={heroImage}
+        alt="UC Berkeley campus glade in afternoon light"
         class="w-full rounded-lg mb-10"
       />
 
@@ -84,6 +83,6 @@ const tagline = "Editorial design • InDesign • Production management • Pre
       <!-- TODO: add spread gallery once issue samples are available -->
 
     </section>
-    <Back next="/work/books" />
+    <Back next="/work/livepricecheck" />
   </ThinnerContent>
 </Base>
