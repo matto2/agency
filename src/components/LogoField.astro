@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
+import cal from "../icons/cal.svg";
 import costco from "../assets/costco.svg";
 import swinerton from "../assets/swinerton.svg";
 import ta from "../assets/ta.png";
@@ -28,7 +29,7 @@ import currys from "../assets/currys.svg";
   <Icon name="fastpencil" alt="Fast Pencil Logo" />
   <Icon name="cisco" alt="Cisco Logo" />
   <Icon name="martinellis" alt="Martinellis Logo" />
-  <Icon name="khakis" alt="Khakis Logo" />
+  <Image src={cal} alt="Cal Alumni Association Logo" width={90} />
   <Icon name="calgiant" alt="Cal Giant Logo" />
   <Image src={ta} alt="Tanimura & Antle Logo" width={200} class="w-20" />
   <Image src={oneill} alt="Oneill Logo" width={100} />
@@ -66,9 +67,6 @@ import currys from "../assets/currys.svg";
     font-size: 2rem;
   }
 
-  [data-icon="khakis"] {
-    font-size: 1.7rem;
-  }
 
   [data-icon="calgiant"] {
     font-size: 2.5rem;

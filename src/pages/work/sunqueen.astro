@@ -21,6 +21,13 @@ const title = "Packaging Production";
       </p>
       <h1 class="font-heading font-bold text-4xl sm:text-5xl mb-6">{title}</h1>
 
+      <!-- Hero -->
+      <Image
+        src={glamorHero}
+        alt="SunQueen mineral sunscreen packaging — glamour shot"
+        class="w-full rounded-lg mb-10"
+      />
+
       <!-- Meta -->
       <dl class="mb-10 text-sm space-y-2">
         <div class="flex gap-3">
@@ -44,13 +51,6 @@ const title = "Packaging Production";
           <dd class="text-stone-800">March 2026</dd>
         </div>
       </dl>
-
-      <!-- Hero -->
-      <Image
-        src={glamorHero}
-        alt="SunQueen mineral sunscreen packaging — glamour shot"
-        class="w-full rounded-lg mb-10"
-      />
 
       <!-- Overview -->
       <div class="max-w-3xl mb-12">
@@ -197,8 +197,23 @@ const title = "Packaging Production";
         </p>
       </div>
 
+      <!-- Client Love -->
+      <div class="max-w-3xl mb-12">
+        <h2 class="font-heading font-bold text-2xl mb-4">Client Love</h2>
+        <blockquote class="p-6 rounded-md bg-gray-200">
+          <p class="text-lg text-violet-800 mb-3">&ldquo;We love the carton!&rdquo;</p>
+          <footer class="text-sm text-stone-600">
+            &mdash; Owner, SunQueen Sunscreen (<a href="https://www.instagram.com/sunqueen_spf/" target="_blank" rel="noopener" class="underline hover:text-violet-800">@sunqueen_spf</a> on Instagram)
+          </footer>
+        </blockquote>
+        <p class="text-stone-700 leading-relaxed mt-4">
+          She liked it enough to feature it on her own feed — which, for a packaging designer, might
+          be the best review there is.
+        </p>
+      </div>
+
     </section>
-    <Back next="/work/westmarine" />
+    <Back next="/work/books" />
   </ThinnerContent>
 </Base>
 

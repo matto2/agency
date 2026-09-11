@@ -5,84 +5,52 @@ import Back from "../../components/Back.astro";
 import { Image } from "astro:assets";
 import heroImage from "../../assets/Berkeley_glade_afternoon.jpg";
 
-const title = "Higher-Education Editorial & Publication Design";
-const tagline = "Editorial design • InDesign • Production management • Prepress";
+const title = "Higher-Education Publications";
 ---
 
 <Base title={title}>
   <ThinnerContent>
     <section class="mb-16">
 
-      <!-- Header -->
-      <p class="text-sm font-semibold tracking-widest uppercase text-violet-800 mt-8 mb-2">
-        Case Study
-      </p>
-      <h1 class="font-heading font-bold text-4xl sm:text-5xl mb-3">{title}</h1>
-      <p class="text-lg text-stone-500 mb-6">{tagline}</p>
+      <h1 class="font-heading font-bold text-4xl sm:text-5xl mt-8 mb-6">{title}</h1>
 
-      <!-- Meta -->
-      <dl class="mb-10 text-sm space-y-2">
-        <div class="flex gap-3">
-          <dt class="font-semibold text-stone-500 uppercase tracking-wider w-28 flex-shrink-0">Role</dt>
-          <dd class="text-stone-800">Graphic Designer &amp; Production Manager (contract), Cal Alumni Association, 2026–present</dd>
-        </div>
-      </dl>
-
-      <!-- Hero -->
       <Image
         src={heroImage}
         alt="UC Berkeley campus glade in afternoon light"
         class="w-full rounded-lg mb-10"
       />
 
-      <!-- Overview -->
       <div class="max-w-3xl mb-12">
-        <h2 class="font-heading font-bold text-2xl mb-4">Overview</h2>
+        <p class="text-stone-700 leading-relaxed mb-6">
+          I help universities, alumni organizations, and institutions create
+          thoughtful, beautifully designed publications&mdash;from alumni and
+          research magazines to annual reports, books, and special
+          publications.
+        </p>
+        <p class="text-stone-700 leading-relaxed mb-6">
+          Most recently, I completed the Fall 2026 issue of California
+          magazine for the Cal Alumni Association, managing the design and
+          production process from editorial layouts and image placement
+          through revisions, prepress, final proofs, and press-ready
+          delivery. I also worked directly with the print vendor to help
+          ensure the issue was produced accurately and on schedule.
+        </p>
+        <p class="text-stone-700 leading-relaxed mb-6">
+          That experience builds on more than 20 years in editorial design,
+          publishing, and print production. I bring both a designer&rsquo;s
+          eye and a production manager&rsquo;s understanding of what it takes
+          to move a complex publication from content and assets to a
+          finished piece.
+        </p>
         <p class="text-stone-700 leading-relaxed">
-          California is the Cal Alumni Association&rsquo;s quarterly magazine. I design and produce
-          each issue: building the InDesign layout, placing and refining imagery, and keeping visual
-          consistency across editorial pages, ads and inserts. On the production side I manage the
-          relationship with the printer (Quad) end to end — preflighting ad materials, delivering
-          press-ready files, running proof and approval cycles with the Creative Director and
-          editorial team, and signing off final proofs — then produce the web and promotional assets
-          after print.
+          Whether you need support for a single issue or an ongoing
+          publication partner, I can step into your existing workflow and
+          help get every issue across the finish line&mdash;beautifully,
+          accurately, and on schedule.
         </p>
       </div>
 
-      <!-- Production details -->
-      <div class="max-w-3xl mb-12">
-        <h2 class="font-heading font-bold text-2xl mb-4">Production details</h2>
-        <dl class="text-sm space-y-2">
-          <div class="flex gap-3">
-            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-32 flex-shrink-0">Trim size</dt>
-            <dd class="text-stone-800">TBD</dd>
-          </div>
-          <div class="flex gap-3">
-            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-32 flex-shrink-0">Page count</dt>
-            <dd class="text-stone-800">TBD</dd>
-          </div>
-          <div class="flex gap-3">
-            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-32 flex-shrink-0">Print run</dt>
-            <dd class="text-stone-800">TBD</dd>
-          </div>
-          <div class="flex gap-3">
-            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-32 flex-shrink-0">Paper</dt>
-            <dd class="text-stone-800">TBD</dd>
-          </div>
-          <div class="flex gap-3">
-            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-32 flex-shrink-0">Printer</dt>
-            <dd class="text-stone-800">TBD</dd>
-          </div>
-          <div class="flex gap-3">
-            <dt class="font-semibold text-stone-500 uppercase tracking-wider w-32 flex-shrink-0">Schedule</dt>
-            <dd class="text-stone-800">TBD</dd>
-          </div>
-        </dl>
-      </div>
-
-      <!-- TODO: add spread gallery once issue samples are available -->
-
     </section>
-    <Back next="/work/livepricecheck" />
+    <Back next="/work/sunqueen" />
   </ThinnerContent>
 </Base>
