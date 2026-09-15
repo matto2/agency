@@ -11,7 +11,6 @@ import conversations from "../../assets/conversations.jpg";
 import gullibills from "../../assets/gullibills.jpg";
 import homework from "../../assets/homework.jpg";
 import kills from "../../assets/kills.jpg";
-import prego from "../../assets/prego.jpg";
 import shakespeare from "../../assets/shakespeare.jpg";
 import till from "../../assets/till.jpg";
 import together from "../../assets/together.jpg";
@@ -31,7 +30,6 @@ const books = [
   { src: healer, alt: "Healer" },
   { src: travel, alt: "Travel to Tomorrow" },
   { src: third, alt: "Third Times a Charm" },
-  { src: prego, alt: "Prego" },
   { src: kills, alt: "Kills" },
 ];
 ---
@@ -39,6 +37,21 @@ const books = [
 <Base title={title}>
   <ThinnerContent>
     <h1 class="font-heading font-bold text-4xl sm:text-5xl my-8">{title}</h1>
+
+    <div id="gallery" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-8">
+      {books.map((book) => (
+        <a
+          href={book.src.src}
+          data-pswp-width={book.src.width}
+          data-pswp-height={book.src.height}
+          target="_blank"
+          class="block cursor-zoom-in transition-transform duration-300 hover:scale-105"
+        >
+          <Image src={book.src} alt={book.alt} class="w-full rounded-lg shadow-md" />
+        </a>
+      ))}
+    </div>
+
     <p class="mb-4 max-w-4xl">
       While at FastPencil — a self-publishing platform — I worked with authors
       across the full book production pipeline: cover design, interior
@@ -51,7 +64,7 @@ const books = [
     <p class="mb-4 max-w-4xl">
       <strong>I work in three modes depending on where your project is:</strong>
     </p>
-    <ul class="mb-4 max-w-4xl list-disc list-inside space-y-2 text-stone-700">
+    <ul class="mb-4 max-w-4xl list-disc list-outside pl-5 space-y-2 text-stone-700">
       <li>
         <strong>Design from scratch</strong> — full cover concept and interior
         layout built in InDesign from the ground up, starting from your
@@ -92,20 +105,6 @@ const books = [
         >Reach out</a
       > to chat about your next book project.
     </p>
-
-    <div id="gallery" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-      {books.map((book) => (
-        <a
-          href={book.src.src}
-          data-pswp-width={book.src.width}
-          data-pswp-height={book.src.height}
-          target="_blank"
-          class="block cursor-zoom-in transition-transform duration-300 hover:scale-105"
-        >
-          <Image src={book.src} alt={book.alt} class="w-full rounded-lg shadow-md" />
-        </a>
-      ))}
-    </div>
   </ThinnerContent>
   <Back next="/work/production-design" />
 </Base>
