@@ -5,8 +5,10 @@ import Back from "../../components/Back.astro";
 import { Image } from "astro:assets";
 import glamorHero from "../../assets/SunQueen-Glamor2.jpg";
 import bottleFlat from "../../assets/SunQueen_Bottle_v5_OL.jpg";
-import primaryCarton from "../../assets/Sunqueen_Carton_v5b_OL.jpg";
+import primaryCarton from "../../assets/bigBox.png";
 import masterCarton from "../../assets/Sunqueen_master carton-200mL_v2_OL-NEW.jpg";
+import bottleSketch from "../../assets/Sunqueen_mock-up2.jpg";
+import cartonSketch from "../../assets/Sunqueen_mockup2-1.jpg";
 
 const title = "Packaging Production";
 ---
@@ -46,11 +48,33 @@ const title = "Packaging Production";
       <div class="max-w-3xl mb-12">
         <h2 class="font-heading font-bold text-2xl mb-4">Challenge</h2>
         <p class="mb-4 text-stone-700 leading-relaxed">
-          The brief arrived with minimal source material: a standalone logo, rough hand-sketched
-          layout concepts, and Word documents containing product copy and regulatory information.
-          There were no finished comps, no established type system, and no production templates
-          to work from.
+          The brief arrived with minimal source material: a low-resolution, non-vector logo file,
+          a Word document containing the FDA drug facts panel copy, and dielines supplied by the
+          printer. The only layout direction was a pair of the client's own hand-drawn sketches —
+          one for the bottle, one for the carton — marking out logo placement, callouts, and panel
+          copy in marker on notebook paper. There were no finished comps, no established type
+          system, and no production-ready artwork to work from.
         </p>
+
+        <div class="grid sm:grid-cols-2 gap-6 mb-6">
+          <div>
+            <Image
+              src={bottleSketch}
+              alt="Client's original hand-drawn sketch for the bottle label"
+              class="w-full rounded-lg border border-stone-200"
+            />
+            <p class="text-xs text-stone-500 mt-2">Starting sketch — bottle label</p>
+          </div>
+          <div>
+            <Image
+              src={cartonSketch}
+              alt="Client's original hand-drawn sketch for the carton dieline layout"
+              class="w-full rounded-lg border border-stone-200"
+            />
+            <p class="text-xs text-stone-500 mt-2">Starting sketch — carton layout</p>
+          </div>
+        </div>
+
         <p class="text-stone-700 leading-relaxed">
           All label copy — ingredient lists, usage instructions, warnings, and net weight — had to
           meet FDA labeling requirements for cosmetic products. That meant accurate panel sizing,
@@ -68,7 +92,7 @@ const title = "Packaging Production";
             <Image src={masterCarton} alt="Outer / Master Carton flat artwork" class="w-full rounded-lg" />
             <p class="font-semibold text-sm text-stone-700 mt-3">Outer / Master Carton</p>
             <p class="text-xs text-stone-500 mt-1">
-              Shipping-spec carton for the 200 mL SKU. Full dieline development,
+              Shipping-spec carton for the 200 mL SKU. Printer dieline adaptation,
               brand graphics, and information panels set to manufacturer spec.
             </p>
           </div>
@@ -95,11 +119,12 @@ const title = "Packaging Production";
       <div class="max-w-3xl mb-12">
         <h2 class="font-heading font-bold text-2xl mb-4">Process</h2>
         <p class="mb-4 text-stone-700 leading-relaxed">
-          Starting from the supplied logo and rough layout sketches, I built the typographic system,
-          established the color palette, and developed dieline templates for all three components.
-          Regulatory copy from the client's Word documents was typeset with production precision —
-          correct point sizes for principal display panel requirements, accurate net content
-          statements, and correctly ordered ingredient lists.
+          Starting from the lo-res logo file and the client's two hand-drawn sketches, I rebuilt the
+          logo as clean vector art, built out the typographic system, established the color palette,
+          and adapted the printer's dielines for all three components. Regulatory copy from the
+          client's Word document was typeset with production precision — correct point sizes for
+          principal display panel requirements, accurate net content statements, and correctly
+          ordered ingredient lists.
         </p>
         <p class="mb-4 text-stone-700 leading-relaxed">
           Each piece went through three focused revision rounds. Feedback was incorporated cleanly
@@ -183,6 +208,19 @@ const title = "Packaging Production";
           She liked it enough to feature it on her own feed — which, for a packaging designer, might
           be the best review there is.
         </p>
+      </div>
+
+      <!-- Instagram Video -->
+      <div class="max-w-xl mx-auto mb-12">
+        <blockquote
+          class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/p/Dcs-eDwxrV2/"
+          data-instgrm-version="14"
+          style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:100%;"
+        >
+          <a href="https://www.instagram.com/p/Dcs-eDwxrV2/" target="_blank" rel="noopener"></a>
+        </blockquote>
+        <script async src="//www.instagram.com/embed.js"></script>
       </div>
 
     </section>
