@@ -3,7 +3,11 @@ import Base from "../../layouts/Base.astro";
 import ThinnerContent from "../../components/ThinnerContent.astro";
 import Back from "../../components/Back.astro";
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 import heroImage from "../../assets/Berkeley_glade_afternoon.jpg";
+import coverImage from "../../assets/california-mag-fall2026-cover.jpg";
+
+const pdfHref = "/California-Mag-Fall2026_lo.pdf";
 
 const title = "Higher-Education Publications";
 ---
@@ -27,13 +31,33 @@ const title = "Higher-Education Publications";
           research magazines, annual reports, books, and special editions.
         </p>
         <p class="text-stone-700 leading-relaxed mb-6">
-          Most recently, I managed the Fall 2026 issue of California
-          magazine for the Cal Alumni Association: editorial layouts, image
-          placement, revisions, prepress, and final press-ready delivery. I
+          Most recently, I managed the Fall 2026 issue of <em>California</em> magazine for the Cal Alumni Association&mdash;laying out many of the
+          non-feature spreads and handling image placement, revisions,
+          prepress, and final press-ready delivery. I
           served as the main point of contact with the print vendor,
           ensuring the issue moved through production accurately and on
           deadline.
         </p>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-6 mb-8">
+          <a href={pdfHref} target="_blank" class="block w-40 shrink-0">
+            <Image
+              src={coverImage}
+              alt="Cover of the Fall 2026 issue of California magazine"
+              width={320}
+              class="w-full rounded shadow-md hover:shadow-lg transition-shadow"
+            />
+          </a>
+          <div>
+            <a
+              href={pdfHref}
+              target="_blank"
+              class="inline-flex items-center font-semibold text-violet-800 hover:text-violet-900 transition-colors"
+            >
+              <Icon name="pdf" class="w-5 h-5 mr-2" />
+              <span><em>California</em> magazine, Fall 2026 (PDF)</span>
+            </a>
+          </div>
+        </div>
         <p class="text-stone-700 leading-relaxed mb-6">
           That&rsquo;s built on 20+ years in editorial design and print
           production&mdash;prepress, color separations, imposition, and
