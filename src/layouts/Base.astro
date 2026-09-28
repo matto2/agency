@@ -1,5 +1,6 @@
 ---
 const { title } = Astro.props;
+const fullTitle = title.includes("O’Leary") ? title : `${title} — Matthew O’Leary`;
 import "../styles/main.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
@@ -23,11 +24,11 @@ import { SEO } from "astro-seo";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <SEO
-      title="Matthew O&rsquo;Leary — Graphic Designer & Production Manager"
-      description="Graphic designer and production manager with 20+ years in magazine publishing, CPG packaging and enterprise marketing — editorial layout, prepress and print production from concept through press."
+      title={fullTitle}
+      description="Design production lead with 20+ years in magazine publishing, CPG packaging and enterprise marketing. I run production end to end, from file standards and preflight to printer relationships and press, and build the files myself."
       openGraph={{
         basic: {
-          title: "Matthew O&rsquo;Leary — Graphic Designer & Production Manager",
+          title: "Matthew O’Leary — Design Production Lead",
           type: "website",
           image: "https://mattoleary.design/images/og-image.jpg",
         },
@@ -38,7 +39,7 @@ import { SEO } from "astro-seo";
           {
             name: "description",
             content:
-              "Graphic designer and production manager with 20+ years in magazine publishing, CPG packaging and enterprise marketing — editorial layout, prepress and print production from concept through press.",
+              "Design production lead with 20+ years in magazine publishing, CPG packaging and enterprise marketing. I run production end to end, from file standards and preflight to printer relationships and press, and build the files myself.",
           },
           {
             name: "og:image",
@@ -46,12 +47,12 @@ import { SEO } from "astro-seo";
           },
           {
             name: "og:title",
-            content: "Matthew O&rsquo;Leary — Graphic Designer & Production Manager",
+            content: "Matthew O’Leary — Design Production Lead",
           },
           {
             name: "og:description",
             content:
-              "Graphic designer and production manager with 20+ years in magazine publishing, CPG packaging and enterprise marketing — editorial layout, prepress and print production from concept through press.",
+              "Design production lead with 20+ years in magazine publishing, CPG packaging and enterprise marketing. I run production end to end, from file standards and preflight to printer relationships and press, and build the files myself.",
           },
         ],
       }}
@@ -62,7 +63,6 @@ import { SEO } from "astro-seo";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    <title>{title}</title>
     <ClientRouter />
   </head>
   <body>
