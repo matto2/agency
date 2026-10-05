@@ -118,7 +118,7 @@ const brands = [
   <!-- TITLE BAND -->
   <section class="on-dark bg-band text-on-band mx-2">
     <div
-      class="max-w-container mx-auto px-gutter py-10 md:py-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+      class="max-w-container mx-auto px-gutter py-6 md:py-12 flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-6"
     >
       <h1 class="m-0 font-medium leading-tight text-on-band">
         <span class="block text-h1">Print Production Lead</span>
@@ -367,14 +367,16 @@ const brands = [
 </Base>
 
 <style>
+  /* Phone: leave room for the header and title band (~26rem) so the headline stays above the fold */
   .lead-photo {
-    height: clamp(520px, 58vw, 860px);
+    height: clamp(200px, calc(100svh - 26rem), 520px);
     object-position: 60% center;
   }
 
-  /* Desktop: leave room for the header and title band (~27rem) so the headline stays above the fold */
+  /* Desktop: same idea with the taller desktop header and band (~27rem) */
   @media (min-width: 768px) {
     .lead-photo {
+      height: clamp(520px, 58vw, 860px);
       max-height: max(280px, calc(100svh - 27rem));
     }
   }
