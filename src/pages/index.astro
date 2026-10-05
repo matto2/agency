@@ -1,10 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
-import Button from "../components/Button.astro";
-import Card from "../components/Card.astro";
 import { Image } from "astro:assets";
-import Testimonial from "../components/Testimonial.astro";
-import LogoField from "../components/LogoField.astro";
 import { Icon } from "astro-icon/components";
 
 // Project images
@@ -15,6 +11,7 @@ import martinellisThumb from "../assets/martinellis-fruitvirtues_377.jpg";
 import packagingThumb from "../assets/SunQueen-Glamor2.jpg";
 import westmarineThumb from "../assets/WestMarine.jpg";
 import higherEdThumb from "../assets/Berkeley_glade_afternoon.jpg";
+import heroImage from "../assets/hero-new.jpg";
 import jackWebsite from "../assets/jack-website.webp";
 import jackThumb from "../assets/09_people.BUrkml1d.webp";
 
@@ -26,203 +23,157 @@ import abishek from "../assets/abishek.png";
 import diana from "../assets/diana.jpg";
 import bruce from "../assets/bruce.jpg";
 import jennine from "../assets/jennine.jpg";
+
+const capabilities = [
+  {
+    title: "Production Management & Systems",
+    text: "End-to-end ownership of publications and print programs: schedules and page flow managed in Jira and Trello, file intake, and printer coordination. Templates and InDesign automation\u2014JavaScript/ExtendScript scripting, GREP styles, find/change, and Data Merge.",
+  },
+  {
+    title: "Editorial & Publication Production",
+    text: "Magazine and publication layouts, complex page composition, typography, parent-page systems, page mapping, image placement, proof corrections, and press-ready editorial files for alumni magazines, books, annual reports, and special editions.",
+  },
+  {
+    title: "Packaging, Labels & Collateral",
+    text: "Packaging mechanicals, rigid and flexible dielines, product labels, kitting and retail collateral, POS displays, signage and trade-show graphics, color separations, regulated copy placement, and multi-SKU rollouts.",
+  },
+  {
+    title: "Print Production & Prepress",
+    text: "InDesign and Illustrator production files, PDF/X preflight, file proofing, CMYK and spot-color management, naming and delivery standards, press checks, and quality control across offset, digital, and large-format printing.",
+  },
+];
+
+const featuredWork = [
+  { img: juice, alt: "The Juice Magazine", title: "The Juice Magazine", link: "/work/juice" },
+  { img: higherEdThumb, alt: "Higher-Education Publications", title: "Higher-Education Publications", link: "/work/california-magazine", position: "center top" },
+];
+
+const moreWork = [
+  { img: packagingThumb, alt: "Packaging Production — SunQueen", title: "Packaging Production", link: "/work/sunqueen" },
+  { img: westmarineThumb, alt: "West Marine", title: "West Marine", link: "/work/westmarine" },
+  { img: books, alt: "Book Design & Production", title: "Book Design & Production", link: "/work/books" },
+  { img: martinellisThumb, alt: "Production Design", title: "Production Design", link: "/work/production-design" },
+  { img: lpc, alt: "Live Price Check", title: "Live Price Check", link: "/work/livepricecheck" },
+  { img: jackThumb, alt: "Jack Pitts Photography", title: "Jack Pitts Photography", link: "/work/jack" },
+  // TODO: re-add "Websites for Small Businesses" (jackWebsite, links to /websites) when ready
+];
+
+const testimonials = [
+  {
+    quote: "I worked with Matt on a variety of packaging and communication material design and production projects. Matt is very knowledgeable as well as personable, guiding the process to ensure expected creative outcomes.",
+    img: diana,
+    alt: "Diana McClean",
+    person: "Diana (DeVincenzi) McClean",
+    title: "Director of Marketing and Communications",
+    company: "Mission Produce",
+  },
+  {
+    quote: "I find it refreshing to work with someone who knows how to tackle big projects while staying calm, focused and creative all while delivering outstanding work.",
+    img: jennine,
+    alt: "Jennine Dureau",
+    person: "Jennine Dureau",
+    title: "Marketing Manager",
+    company: "TurboTax",
+  },
+  {
+    quote: "Matt is a very creative individual. His knowledge of design as well as production techniques and crafts is invaluable and enables him to participate from start to finish on every project. From book covers to website and page design, Matt\u2019s creative sense is remarkable and invaluable.",
+    img: bruce,
+    alt: "Bruce Butterfield",
+    person: "Bruce Butterfield",
+    title: "CEO and Founder",
+    company: "The Wittfield Group",
+  },
+  {
+    quote: "Matt is an incredible designer who works hard to identify/solve for customers\u2019 pain points. His designs for critical and heavily used functionality were well received and had a lasting impact on the product adoption.",
+    img: abishek,
+    alt: "Abishek Aurora",
+    person: "Abishek Aurora",
+    title: "Director of Product",
+    company: "Credit Karma",
+  },
+];
+
+// Same brands, same order as the former logo grid
+const brands = [
+  "Axway", "Kiteworks", "West Marine", "Costco", "Wiser", "FastPencil",
+  "Cisco", "Martinelli\u2019s", "Cal Alumni Association", "Cal Giant",
+  "Tanimura & Antle", "O\u2019Neill", "Big Surf", "Stagnaro", "Annie Glass",
+  "Syncplicity",
+];
 ---
 
-<Base title="Matthew O’Leary — Print Production Lead">
-  <!-- HERO SECTION -->
-  <section class="px-4 2xl:px-0 pt-16 pb-6 md:pt-24 md:pb-8">
+<Base title="Matthew O’Leary — Print Production Lead" fullBleed>
+  <!-- LEAD PHOTO -->
+  <div class="mx-2">
+    <Image
+      src={heroImage}
+      alt="Rocky coastline and beach under a blue sky"
+      widths={[800, 1400, 2000, 2800]}
+      sizes="100vw"
+      loading="eager"
+      class="lead-photo block w-full object-cover"
+    />
+  </div>
+
+  <!-- TITLE BAND -->
+  <section class="on-dark bg-band text-on-band mx-2">
     <div
-      class="flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-5xl mx-auto"
+      class="max-w-container mx-auto px-gutter py-10 md:py-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
     >
-      <div class="w-48 md:w-64 flex-shrink-0 animate-on-scroll">
-        <Image
-          src={newProfilePic}
-          alt="Matthew O’Leary"
-          class="rounded-full ring-4 ring-white shadow-xl"
-        />
-      </div>
-      <div class="text-center md:text-left animate-on-scroll">
-        <h1
-          class="font-heading font-bold mb-6 gradient-text"
-        >
-          <span class="block text-4xl md:text-5xl xl:text-6xl">
-            Print Production Lead
-          </span>
-          <span class="block text-2xl md:text-3xl xl:text-4xl mt-2">
-            Publications, Packaging &amp; Prepress
-          </span>
-        </h1>
-        <p class="text-xl md:text-2xl text-stone-600 leading-relaxed">
-          I run print production from approved creative to finished press,
-          handling schedules, file standards, preflight, proofing, color,
-          and printer relationships. As a hands-on designer, I build and fix
-          the files myself, and I help teams standardize their workflows so
-          production scales without losing quality.
-        </p>
-      </div>
+      <h1 class="m-0 font-medium leading-tight text-on-band">
+        <span class="block text-h1">Print Production Lead</span>
+        <span class="block text-intro mt-2">
+          Publications, Packaging &amp; Prepress
+        </span>
+      </h1>
+      <a href="/contact" class="btn-outline-light self-start md:self-auto shrink-0">Contact</a>
     </div>
   </section>
 
+  <!-- INTRO -->
+  <section class="px-4 py-section">
+    <p
+      class="max-w-[900px] mx-auto text-center text-intro leading-body text-ink m-0 animate-on-scroll"
+    >
+      I run print production from approved creative to finished press,
+      handling schedules, file standards, preflight, proofing, color,
+      and printer relationships. As a hands-on designer, I build and fix
+      the files myself, and I help teams standardize their workflows so
+      production scales without losing quality.
+    </p>
+  </section>
+
   <!-- SKILLS SECTION -->
-  <section class="px-4 2xl:px-0 pt-4 pb-16 md:pt-6 md:pb-20 bg-stone-100/50">
-    <div class="max-w-6xl mx-auto">
-      <p
-        class="text-sm font-semibold tracking-widest uppercase text-violet-800 mb-4 text-center animate-on-scroll"
-      >
-        Areas of Expertise
-      </p>
-      <h2
-        class="font-heading text-3xl md:text-4xl font-bold text-center mb-12 animate-on-scroll"
-      >
-        Core Capabilities
-      </h2>
+  <section class="on-dark bg-band text-on-band px-4 py-section">
+    <div class="max-w-container mx-auto px-0 md:px-gutter">
+      <div class="section-head animate-on-scroll">
+        <h2>Core Capabilities</h2>
+        <p>Areas of Expertise</p>
+      </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div
-          class="bg-white/80 backdrop-blur-sm border border-white/50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow animate-on-scroll"
-        >
-          <div
-            class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-4"
-          >
-            <svg
-              class="w-6 h-6 text-violet-800"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-              ></path>
-            </svg>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16">
+        {capabilities.map((item) => (
+          <div class="spec-item py-8 animate-on-scroll">
+            <h3 class="m-0 mb-3 text-label-lg font-semibold uppercase tracking-caps text-on-band leading-normal">
+              <span class="text-highlight mr-2" aria-hidden="true">&raquo;</span>{item.title}
+            </h3>
+            <p class="m-0 text-body leading-body text-on-band">{item.text}</p>
           </div>
-          <h3 class="font-heading font-semibold text-xl mb-2">
-            Production Management & Systems
-          </h3>
-          <p class="text-stone-600">
-            End-to-end ownership of publications and print programs:
-            schedules and page flow managed in Jira and Trello, file
-            intake, and printer coordination. Templates and
-            InDesign automation&mdash;JavaScript/ExtendScript scripting, GREP
-            styles, find/change, and Data Merge.
-          </p>
-        </div>
-
-        <div
-          class="bg-white/80 backdrop-blur-sm border border-white/50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow animate-on-scroll"
-        >
-          <div
-            class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-4"
-          >
-            <svg
-              class="w-6 h-6 text-violet-800"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-              ></path>
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold text-xl mb-2">
-            Editorial & Publication Production
-          </h3>
-          <p class="text-stone-600">
-            Magazine and publication layouts, complex page composition,
-            typography, parent-page systems, page mapping, image placement,
-            proof corrections, and press-ready editorial files for alumni
-            magazines, books, annual reports, and special editions.
-          </p>
-        </div>
-
-        <div
-          class="bg-white/80 backdrop-blur-sm border border-white/50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow animate-on-scroll"
-        >
-          <div
-            class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-4"
-          >
-            <svg
-              class="w-6 h-6 text-violet-800"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              ></path>
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold text-xl mb-2">
-            Packaging, Labels & Collateral
-          </h3>
-          <p class="text-stone-600">
-            Packaging mechanicals, rigid and flexible dielines, product
-            labels, kitting and retail collateral, POS displays, signage and
-            trade-show graphics, color separations, regulated copy placement,
-            and multi-SKU rollouts.
-          </p>
-        </div>
-
-        <div
-          class="bg-white/80 backdrop-blur-sm border border-white/50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow animate-on-scroll"
-        >
-          <div
-            class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mb-4"
-          >
-            <svg
-              class="w-6 h-6 text-violet-800"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-              ></path>
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold text-xl mb-2">
-            Print Production & Prepress
-          </h3>
-          <p class="text-stone-600">
-            InDesign and Illustrator production files, PDF/X preflight, file
-            proofing, CMYK and spot-color management, naming and delivery
-            standards, press checks, and quality control across offset,
-            digital, and large-format printing.
-          </p>
-        </div>
-
+        ))}
       </div>
     </div>
   </section>
 
   <!-- WORK GRID SECTION -->
-  <section class="px-4 2xl:px-0 py-16 md:py-20">
-    <div class="max-w-7xl mx-auto">
-      <p
-        class="text-sm font-semibold tracking-widest uppercase text-violet-800 mb-4 text-center animate-on-scroll"
-      >
-        Portfolio
-      </p>
-      <h2
-        class="font-heading text-3xl md:text-4xl font-bold text-center mb-12 animate-on-scroll"
-      >
-        Selected Work
-      </h2>
+  <section class="px-4 py-section">
+    <div class="max-w-wide mx-auto md:px-gutter">
+      <div class="section-head animate-on-scroll">
+        <h2>Selected Work</h2>
+        <p>Portfolio</p>
+      </div>
 
       <p
-        class="text-stone-500 text-center max-w-2xl mx-auto mb-12 animate-on-scroll"
+        class="text-muted text-body text-center max-w-2xl mx-auto mb-14 animate-on-scroll"
       >
         Projects spanning production management, editorial and packaging
         production, prepress, proofing, and final vendor delivery. Some
@@ -230,225 +181,216 @@ import jennine from "../assets/jennine.jpg";
         confidentiality.
       </p>
 
-      <div
-        class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2"
-      >
-        <Card
-          img={higherEdThumb}
-          alt="Higher-Education Publications"
-          title="Higher-Education Publications"
-          link="/work/california-magazine"
-        />
-        <Card
-          img={packagingThumb}
-          alt="Packaging Production — SunQueen"
-          title="Packaging Production"
-          link="/work/sunqueen"
-        />
-        <Card
-          img={westmarineThumb}
-          alt="West Marine"
-          title="West Marine"
-          link="/work/westmarine"
-        />
-        <Card
-          img={juice}
-          alt="The Juice Magazine"
-          title="The Juice Magazine"
-          link="/work/juice"
-        />
-        <Card
-          img={books}
-          alt="Book Design & Production"
-          title="Book Design & Production"
-          link="/work/books"
-        />
-        <Card
-          img={martinellisThumb}
-          alt="Production Design"
-          title="Production Design"
-          link="/work/production-design"
-        />
-        <Card
-          img={lpc}
-          alt="Live Price Check"
-          title="Live Price Check"
-          link="/work/livepricecheck"
-        />
-        <Card
-          img={jackThumb}
-          alt="Jack Pitts Photography"
-          title="Jack Pitts Photography"
-          link="/work/jack"
-        />
-        <!-- TODO: re-add "Websites for Small Businesses" card (links to /websites) when ready -->
-        <!-- <Card
-          img={jackWebsite}
-          alt="Websites for Small Businesses"
-          title="Websites for Small Businesses"
-          link="/websites"
-        /> -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12 mb-12">
+        {featuredWork.map((w) => (
+          <a href={w.link} class="work-tile group block animate-on-scroll">
+            <Image
+              src={w.img}
+              alt={w.alt}
+              widths={[600, 900, 1300]}
+              sizes="(min-width: 640px) 50vw, 100vw"
+              class="block w-full aspect-[4/3] object-cover"
+              style={w.position ? `object-position: ${w.position}` : undefined}
+            />
+            <span class="block mt-4 text-center text-card-title font-medium text-ink group-hover:text-link-hover transition-colors">
+              {w.title}
+            </span>
+          </a>
+        ))}
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+        {moreWork.map((w) => (
+          <a href={w.link} class="work-tile group block animate-on-scroll">
+            <Image
+              src={w.img}
+              alt={w.alt}
+              widths={[500, 800]}
+              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              class="block w-full aspect-square object-cover"
+            />
+            <span class="block mt-4 text-center text-card-title font-medium text-ink group-hover:text-link-hover transition-colors">
+              {w.title}
+            </span>
+          </a>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- BIO SECTION -->
-  <section class="px-4 2xl:px-0 py-16 md:py-20 bg-stone-100/50">
-    <div class="max-w-4xl mx-auto">
-      <p
-        class="text-sm font-semibold tracking-widest uppercase text-violet-800 mb-4 text-center animate-on-scroll"
-      >
-        About
-      </p>
-      <h2
-        class="font-heading text-3xl md:text-4xl font-bold text-center mb-8 animate-on-scroll"
-      >
-        Background & Experience
-      </h2>
-
-      <div class="prose prose-lg max-w-none text-stone-600 animate-on-scroll">
-        <p class="mb-6">
-          I&rsquo;m a print production lead with more than 20 years in
-          magazine publishing, packaging, books, retail catalogs, and
-          branded collateral. Most recently I served as Designer &amp;
-          Production Manager for <em>California</em> magazine (Cal Alumni
-          Association), running the issue from layout and ad preflight
-          through the printer relationship with Quad and post-press file
-          delivery.
-        </p>
-        <p class="mb-6">
-          I&rsquo;ve run press checks, managed printer and packaging-vendor
-          relationships, coordinated designers, editors, and freelancers
-          against hard deadlines using agile workflows, and built the
-          templates and standards that keep multi-person production
-          consistent. I&rsquo;m especially interested in helping teams
-          standardize production workflows, including InDesign scripting
-          and AI-assisted tools (Adobe Firefly, Generative Fill), without
-          taking creative freedom away from the artists.
-        </p>
-        <p class="mb-6">
-          I stay hands-on. I&rsquo;m the person who can own the schedule and
-          the vendor call, and also open the file and fix it. That
-          combination is what I bring to every project.
-        </p>
+  <section class="px-4 pb-section">
+    <div class="max-w-[900px] mx-auto">
+      <div class="section-head animate-on-scroll">
+        <h2>Background &amp; Experience</h2>
+        <p>About</p>
       </div>
+
+      <div class="flex flex-col sm:flex-row gap-8 items-center sm:items-start animate-on-scroll">
+        <Image
+          src={newProfilePic}
+          alt="Matthew O’Leary"
+          width={370}
+          class="shrink-0 w-[150px] h-[185px] object-cover"
+        />
+        <div class="text-body leading-body text-ink">
+          <p class="mt-0 mb-6">
+            I&rsquo;m a print production lead with more than 20 years in
+            magazine publishing, packaging, books, retail catalogs, and
+            branded collateral. Most recently I served as Designer &amp;
+            Production Manager for <em>California</em> magazine (Cal Alumni
+            Association), running the issue from layout and ad preflight
+            through the printer relationship with Quad and post-press file
+            delivery.
+          </p>
+          <p class="m-0">
+            I&rsquo;ve run press checks, managed printer and packaging-vendor
+            relationships, coordinated designers, editors, and freelancers
+            against hard deadlines using agile workflows, and built the
+            templates and standards that keep multi-person production
+            consistent. I&rsquo;m especially interested in helping teams
+            standardize production workflows, including InDesign scripting
+            and AI-assisted tools (Adobe Firefly, Generative Fill), without
+            taking creative freedom away from the artists.
+          </p>
+        </div>
+      </div>
+
+      <p
+        class="mt-14 mb-0 py-10 border-y border-rule font-quote italic text-quote leading-snug text-center text-ink animate-on-scroll"
+      >
+        I stay hands-on. I&rsquo;m the person who can own the schedule and
+        the vendor call, and also open the file and fix it. That
+        combination is what I bring to every project.
+      </p>
     </div>
   </section>
 
   <!-- TESTIMONIALS SECTION -->
-  <section class="px-4 2xl:px-0 py-16 md:py-20">
-    <div class="max-w-4xl mx-auto">
-      <p
-        class="text-sm font-semibold tracking-widest uppercase text-violet-800 mb-4 text-center animate-on-scroll"
-      >
-        Testimonials
-      </p>
-      <h2
-        class="font-heading text-3xl md:text-4xl font-bold text-center mb-12 animate-on-scroll"
-      >
-        What People Say
-      </h2>
+  <section class="px-4 pb-section">
+    <div class="max-w-container mx-auto md:px-gutter">
+      <div class="section-head animate-on-scroll">
+        <h2>What People Say</h2>
+        <p>Testimonials</p>
+      </div>
 
-      <Testimonial
-        quote="I worked with Matt on a variety of packaging and communication material design and production projects. Matt is very knowledgeable as well as personable, guiding the process to ensure expected creative outcomes."
-        img={diana}
-        alt="Diana McClean"
-        person="Diana (DeVincenzi) McClean"
-        title="Director of Marketing and Communications"
-        company="Mission Produce"
-      />
-
-      <Testimonial
-        quote="I find it refreshing to work with someone who knows how to tackle big projects while staying calm, focused and creative all while delivering outstanding work."
-        img={jennine}
-        alt="Jennine Dureau"
-        person="Jennine Dureau"
-        title="Marketing Manager"
-        company="TurboTax"
-      />
-
-      <Testimonial
-        quote="Matt is a very creative individual. His knowledge of design as well as production techniques and crafts is invaluable and enables him to participate from start to finish on every project. From book covers to website and page design, Matt’s creative sense is remarkable and invaluable."
-        img={bruce}
-        alt="Bruce Butterfield"
-        person="Bruce Butterfield"
-        title="CEO and Founder"
-        company="The Wittfield Group"
-      />
-
-      <Testimonial
-        quote="Matt is an incredible designer who works hard to identify/solve for customers’ pain points. His designs for critical and heavily used functionality were well received and had a lasting impact on the product adoption."
-        img={abishek}
-        alt="Abishek Aurora"
-        person="Abishek Aurora"
-        title="Director of Product"
-        company="Credit Karma"
-      />
-    </div>
-  </section>
-
-  <!-- BRANDS SECTION -->
-  <section class="px-4 2xl:px-0 py-16 md:py-20">
-    <div class="max-w-5xl mx-auto">
-      <p
-        class="text-sm font-semibold tracking-widest uppercase text-violet-800 mb-4 text-center animate-on-scroll"
-      >
-        Experience
-      </p>
-      <h2
-        class="font-heading text-3xl md:text-4xl font-bold text-center mb-12 animate-on-scroll"
-      >
-        Brands I&rsquo;ve Worked With
-      </h2>
-      <div class="animate-on-scroll">
-        <LogoField />
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-10 gap-y-14">
+        {testimonials.map((t) => (
+          <figure class="m-0 text-center animate-on-scroll">
+            <Image
+              src={t.img}
+              alt={t.alt}
+              width={300}
+              quality={100}
+              class="mx-auto w-[150px] h-[150px] object-cover"
+            />
+            <figcaption class="mt-5">
+              <p class="m-0 text-body font-medium text-ink">{t.person}</p>
+              <p class="mt-1 mb-0 text-label tracking-[0.5px] text-muted leading-snug">
+                {t.title}, {t.company}
+              </p>
+            </figcaption>
+            <blockquote class="mt-5 mx-0 mb-0 text-body leading-body text-ink">
+              <p class="m-0">{t.quote}</p>
+            </blockquote>
+          </figure>
+        ))}
       </div>
     </div>
   </section>
 
+  <!-- BRANDS SECTION -->
+  <section class="px-4 pb-section">
+    <div class="max-w-container mx-auto md:px-gutter">
+      <div class="section-head animate-on-scroll">
+        <h2>Brands I&rsquo;ve Worked With</h2>
+        <p>Experience</p>
+      </div>
+      <ul
+        class="list-none m-0 p-0 flex flex-wrap justify-center gap-y-2 caps text-ink leading-loose animate-on-scroll"
+      >
+        {brands.map((brand, i) => (
+          <li class="whitespace-nowrap">
+            {i > 0 && <span class="text-band mx-3" aria-hidden="true">&raquo;</span>}{brand}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
   <!-- CONTACT SECTION -->
-  <section class="px-4 2xl:px-0 py-16 md:py-20 bg-stone-100/50">
-    <div class="max-w-2xl mx-auto text-center">
-      <p
-        class="text-sm font-semibold tracking-widest uppercase text-violet-800 mb-4 animate-on-scroll"
-      >
-        Get in Touch
-      </p>
-      <h2
-        class="font-heading text-3xl md:text-4xl font-bold mb-6 animate-on-scroll"
-      >
-        Need someone to own your print production?
-      </h2>
-      <p class="text-xl text-stone-600 mb-8 animate-on-scroll">
-        I&rsquo;m available for contract, fractional, and project-based
-        production leadership, including issue-based publication production,
-        catalog and packaging programs, and production-system builds. Based
-        in Santa Cruz and working remotely, with Bay Area onsite availability
-        as needed.
-      </p>
-      <div
-        class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-on-scroll"
-      >
+  <section class="on-dark bg-band-dark text-on-band px-4 py-section">
+    <div
+      class="max-w-container mx-auto md:px-gutter grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 lg:gap-20 items-center"
+    >
+      <div class="animate-on-scroll">
+        <p class="m-0 mb-4 text-label-lg font-semibold uppercase tracking-section">
+          Get in Touch
+        </p>
+        <h2 class="m-0 mb-6 text-h2-band font-medium leading-tight text-on-band">
+          Need someone to own your print production?
+        </h2>
+        <p class="m-0 text-body leading-body">
+          I&rsquo;m available for contract, fractional, and project-based
+          production leadership, including issue-based publication production,
+          catalog and packaging programs, and production-system builds. Based
+          in Santa Cruz and working remotely, with Bay Area onsite availability
+          as needed.
+        </p>
+      </div>
+      <div class="flex flex-col gap-3 w-full lg:w-72 animate-on-scroll">
+        <a href="/contact" class="btn-highlight w-full">Contact</a>
         <a
-          href="/OLeary_Resume_Sept2026.pdf"
+          href="/OLeary-Resume_Production_Oct2026.pdf"
           target="_blank"
-          class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-violet-800 hover:text-violet-900 transition-colors"
+          class="btn-outline-light w-full gap-2"
         >
-          <Icon name="pdf" class="w-5 h-5 mr-2" />
+          <Icon name="pdf" class="w-4 h-4" />
           Resume
         </a>
         <a
           href="https://www.linkedin.com/in/matt-oleary/"
           target="_blank"
-          class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-violet-800 hover:text-violet-900 transition-colors"
+          class="btn-outline-light w-full gap-2"
         >
-          <Icon name="linkedin" class="w-5 h-5 mr-2" />
+          <Icon name="linkedin" class="w-4 h-4" />
           LinkedIn
         </a>
-        <a href="/contact" class="w-full sm:w-auto">
-          <Button text="Contact Me" class="w-full" />
-        </a>
+        <ul class="list-none m-0 mt-3 p-0 text-body">
+          <li><a href="mailto:matt@mattoleary.design" class="contact-link">matt@mattoleary.design</a></li>
+          <li><a href="tel:8312752566" class="contact-link">(831) 275-2566</a></li>
+          <li><a href="https://www.linkedin.com/in/matt-oleary/" class="contact-link">/in/matt-oleary</a></li>
+        </ul>
       </div>
     </div>
   </section>
 </Base>
+
+<style>
+  .lead-photo {
+    height: clamp(520px, 58vw, 860px);
+    object-position: 60% center;
+  }
+
+  /* Desktop: leave room for the header and title band (~27rem) so the headline stays above the fold */
+  @media (min-width: 768px) {
+    .lead-photo {
+      max-height: max(280px, calc(100svh - 27rem));
+    }
+  }
+
+  .spec-item {
+    border-top: 1px solid color-mix(in srgb, var(--color-on-band) 35%, transparent);
+  }
+
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    text-underline-offset: 4px;
+  }
+  .contact-link:hover {
+    color: var(--color-highlight);
+    text-decoration: underline;
+  }
+</style>

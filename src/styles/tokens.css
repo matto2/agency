@@ -1,0 +1,44 @@
+/* Design tokens: the only place raw color, font, and type-size values live. */
+:root {
+  /* Color */
+  --color-bg:          #FFFFFF;
+  --color-text:        #111111;
+  --color-text-muted:  #4A4A4A;
+  --color-rule:        #111111;
+  --color-band:        #4E7785;  /* slate-teal bands */
+  --color-band-dark:   #464646;  /* charcoal contact band */
+  --color-on-band:     #FFFFFF;
+  --color-highlight:   #FCF1B2;  /* butter yellow: Contact buttons, » marks on teal */
+  --color-link-hover:  #4E7785;
+
+  /* Type */
+  --font-sans:  "Hanken Grotesk Variable", "Hanken Grotesk", Helvetica, Arial, sans-serif;  /* everything */
+  --font-quote: "Lora", Georgia, serif;                                                   /* pull quote only, italic */
+
+  --weight-regular: 400;  /* body */
+  --weight-medium: 500;   /* names, titles, nav */
+  --weight-semibold: 600; /* section labels */
+  --weight-bold: 700;     /* wordmark */
+
+  --text-label: 0.75rem;     /* 12px tracked caps */
+  --text-label-lg: 0.875rem; /* 14px section labels */
+  --text-body: 1.125rem;     /* 18px */
+  --text-intro: clamp(1.25rem, 2vw, 1.5625rem);
+  --text-card-title: 1.3125rem;
+  --text-h1: clamp(2.25rem, 4.4vw, 3.5rem);
+  --text-h2-band: clamp(2rem, 3.6vw, 2.875rem);
+  --text-quote: clamp(1.375rem, 2.4vw, 1.8rem);
+  --text-wordmark: clamp(1.75rem, 3.2vw, 2.5rem);
+  --text-wordmark-sm: 1.25rem;
+
+  --tracking-caps: 2px;
+  --tracking-section: 3px;
+  --leading-body: 1.7;
+
+  /* Layout */
+  --container: 1240px;
+  --container-wide: 1320px;
+  --gutter: 2rem;
+  --section-space: 7rem;
+  --radius: 0;
+}

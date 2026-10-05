@@ -1,98 +1,56 @@
 ---
-import FooterContact from "../components/FooterContact.astro";
-import Socials from "./Socials.astro";
+import Logo from "./Logo.astro";
 
 const isWebsitesPage = Astro.url.pathname.startsWith("/websites");
 ---
 
-<footer class="border-t border-slate-300 px-4">
-  <div
-    class="grid md:grid-cols-3 md:gap-x-12 place-items-start max-w-4xl mx-auto"
-  >
-    <div class="mt-6 min-w-96">
-      <FooterContact />
-    </div>
-    <div class="mt-6 mb-4 font-sans font-semibold leading-relaxed">
-      <p>
-        <a
-          href="/"
-          class="text-base text-violet-50 hover:text-violet-200 hover:underline mb-2"
-          >Home</a
-        >
-      </p>
-      <p>
-        <a
-          href="/contact"
-          class="text-base text-violet-50 hover:text-violet-200 hover:underline mb-2"
-          >Contact</a
-        >
-      </p>
+<footer class="bg-bg px-4 pt-14 pb-10 text-center">
+  <div class="max-w-container mx-auto flex flex-col items-center gap-6">
+    <Logo size="sm" />
+
+    <ul class="list-none m-0 p-0 flex flex-wrap justify-center caps text-ink">
+      <li><a href="/" class="footer-link">Home</a></li>
+      <li><a href="/contact" class="footer-link">Contact</a></li>
       {!isWebsitesPage && (
-        <p>
-          <a
-            href="/websites"
-            class="text-base text-violet-50 hover:text-violet-200 hover:underline mb-2"
-            >Need a new website?</a
-          >
-        </p>
+        <li><a href="/websites" class="footer-link">Need a new website?</a></li>
       )}
+      <li><a href="mailto:matt@mattoleary.design" class="footer-link">matt@mattoleary.design</a></li>
+      <li><a href="tel:8312752566" class="footer-link">(831) 275-2566</a></li>
+      <li><a href="https://www.linkedin.com/in/matt-oleary/" class="footer-link">/in/matt-oleary</a></li>
+    </ul>
+
+    <div class="flex flex-wrap justify-center items-center caps text-muted">
+      <span class="text-band font-medium px-3">Other Links</span>
+      <a href="https://olearystudios.com/" class="footer-link">O&rsquo;Leary Studios</a>
+      <a href="https://minnieoleary.com/" class="footer-link">minnieoleary.com</a>
+      <a href="https://walksantacruz.com" class="footer-link">Walk Santa Cruz</a>
+      <a href="https://julian-links.netlify.app/" class="footer-link">Julian&rsquo;s Links</a>
     </div>
-    <div class="mt-6 min-w-96">
-      <p class="font-sans font-semibold text-slate-400">Other Links</p>
 
-      <p>
-        <a
-          href="https://olearystudios.com/"
-          class="text-violet-50 hover:text-violet-200 hover:underline mb-2"
-          >O&rsquo;Leary Studios</a
-        >
-      </p>
-
-      <p>
-        <a
-          href="https://minnieoleary.com/"
-          class="text-violet-50 hover:text-violet-200 hover:underline mb-2"
-          >minnieoleary.com</a
-        >
-      </p>
-
-      <p>
-        <a
-          href="https://walksantacruz.com"
-          class="text-violet-50 hover:text-violet-200 hover:underline mb-2"
-          >Walk Santa Cruz</a
-        >
-      </p>
-
-      <p>
-        <a
-          href="https://julian-links.netlify.app/"
-          class="text-violet-50 hover:text-violet-200 hover:underline mb-2"
-          >Julian&rsquo;s Links</a
-        >
-      </p>
-
-      <!-- <p>
-        <a
-          href="/contact"
-          class="text-violet-800 hover:text-violet-900 hover:underline mb-2"
-          >Contact</a
-        >
-      </p> -->
-    </div>
-  </div>
-
-  <div class="my-4 text-center text-slate-400">
-    &copy;
-    <span id="copyright">
-      <script>
-        document
-          .getElementById("copyright")
-          .appendChild(
-            document.createTextNode(new Date().getFullYear().toString())
-          );
-      </script>
-    </span>
-    Matthew O&rsquo;Leary
+    <p class="text-label text-muted m-0">
+      &copy; <span class="copyright-year"></span> Matthew O&rsquo;Leary
+    </p>
   </div>
 </footer>
+
+<script>
+  const setYear = () =>
+    document.querySelectorAll(".copyright-year").forEach((el) => {
+      el.textContent = new Date().getFullYear().toString();
+    });
+  setYear();
+  document.addEventListener("astro:page-load", setYear);
+</script>
+
+<style>
+  .footer-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 0.75rem;
+    transition: color 0.2s ease;
+  }
+  .footer-link:hover {
+    color: var(--color-link-hover);
+  }
+</style>

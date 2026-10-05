@@ -4,20 +4,7 @@ const { text, class: className = "" } = Astro.props;
 
 <button
   type="button"
-  class={`group rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-3 text-lg font-semibold text-white shadow-md hover:shadow-lg hover:shadow-orange-500/25 hover:from-orange-600 hover:to-orange-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 flex items-center justify-center gap-2 transition-all duration-300 ${className}`}
+  class={`btn bg-band text-on-band border border-band hover:bg-band-dark hover:border-band-dark ${className}`}
 >
   {text}
-  <svg
-    class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M9 5l7 7-7 7"></path>
-  </svg>
 </button>

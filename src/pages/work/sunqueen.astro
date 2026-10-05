@@ -18,7 +18,7 @@ const title = "Packaging Production";
     <section class="mb-16">
 
       <!-- Header -->
-      <h1 class="font-heading font-bold text-4xl sm:text-5xl my-8">{title}</h1>
+      <h1 class="my-8">{title}</h1>
 
       <!-- Hero -->
       <Image
@@ -29,7 +29,7 @@ const title = "Packaging Production";
 
       <!-- Overview -->
       <div class="max-w-3xl mb-12">
-        <h2 class="font-heading font-bold text-2xl mb-4">Overview</h2>
+        <h2 class="mb-4">Overview</h2>
         <p class="mb-4 text-stone-700 leading-relaxed">
           A private label mineral sunscreen and skincare manufacturer contracted me to design and produce
           three distinct print-ready packaging components for a new product line: an outer shipping carton,
@@ -46,7 +46,7 @@ const title = "Packaging Production";
 
       <!-- Challenge -->
       <div class="max-w-3xl mb-12">
-        <h2 class="font-heading font-bold text-2xl mb-4">Challenge</h2>
+        <h2 class="mb-4">Challenge</h2>
         <p class="mb-4 text-stone-700 leading-relaxed">
           The brief arrived with minimal source material: a low-resolution, non-vector logo file,
           a Word document containing the FDA drug facts panel copy, and dielines supplied by the
@@ -63,7 +63,7 @@ const title = "Packaging Production";
               alt="Client's original hand-drawn sketch for the bottle label"
               class="w-full rounded-lg border border-stone-200"
             />
-            <p class="text-xs text-stone-500 mt-2">Starting sketch — bottle label</p>
+            <p class="text-label text-stone-500 mt-2">Starting sketch — bottle label</p>
           </div>
           <div>
             <Image
@@ -71,7 +71,7 @@ const title = "Packaging Production";
               alt="Client's original hand-drawn sketch for the carton dieline layout"
               class="w-full rounded-lg border border-stone-200"
             />
-            <p class="text-xs text-stone-500 mt-2">Starting sketch — carton layout</p>
+            <p class="text-label text-stone-500 mt-2">Starting sketch — carton layout</p>
           </div>
         </div>
 
@@ -86,28 +86,28 @@ const title = "Packaging Production";
 
       <!-- Deliverables — full-width stacked -->
       <div class="mb-12">
-        <h2 class="font-heading font-bold text-2xl mb-6">Deliverables</h2>
+        <h2 class="mb-6">Deliverables</h2>
         <div class="space-y-10">
           <div>
             <Image src={masterCarton} alt="Outer / Master Carton flat artwork" class="w-full rounded-lg" />
-            <p class="font-semibold text-sm text-stone-700 mt-3">Outer / Master Carton</p>
-            <p class="text-xs text-stone-500 mt-1">
+            <p class="font-medium text-label-lg text-stone-700 mt-3">Outer / Master Carton</p>
+            <p class="text-label text-stone-500 mt-1">
               Shipping-spec carton for the 200 mL SKU. Printer dieline adaptation,
               brand graphics, and information panels set to manufacturer spec.
             </p>
           </div>
           <div>
             <Image src={primaryCarton} alt="Primary Retail Carton flat artwork" class="w-full rounded-lg" />
-            <p class="font-semibold text-sm text-stone-700 mt-3">Primary Retail Carton</p>
-            <p class="text-xs text-stone-500 mt-1">
+            <p class="font-medium text-label-lg text-stone-700 mt-3">Primary Retail Carton</p>
+            <p class="text-label text-stone-500 mt-1">
               Consumer-facing retail carton with full brand treatment, FDA-compliant
               information panel, and press-ready color separation.
             </p>
           </div>
           <div>
             <Image src={bottleFlat} alt="Wraparound bottle label flat artwork" class="w-full rounded-lg" />
-            <p class="font-semibold text-sm text-stone-700 mt-3">Wraparound Bottle Label</p>
-            <p class="text-xs text-stone-500 mt-1">
+            <p class="font-medium text-label-lg text-stone-700 mt-3">Wraparound Bottle Label</p>
+            <p class="text-label text-stone-500 mt-1">
               Wraparound label for the primary bottle. Designed to the exact cylinder
               circumference with correct overlap and bleed for the label printer.
             </p>
@@ -117,7 +117,7 @@ const title = "Packaging Production";
 
       <!-- Process -->
       <div class="max-w-3xl mb-12">
-        <h2 class="font-heading font-bold text-2xl mb-4">Process</h2>
+        <h2 class="mb-4">Process</h2>
         <p class="mb-4 text-stone-700 leading-relaxed">
           Starting from the lo-res logo file and the client's two hand-drawn sketches, I rebuilt the
           logo as clean vector art, built out the typographic system, established the color palette,
@@ -136,7 +136,7 @@ const title = "Packaging Production";
 
       <!-- 3D Visualizations -->
       <div class="mb-12">
-        <h2 class="font-heading font-bold text-2xl mb-2">3D Client Visualizations</h2>
+        <h2 class="mb-2">3D Client Visualizations</h2>
         <p class="max-w-3xl text-stone-700 leading-relaxed mb-8">
           Early in the project — before final art was complete — I built interactive 3D renderings
           of the carton and bottle and delivered them to the client. These were not finished artwork;
@@ -148,7 +148,7 @@ const title = "Packaging Production";
 
         <!-- Carton — inlined CSS 3D -->
         <div class="mb-8">
-          <p class="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-3">
+          <p class="text-label-lg font-semibold text-stone-500 uppercase tracking-section mb-3">
             Primary Carton — Interactive 3D
           </p>
           <div class="sq-carton-wrap rounded-lg overflow-hidden">
@@ -164,12 +164,12 @@ const title = "Packaging Production";
               </div>
             </div>
           </div>
-          <p class="text-xs text-stone-400 mt-2">Drag to rotate · Scroll to zoom</p>
+          <p class="text-label text-stone-400 mt-2">Drag to rotate · Scroll to zoom</p>
         </div>
 
         <!-- Bottle — Three.js (large self-contained file, iframe is appropriate) -->
         <div class="mb-8">
-          <p class="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-3">
+          <p class="text-label-lg font-semibold text-stone-500 uppercase tracking-section mb-3">
             Bottle — Interactive 3D
           </p>
           <div class="rounded-lg overflow-hidden" style="height: min(1000px, 90vh);">
@@ -179,13 +179,13 @@ const title = "Packaging Production";
               title="SunQueen bottle — interactive 3D viewer"
             ></iframe>
           </div>
-          <p class="text-xs text-stone-400 mt-2">Drag to rotate · Scroll to zoom</p>
+          <p class="text-label text-stone-400 mt-2">Drag to rotate · Scroll to zoom</p>
         </div>
       </div>
 
       <!-- Result -->
       <div class="max-w-3xl mb-12">
-        <h2 class="font-heading font-bold text-2xl mb-4">Result</h2>
+        <h2 class="mb-4">Result</h2>
         <p class="text-stone-700 leading-relaxed">
           All three packaging components were delivered press-ready within the project timeline and
           budget. The client, the private label manufacturer, and the print vendors approved the files
@@ -197,11 +197,11 @@ const title = "Packaging Production";
 
       <!-- Client Love -->
       <div class="max-w-3xl mb-12">
-        <h2 class="font-heading font-bold text-2xl mb-4">Client Love</h2>
+        <h2 class="mb-4">Client Love</h2>
         <blockquote class="p-6 rounded-md bg-gray-200">
-          <p class="text-lg text-violet-800 mb-3">&ldquo;We love the carton!&rdquo;</p>
-          <footer class="text-sm text-stone-600">
-            &mdash; Owner, SunQueen Sunscreen (<a href="https://www.instagram.com/sunqueen_spf/" target="_blank" rel="noopener" class="underline hover:text-violet-800">@sunqueen_spf</a> on Instagram)
+          <p class="text-body text-band mb-3">&ldquo;We love the carton!&rdquo;</p>
+          <footer class="text-label-lg text-stone-600">
+            &mdash; Owner, SunQueen Sunscreen (<a href="https://www.instagram.com/sunqueen_spf/" target="_blank" rel="noopener" class="underline hover:text-band">@sunqueen_spf</a> on Instagram)
           </footer>
         </blockquote>
         <p class="text-stone-700 leading-relaxed mt-4">

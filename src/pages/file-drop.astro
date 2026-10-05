@@ -18,17 +18,17 @@ import Back2 from "../components/Back2.astro";
 
         <Back2 />
 
-        <h1 class="font-heading font-semibold text-4xl md:text-5xl text-gray-800 mb-2 leading-tight">
+        <h1 class="text-gray-800 mb-2 leading-tight">
           Print-Ready Files. Fast.
         </h1>
-        <p class="text-gray-600 text-base mb-3 leading-relaxed">
+        <p class="text-gray-600 text-body mb-3 leading-relaxed">
           Send me your file and a quick description. I&rsquo;ll review it and get back to you with a quote &mdash; most jobs are $50 flat and turned around next day.
         </p>
-        <p class="text-gray-700 font-bold mb-10">
+        <p class="text-gray-700 font-medium mb-10">
           Questions?
-          <a href="mailto:matt@mattoleary.design" class="text-violet-800 hover:underline">matt@mattoleary.design</a>
+          <a href="mailto:matt@mattoleary.design" class="text-band hover:underline">matt@mattoleary.design</a>
           &bull;
-          <a href="tel:8312752566" class="text-violet-800 hover:underline">831-275-2566</a>
+          <a href="tel:8312752566" class="text-band hover:underline">831-275-2566</a>
         </p>
 
         <form
@@ -48,66 +48,66 @@ import Back2 from "../components/Back2.astro";
           </p>
 
           <div class="mb-4">
-            <label class="block text-gray-700 font-bold mb-2" for="name">Name</label>
+            <label class="block text-gray-700 font-medium mb-2" for="name">Name</label>
             <input
               id="name"
               type="text"
               name="name"
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-violet-800"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-band"
               required
             />
           </div>
 
           <div class="mb-4">
-            <label class="block text-gray-700 font-bold mb-2" for="email">Email</label>
+            <label class="block text-gray-700 font-medium mb-2" for="email">Email</label>
             <input
               id="email"
               type="email"
               name="email"
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-violet-800"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-band"
               required
             />
           </div>
 
           <div class="mb-4">
-            <label class="block text-gray-700 font-bold mb-2" for="phone">
-              Phone <span class="font-normal text-gray-500">(optional)</span>
+            <label class="block text-gray-700 font-medium mb-2" for="phone">
+              Phone <span class="text-gray-500">(optional)</span>
             </label>
             <input
               id="phone"
               type="tel"
               name="phone"
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-violet-800"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-band"
             />
           </div>
 
           <div class="mb-4">
-            <label class="block text-gray-700 font-bold mb-2" for="description">What needs fixing?</label>
+            <label class="block text-gray-700 font-medium mb-2" for="description">What needs fixing?</label>
             <textarea
               id="description"
               name="description"
               rows="4"
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-violet-800 resize-y"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-band resize-y"
               required
             ></textarea>
           </div>
 
           <div class="mb-6">
-            <label class="block text-gray-700 font-bold mb-2" for="file">File</label>
+            <label class="block text-gray-700 font-medium mb-2" for="file">File</label>
             <input
               id="file"
               type="file"
               name="file"
               accept=".ai,.pdf,.eps,.psd,.indd,.png,.jpg,.jpeg,.zip"
-              class="block w-full text-gray-700 text-sm file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-800 hover:file:bg-violet-100 cursor-pointer"
+              class="block w-full text-gray-700 text-label-lg file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-label-lg file:font-medium file:bg-highlight file:text-ink hover:file:bg-band hover:file:text-on-band cursor-pointer"
               required
             />
-            <p class="mt-1 text-xs text-gray-500">.ai .pdf .eps .psd .indd .png .jpg .zip</p>
+            <p class="mt-1 text-label text-gray-500">.ai .pdf .eps .psd .indd .png .jpg .zip</p>
           </div>
 
           <button
             type="submit"
-            class="w-full rounded-full bg-orange-500 px-8 py-3 text-lg font-semibold text-white shadow-sm hover:bg-orange-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 transition-colors"
+            class="w-full rounded-full bg-orange-500 px-8 py-3 text-body font-medium text-white shadow-sm hover:bg-orange-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 transition-colors"
           >
             Send File
           </button>

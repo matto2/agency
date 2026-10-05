@@ -1,11 +1,16 @@
 ---
-import { Image } from "astro:assets";
-import icon from "../assets/icon.svg";
+// Stacked wordmark. size="sm" is the footer version.
+const { size = "lg" } = Astro.props;
 ---
 
-<a href="/">
-  <p class="font-heading text-2xl md:text-3xl font-bold py-2">
-    <Image src={icon} alt="Logo" width={50} height={50} class="inline relative -top-1.5" /> Matthew
-    O’Leary
+<a href="/" class="inline-block py-1 text-ink hover:text-ink">
+  <p
+    class:list={[
+      "font-bold uppercase text-center leading-[0.95] tracking-[0.04em] m-0",
+      size === "sm" ? "text-wordmark-sm" : "text-wordmark",
+    ]}
+  >
+    <span class="block">Matthew</span>
+    <span class="block">O’Leary</span>
   </p>
 </a>

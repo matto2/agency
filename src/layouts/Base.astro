@@ -1,10 +1,11 @@
 ---
-const { title } = Astro.props;
+const { title, fullBleed = false } = Astro.props;
 const fullTitle = title.includes("O’Leary") ? title : `${title} — Matthew O’Leary`;
 import "../styles/main.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
-import "@fontsource-variable/plus-jakarta-sans";
+import "@fontsource-variable/hanken-grotesk";
+import "@fontsource/lora/400-italic.css";
 import { ClientRouter } from "astro:transitions";
 import { SEO } from "astro-seo";
 ---
@@ -66,22 +67,22 @@ import { SEO } from "astro-seo";
     <ClientRouter />
   </head>
   <body>
-    <div class="flex flex-col h-screen justify-between w-full">
-      <header class="max-w-7xl mx-auto w-full"><Nav /></header>
+    <div class="flex flex-col min-h-screen justify-between w-full">
+      <header class="w-full"><Nav /></header>
 
       <main
         class="mb-auto w-full flex justify-center"
         transition:animate="fade"
       >
-        <div class="w-full max-w-7xl px-2 md:px-4">
-          <slot />
-        </div>
+        {fullBleed ? (
+          <div class="w-full"><slot /></div>
+        ) : (
+          <div class="w-full max-w-7xl px-2 md:px-4">
+            <slot />
+          </div>
+        )}
       </main>
-      <div class="bg-slate-700">
-        <footer class="max-w-7xl mx-auto">
-          <Footer />
-        </footer>
-      </div>
+      <Footer />
     </div>
   <script>
   // Reloading the page should start at the top, not wherever the browser last had you scrolled to

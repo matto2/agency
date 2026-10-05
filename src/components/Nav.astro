@@ -3,36 +3,20 @@ import Logo from "./Logo.astro";
 import { Icon } from "astro-icon/components";
 ---
 
-<nav
-  class="mt-4 lg:flex lg:justify-between lg:items-center mx-4 2xl:mx-0 relative z-50"
->
-  <div class="text-center lg:flex lg:items-center">
-    <Logo />
-  </div>
-  <div class="flex justify-center items-center lg:ml-auto">
-    <div
-      class="flex items-center space-x-4 text-slate-700 text-lg font-heading"
-    >
-      <a
-        href="/"
-        data-link="work"
-        class="hover:text-black cursor-pointer font-medium">Home</a
-      >
-      <a
-        href="/contact"
-        data-link="contact"
-        class="hover:text-black cursor-pointer font-medium">Contact</a
-      >
-      <a href="tel:8312752566" aria-label="Phone">
-        <Icon name="phone" class="w-[18px] h-[18px] hover:text-violet-600 transition-colors" />
-      </a>
-      <a href="mailto:matt@mattoleary.design" aria-label="Email">
-        <Icon name="mail" class="w-6 h-6 hover:text-violet-600 transition-colors" />
-      </a>
-      <a href="https://linkedin.com/in/matt-oleary/" aria-label="LinkedIn">
-        <Icon name="linkedin" class="w-6 h-6 hover:text-violet-600 transition-colors" />
-      </a>
-    </div>
+<nav class="pt-8 pb-6 px-4 flex flex-col items-center gap-5 relative z-50">
+  <Logo />
+  <div class="flex flex-wrap justify-center items-center gap-x-2 gap-y-1 text-ink caps">
+    <a href="/" data-link="work" class="nav-link">Home</a>
+    <a href="tel:8312752566" aria-label="Phone" class="nav-link">
+      <Icon name="phone" class="w-[16px] h-[16px]" />
+    </a>
+    <a href="mailto:matt@mattoleary.design" aria-label="Email" class="nav-link">
+      <Icon name="mail" class="w-5 h-5" />
+    </a>
+    <a href="https://linkedin.com/in/matt-oleary/" aria-label="LinkedIn" class="nav-link">
+      <Icon name="linkedin" class="w-5 h-5" />
+    </a>
+    <a href="/contact" data-link="contact" class="btn-highlight ml-2">Contact</a>
   </div>
 </nav>
 
@@ -81,33 +65,23 @@ import { Icon } from "astro-icon/components";
 </script>
 
 <style>
-  nav a:not([aria-label]) {
-    position: relative;
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0 0.75rem;
     transition: color 0.2s ease;
   }
 
-  nav a:not([aria-label])::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #5b21b6, #7c3aed);
-    transition: width 0.3s ease;
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--color-link-hover);
   }
 
-  nav a:not([aria-label]):hover::after {
-    width: 100%;
-  }
-
-  .active {
-    font-weight: bold;
-    color: #5b21b6;
-    text-decoration-line: none;
-  }
-
-  .active::after {
-    width: 100% !important;
+  .nav-link.active {
+    text-decoration: underline;
+    text-underline-offset: 6px;
   }
 </style>
