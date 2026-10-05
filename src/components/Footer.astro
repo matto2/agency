@@ -1,7 +1,6 @@
 ---
 import Logo from "./Logo.astro";
 
-const isWebsitesPage = Astro.url.pathname.startsWith("/websites");
 // The hero photo credit only belongs on the home page, where the photo appears
 const isHomePage = Astro.url.pathname === "/";
 ---
@@ -10,13 +9,14 @@ const isHomePage = Astro.url.pathname === "/";
   <div class="max-w-container mx-auto flex flex-col items-center gap-6">
     <Logo size="sm" />
 
+    <p class="m-0 text-body text-muted">
+      Available for contract and full-time production design roles.
+    </p>
+
     <ul class="list-none m-0 p-0 flex flex-wrap justify-center caps text-ink">
       <li><a href="/" class="footer-link">Home</a></li>
       <li><a href="/contact" class="footer-link">Contact</a></li>
-      {!isWebsitesPage && (
-        <li><a href="/websites" class="footer-link">Need a new website?</a></li>
-      )}
-      <li><a href="mailto:matt@mattoleary.design" class="footer-link">matt@mattoleary.design</a></li>
+      <li><a href="mailto:matt@mattoleary.design" class="footer-link">Email Matt</a></li>
       <li><a href="tel:8312752566" class="footer-link">(831) 275-2566</a></li>
       <li><a href="https://www.linkedin.com/in/matt-oleary/" class="footer-link">/in/matt-oleary</a></li>
     </ul>

@@ -26,36 +26,19 @@ import { SEO } from "astro-seo";
 
     <SEO
       title={fullTitle}
-      description="Print production lead with 20+ years in magazine publishing, CPG packaging and enterprise marketing. I run production end to end, from file standards and preflight to printer relationships and press, and build the files myself."
+      description="Matthew O’Leary is a production designer specializing in packaging, editorial, books, and print. Available for contract and full-time production design roles."
       openGraph={{
         basic: {
-          title: "Matthew O’Leary — Print Production Lead",
+          title: "Matthew O’Leary — Production Designer | Packaging, Editorial & Print",
           type: "website",
           image: "https://mattoleary.design/images/og-image.jpg",
+        },
+        optional: {
+          description: "Production design for packaging, editorial, books, and print. Available for contract and full-time roles.",
         },
       }}
       extend={{
         link: [{ rel: "icon", href: "/favicon.ico" }],
-        meta: [
-          {
-            name: "description",
-            content:
-              "Print production lead with 20+ years in magazine publishing, CPG packaging and enterprise marketing. I run production end to end, from file standards and preflight to printer relationships and press, and build the files myself.",
-          },
-          {
-            name: "og:image",
-            content: "https://mattoleary.design/images/og-image.jpg",
-          },
-          {
-            name: "og:title",
-            content: "Matthew O’Leary — Print Production Lead",
-          },
-          {
-            name: "og:description",
-            content:
-              "Print production lead with 20+ years in magazine publishing, CPG packaging and enterprise marketing. I run production end to end, from file standards and preflight to printer relationships and press, and build the files myself.",
-          },
-        ],
       }}
     />
     <link rel="sitemap" href="/sitemap-index.xml" />

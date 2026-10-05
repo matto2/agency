@@ -237,6 +237,15 @@ footer {
     color: var(--button-outline-hover-text);
   }
 
+  /* Pressed state, shared by every button */
+  .btn:active,
+  .btn-primary:active,
+  .btn-highlight:active,
+  .btn-outline-light:active {
+    transform: translateY(1px);
+    filter: brightness(0.92);
+  }
+
   /* Form fields */
   .field-label {
     display: block;
