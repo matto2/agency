@@ -37,7 +37,7 @@ import Back2 from "../components/Back2.astro";
           enctype="multipart/form-data"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          class="bg-white p-6 rounded-lg shadow-lg mb-10"
+          class="flex flex-col gap-6 mb-10"
         >
           <input type="hidden" name="form-name" value="file-drop" />
 
@@ -47,59 +47,59 @@ import Back2 from "../components/Back2.astro";
             </label>
           </p>
 
-          <div class="mb-4">
-            <label class="block text-gray-700 font-medium mb-2" for="name">Name</label>
+          <div>
+            <label class="field-label" for="name">Name</label>
             <input
               id="name"
               type="text"
               name="name"
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-band"
+              class="field"
               required
             />
           </div>
 
-          <div class="mb-4">
-            <label class="block text-gray-700 font-medium mb-2" for="email">Email</label>
+          <div>
+            <label class="field-label" for="email">Email</label>
             <input
               id="email"
               type="email"
               name="email"
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-band"
+              class="field"
               required
             />
           </div>
 
-          <div class="mb-4">
-            <label class="block text-gray-700 font-medium mb-2" for="phone">
+          <div>
+            <label class="field-label" for="phone">
               Phone <span class="text-gray-500">(optional)</span>
             </label>
             <input
               id="phone"
               type="tel"
               name="phone"
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-band"
+              class="field"
             />
           </div>
 
-          <div class="mb-4">
-            <label class="block text-gray-700 font-medium mb-2" for="description">What needs fixing?</label>
+          <div>
+            <label class="field-label" for="description">What needs fixing?</label>
             <textarea
               id="description"
               name="description"
               rows="4"
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus-visible:outline focus-visible:border-band resize-y"
+              class="field resize-y"
               required
             ></textarea>
           </div>
 
-          <div class="mb-6">
-            <label class="block text-gray-700 font-medium mb-2" for="file">File</label>
+          <div>
+            <label class="field-label" for="file">File</label>
             <input
               id="file"
               type="file"
               name="file"
               accept=".ai,.pdf,.eps,.psd,.indd,.png,.jpg,.jpeg,.zip"
-              class="block w-full text-gray-700 text-label-lg file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-label-lg file:font-medium file:bg-highlight file:text-ink hover:file:bg-band hover:file:text-on-band cursor-pointer"
+              class="field cursor-pointer"
               required
             />
             <p class="mt-1 text-label text-gray-500">.ai .pdf .eps .psd .indd .png .jpg .zip</p>
@@ -107,7 +107,7 @@ import Back2 from "../components/Back2.astro";
 
           <button
             type="submit"
-            class="w-full rounded-full bg-orange-500 px-8 py-3 text-body font-medium text-white shadow-sm hover:bg-orange-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 transition-colors"
+            class="btn-primary w-full"
           >
             Send File
           </button>

@@ -2,6 +2,8 @@
 import Logo from "./Logo.astro";
 
 const isWebsitesPage = Astro.url.pathname.startsWith("/websites");
+// The hero photo credit only belongs on the home page, where the photo appears
+const isHomePage = Astro.url.pathname === "/";
 ---
 
 <footer class="bg-bg px-4 pt-14 pb-10 text-center">
@@ -19,15 +21,13 @@ const isWebsitesPage = Astro.url.pathname.startsWith("/websites");
       <li><a href="https://www.linkedin.com/in/matt-oleary/" class="footer-link">/in/matt-oleary</a></li>
     </ul>
 
-    <div class="flex flex-wrap justify-center items-center caps text-muted">
-      <span class="text-band font-medium px-3">Other Links</span>
-      <a href="https://olearystudios.com/" class="footer-link">O&rsquo;Leary Studios</a>
-      <a href="https://minnieoleary.com/" class="footer-link">minnieoleary.com</a>
-      <a href="https://walksantacruz.com" class="footer-link">Walk Santa Cruz</a>
-      <a href="https://julian-links.netlify.app/" class="footer-link">Julian&rsquo;s Links</a>
-    </div>
-
-    <p class="text-label text-muted m-0">
+    <p class="photo-credit text-label text-muted m-0">
+      {isHomePage && (
+        <>
+          Hero photo by <a href="https://unsplash.com/@maxberg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Maxim Berg</a> on <a href="https://unsplash.com/photos/a-multicolored-background-with-lines-of-different-colors-qsDfqZyTCAE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+          <span class="mx-2" aria-hidden="true">&middot;</span>
+        </>
+      )}
       &copy; <span class="copyright-year"></span> Matthew O&rsquo;Leary
     </p>
   </div>
@@ -51,6 +51,14 @@ const isWebsitesPage = Astro.url.pathname.startsWith("/websites");
     transition: color 0.2s ease;
   }
   .footer-link:hover {
+    color: var(--color-link-hover);
+  }
+  .photo-credit a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .photo-credit a:hover {
     color: var(--color-link-hover);
   }
 </style>

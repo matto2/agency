@@ -11,7 +11,7 @@ import martinellisThumb from "../assets/martinellis-fruitvirtues_377.jpg";
 import packagingThumb from "../assets/SunQueen-Glamor2.jpg";
 import westmarineThumb from "../assets/WestMarine.jpg";
 import higherEdThumb from "../assets/Berkeley_glade_afternoon.jpg";
-import heroImage from "../assets/hero-new.jpg";
+import heroImage from "../assets/cmyk.jpg";
 import jackWebsite from "../assets/jack-website.webp";
 import jackThumb from "../assets/09_people.BUrkml1d.webp";
 
@@ -107,7 +107,7 @@ const brands = [
   <div class="mx-2">
     <Image
       src={heroImage}
-      alt="Rocky coastline and beach under a blue sky"
+      alt="Abstract streaks of cyan, magenta, and yellow ink"
       widths={[800, 1400, 2000, 2800]}
       sizes="100vw"
       loading="eager"
@@ -276,20 +276,22 @@ const brands = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-10 gap-y-14">
         {testimonials.map((t) => (
-          <figure class="m-0 text-center animate-on-scroll">
-            <Image
-              src={t.img}
-              alt={t.alt}
-              width={300}
-              quality={100}
-              class="mx-auto w-[150px] h-[150px] object-cover"
-            />
-            <figcaption class="mt-5">
-              <p class="m-0 text-body font-medium text-ink">{t.person}</p>
-              <p class="mt-1 mb-0 text-label tracking-[0.5px] text-muted leading-snug">
-                {t.title}, {t.company}
-              </p>
-            </figcaption>
+          <figure class="m-0 grid grid-rows-subgrid row-span-2 gap-0 animate-on-scroll">
+            <div class="flex items-start gap-4">
+              <Image
+                src={t.img}
+                alt={t.alt}
+                width={144}
+                quality={100}
+                class="shrink-0 w-[72px] h-[72px] object-cover"
+              />
+              <div>
+                <p class="m-0 text-body font-medium text-ink leading-snug">{t.person}</p>
+                <p class="mt-1 mb-0 text-label tracking-[0.5px] text-muted leading-snug">
+                  {t.title}
+                </p>
+              </div>
+            </div>
             <blockquote class="mt-5 mx-0 mb-0 text-body leading-body text-ink">
               <p class="m-0">{t.quote}</p>
             </blockquote>
@@ -370,7 +372,7 @@ const brands = [
   /* Phone: leave room for the header and title band (~26rem) so the headline stays above the fold */
   .lead-photo {
     height: clamp(200px, calc(100svh - 26rem), 520px);
-    object-position: 60% center;
+    object-position: center;
   }
 
   /* Desktop: same idea with the taller desktop header and band (~27rem) */

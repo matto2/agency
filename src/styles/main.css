@@ -179,15 +179,100 @@ footer {
     @apply text-label font-semibold uppercase tracking-caps;
   }
 
-  /* Square buttons; 44px minimum tap target */
-  .btn {
-    @apply inline-flex items-center justify-center min-h-[44px] px-7 py-3 rounded-token caps transition-colors;
+  /* Buttons: one base, three variants, all driven by the --button-* tokens.
+     Each variant works on its own (class="btn-primary") or with .btn. */
+  .btn,
+  .btn-primary,
+  .btn-highlight,
+  .btn-outline-light,
+  input[type="file"]::file-selector-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: var(--button-min-height);
+    padding: var(--button-pad-y) var(--button-pad-x);
+    border: 1px solid transparent;
+    border-radius: var(--button-radius);
+    font-family: var(--font-sans);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-weight);
+    letter-spacing: var(--button-tracking);
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   }
+
+  .btn-primary,
+  input[type="file"]::file-selector-button {
+    background: var(--button-primary-bg);
+    border-color: var(--button-primary-bg);
+    color: var(--button-primary-text);
+  }
+  .btn-primary:hover,
+  input[type="file"]::file-selector-button:hover {
+    background: var(--button-primary-bg-hover);
+    border-color: var(--button-primary-bg-hover);
+  }
+
   .btn-highlight {
-    @apply btn bg-highlight text-ink border border-highlight hover:bg-on-band hover:border-on-band;
+    background: var(--button-highlight-bg);
+    border-color: var(--button-highlight-bg);
+    color: var(--button-highlight-text);
   }
+  .btn-highlight:hover {
+    background: var(--button-highlight-bg-hover);
+    border-color: var(--button-highlight-bg-hover);
+  }
+
   .btn-outline-light {
-    @apply btn border border-on-band text-on-band hover:bg-on-band hover:text-ink;
+    background: transparent;
+    border-color: var(--button-outline-color);
+    color: var(--button-outline-color);
+  }
+  .btn-outline-light:hover {
+    background: var(--button-outline-color);
+    color: var(--button-outline-hover-text);
+  }
+
+  /* Form fields */
+  .field-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: var(--text-label);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--color-text);
+  }
+
+  .field {
+    display: block;
+    width: 100%;
+    min-height: var(--button-min-height);
+    padding: 0.625rem 0.75rem;
+    border: 1px solid var(--field-border);
+    border-radius: var(--field-radius);
+    background: var(--color-bg);
+    color: var(--color-text);
+    font: inherit;
+    font-size: var(--text-body);
+    appearance: none;
+  }
+  .field:focus-visible {
+    border-color: var(--field-focus);
+    outline: 2px solid var(--field-focus);
+    outline-offset: 0;
+  }
+
+  input[type="file"].field {
+    padding: 0.375rem;
+    font-size: var(--text-label-lg);
+  }
+  input[type="file"]::file-selector-button {
+    margin-right: 1rem;
   }
 
   .text-link {

@@ -52,7 +52,7 @@ import Base from "../layouts/Base.astro";
           <textarea id="contact-message" name="message" rows="5" class="field resize-y" required></textarea>
         </div>
 
-        <button type="submit" class="btn w-full bg-band text-on-band border border-band hover:bg-band-dark hover:border-band-dark">
+        <button type="submit" class="btn-primary w-full">
           Send
         </button>
       </form>
@@ -60,35 +60,3 @@ import Base from "../layouts/Base.astro";
   </section>
 </Base>
 
-<style>
-  .field-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: var(--text-label);
-    font-weight: var(--weight-semibold);
-    letter-spacing: var(--tracking-caps);
-    text-transform: uppercase;
-    color: var(--color-text);
-  }
-
-  .field {
-    display: block;
-    width: 100%;
-    min-height: 44px;
-    padding: 0.625rem 0.75rem;
-    border: 1px solid var(--color-text-muted);
-    border-radius: var(--radius);
-    background: var(--color-bg);
-    color: var(--color-text);
-    font: inherit;
-    font-size: var(--text-body);
-    font-weight: var(--weight-regular);
-    appearance: none;
-  }
-
-  .field:focus-visible {
-    border-color: var(--color-band);
-    outline: 2px solid var(--color-band);
-    outline-offset: 0;
-  }
-</style>

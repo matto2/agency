@@ -41,4 +41,35 @@
   --gutter: 2rem;
   --section-space: 7rem;
   --radius: 0;
+
+  /* Buttons: every button on the site reads these */
+  --button-radius: var(--radius);
+  --button-font-size: var(--text-label);
+  --button-weight: var(--weight-semibold);
+  --button-tracking: var(--tracking-caps);
+  --button-pad-x: 1.25rem;
+  --button-pad-y: 0.75rem;
+  --button-min-height: 44px;  /* tap target */
+
+  --button-primary-bg:          var(--color-band);
+  --button-primary-text:        var(--color-on-band);
+  --button-primary-bg-hover:    var(--color-band-dark);
+
+  --button-highlight-bg:        var(--color-highlight);
+  --button-highlight-text:      var(--color-text);
+  --button-highlight-bg-hover:  var(--color-on-band);
+
+  --button-outline-color:       var(--color-on-band);  /* outline buttons sit on teal/charcoal bands */
+  --button-outline-hover-text:  var(--color-text);
+
+  /* Form fields */
+  --field-border:  var(--color-text-muted);
+  --field-focus:   var(--color-band);
+  --field-radius:  var(--radius);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --button-pad-x: 1.75rem;
+  }
 }
