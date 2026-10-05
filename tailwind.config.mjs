@@ -34,6 +34,7 @@ export default withAnimations({
         intro: 'var(--text-intro)',
         'card-title': 'var(--text-card-title)',
         h1: 'var(--text-h1)',
+        hero: 'var(--text-hero)',
         'h2-band': 'var(--text-h2-band)',
         quote: 'var(--text-quote)',
         wordmark: 'var(--text-wordmark)',
