@@ -25,7 +25,7 @@ import jennine from "../assets/jennine.jpg";
 const capabilities = [
   {
     title: "Production Management & Systems",
-    text: "End-to-end ownership of publications and print programs: schedules and page flow in Trello and Asana, file intake, and printer coordination. Templates and InDesign automation\u2014ExtendScript, GREP, Data Merge, and AI to speed up production.",
+    text: "End-to-end ownership of publications and print programs: schedules and page flow in Trello or Asana, file intake, and printer coordination. Templates and InDesign automation\u2014ExtendScript, GREP, and Data Merge. AI-assisted tools\u2014AI-drafted InDesign scripts, Generative Expand for bleed fixes, and batch alt text for accessible PDFs\u2014speed up production and reduce errors.",
   },
   {
     title: "Editorial & Publication Production",
@@ -41,16 +41,31 @@ const capabilities = [
   },
 ];
 
+const engagements = [
+  {
+    title: "Ongoing production",
+    text: "Your outside production department. I handle page production, ad preflight, corrections, and printer coordination on a regular schedule, so your editors and designers can focus on the content.",
+  },
+  {
+    title: "Per-issue or per-project",
+    text: "A flat fee for a defined scope, such as one magazine issue, a catalog, a book interior, or a packaging rollout. Clear deliverables, clear deadlines.",
+  },
+  {
+    title: "Overflow and crunch support",
+    text: "Extra hands during press weeks, launches, and seasonal peaks. I can step into your files and templates quickly.",
+  },
+];
+
 const featuredWork = [
-  { img: higherEdThumb, alt: "Higher-Education Publications", title: "Higher-Education Publications", link: "/work/california-magazine", position: "center top", desc: "Publication layout and production for higher-education magazines, including California magazine." },
-  { img: packagingThumb, alt: "Packaging Production — SunQueen", title: "Packaging Production", link: "/work/sunqueen", desc: "Print-ready cartons and a bottle label for a mineral sunscreen product line." },
+  { img: higherEdThumb, alt: "UC Berkeley campus with the Campanile", title: "Higher-Education Publications", link: "/work/california-magazine", position: "center top", desc: "Ongoing publication layout and production for higher-education magazines, including <em>California</em> magazine, where I’m currently Designer &amp; Production Manager." },
+  { img: packagingThumb, alt: "SunQueen sunscreen bottle and retail carton on a beach towel", title: "Packaging Production", link: "/work/sunqueen", desc: "Print-ready cartons and a bottle label for a mineral sunscreen product line." },
 ];
 
 const moreWork = [
-  { img: juice, alt: "The Juice Magazine", title: "The Juice Magazine", link: "/work/juice", desc: "Editorial design and production for a quarterly surf magazine I co-founded." },
-  { img: westmarineThumb, alt: "West Marine", title: "West Marine", link: "/work/westmarine", desc: "In-house prepress and press checks for monthly mailers and a 600+ page catalog." },
-  { img: books, alt: "Book Design & Production", title: "Book Design & Production", link: "/work/books", desc: "Covers, interior typesetting, and print-on-demand files for self-published authors." },
-  { img: martinellisThumb, alt: "Production Design", title: "Production Design", link: "/work/production-design", desc: "Packaging and label mechanicals rolled out across flavors, sizes, and variants." },
+  { img: juice, alt: "Two covers of The Juice surf magazine", title: "The Juice Magazine", link: "/work/juice", desc: "Editorial design and production for a quarterly surf magazine I co-founded." },
+  { img: westmarineThumb, alt: "West Marine logo over clear ocean water", title: "West Marine", link: "/work/westmarine", desc: "In-house prepress and press checks for monthly mailers and a 600+ page catalog." },
+  { img: books, alt: "Cover of the book Torque by Michael Ashley", title: "Book Design & Production", link: "/work/books", desc: "Covers, interior typesetting, and print-on-demand files for self-published authors." },
+  { img: martinellisThumb, alt: "Martinelli\u2019s juice bottles in assorted flavors", title: "Production Design", link: "/work/production-design", desc: "Packaging and label mechanicals rolled out across flavors, sizes, and variants." },
   // TODO: re-add "Websites for Small Businesses" (jackWebsite, links to /websites) when ready
 ];
 
@@ -93,12 +108,12 @@ const testimonials = [
 const brands = [
   "Axway", "Kiteworks", "West Marine", "Costco", "Wiser", "FastPencil",
   "Cisco", "Martinelli\u2019s", "Cal Alumni Association", "Cal Giant",
-  "Tanimura & Antle", "O\u2019Neill", "Big Surf", "Stagnaro", "Annie Glass",
+  "Tanimura & Antle", "O\u2019Neill", "Big Surf", "Stagnaros", "Annie Glass",
   "Syncplicity",
 ];
 ---
 
-<Base title="Matthew O’Leary — Production Designer | Packaging, Editorial & Print" fullBleed>
+<Base title="Matthew O’Leary | Part-Time Production Designer & Manager for Magazines, Books, Packaging & Print" fullBleed>
   <!-- HERO: photo + title band fill the first screen -->
   <div class="hero-fold">
   <div class="hero-photo mx-2">
@@ -108,6 +123,7 @@ const brands = [
       widths={[800, 1400, 2000, 2800]}
       sizes="100vw"
       loading="eager"
+      fetchpriority="high"
       class="lead-photo block w-full h-full object-cover"
     />
   </div>
@@ -126,11 +142,11 @@ const brands = [
           I turn approved creative into accurate, organized, press-ready files.
         </p>
         <p class="mt-2 mb-0 text-body font-semibold leading-snug">
-          Available for contract and full-time production design roles.
+          Now booking contract, retainer, and project-based production work.
         </p>
         <div class="mt-4 flex flex-wrap gap-3">
           <a href="#work" class="btn-highlight">View selected work</a>
-          <a href="mailto:matt@mattoleary.design" class="btn-outline-light">Email Matt</a>
+          <a href="/contact" class="btn-outline-light">Contact</a>
         </div>
       </div>
     </div>
@@ -154,6 +170,30 @@ const brands = [
           </div>
         ))}
       </div>
+    </div>
+  </section>
+
+  <!-- WAYS TO WORK TOGETHER -->
+  <section class="px-4 pt-section">
+    <div class="max-w-container mx-auto md:px-gutter">
+      <div class="section-head animate-on-scroll">
+        <h2>Ways to Work Together</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-x-10">
+        {engagements.map((item) => (
+          <div class="border-t border-rule py-8 animate-on-scroll">
+            <h3 class="m-0 mb-3 text-label-lg font-semibold uppercase tracking-caps text-ink leading-normal">
+              <span class="text-band mr-2" aria-hidden="true">&raquo;</span>{item.title}
+            </h3>
+            <p class="m-0 text-body leading-body text-ink">{item.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="mt-6 mb-0 text-center text-body font-medium text-ink animate-on-scroll">
+        I schedule around your press dates and I&rsquo;m reachable during your crunch weeks.
+      </p>
     </div>
   </section>
 
@@ -187,7 +227,7 @@ const brands = [
               {w.title}
             </span>
             <span class="block mt-1 mx-auto max-w-[34ch] text-center text-body leading-snug text-muted">
-              {w.desc}
+              <Fragment set:html={w.desc} />
             </span>
           </a>
         ))}
@@ -214,7 +254,7 @@ const brands = [
               {w.title}
             </span>
             <span class="block mt-1 mx-auto max-w-[34ch] text-center text-body leading-snug text-muted">
-              {w.desc}
+              <Fragment set:html={w.desc} />
             </span>
           </a>
         ))}
@@ -245,10 +285,11 @@ const brands = [
             revisions, preflight, proofing, color, and vendor handoff.
           </p>
           <p class="mt-0 mb-6">
-            Most recently I served as Designer &amp; Production Manager for
-            <em>California</em> magazine (Cal Alumni Association), running the
+            I currently serve as Designer &amp; Production Manager for
+            <em>California</em> magazine (Cal Alumni Association), running each
             issue from layout and ad preflight through the printer relationship
-            with Quad and post-press file delivery.
+            with Quad and post-press file delivery. I have room for one or two
+            more ongoing clients, whether magazines, books, or packaging.
           </p>
           <p class="m-0">
             I&rsquo;ve run press checks, managed printer and packaging-vendor
@@ -316,9 +357,9 @@ const brands = [
       <ul
         class="list-none m-0 p-0 flex flex-wrap justify-center gap-y-1 caps text-ink leading-relaxed animate-on-scroll"
       >
-        {brands.map((brand, i) => (
+        {brands.map((brand) => (
           <li class="whitespace-nowrap">
-            {i > 0 && <span class="text-band mx-3" aria-hidden="true">&raquo;</span>}{brand}
+            <span class="text-band ml-3 mr-2" aria-hidden="true">&raquo;</span>{brand}
           </li>
         ))}
       </ul>
@@ -335,22 +376,25 @@ const brands = [
           Get in Touch
         </p>
         <h2 class="m-0 mb-6 text-h2-band font-medium leading-tight text-on-band">
-          Need a detail-oriented production designer?
+          Need a production partner who gets it to press right?
         </h2>
         <p class="m-0 text-body leading-body">
-          I&rsquo;m available for contract and full-time production design
-          roles in packaging, editorial, books, and print. Based in Santa Cruz
-          and working remotely, with Bay Area onsite availability as needed.
+          I&rsquo;m taking on contract, retainer, or per-project production
+          work across editorial, packaging, books, and
+          print. That could be producing a magazine issue from start to finish,
+          handling overflow during a busy season, or rolling out labels across
+          many products. I&rsquo;m based in Santa Cruz, work remotely, and can be
+          onsite in the Bay Area when needed.
         </p>
       </div>
       <div class="flex flex-col gap-3 w-full lg:w-72 animate-on-scroll">
-        <a href="mailto:matt@mattoleary.design" class="btn-highlight w-full">Email Matt</a>
+        <a href="/contact" class="btn-highlight w-full">Contact</a>
         <a
           href="/OLeary-Resume_Production_Oct2026.pdf"
           target="_blank"
           class="btn-outline-light w-full gap-2"
         >
-          <Icon name="pdf" class="w-4 h-4" />
+          <Icon name="pdf" class="w-4 h-4" aria-hidden="true" />
           View résumé
         </a>
         <a
@@ -358,7 +402,7 @@ const brands = [
           target="_blank"
           class="btn-outline-light w-full gap-2"
         >
-          <Icon name="linkedin" class="w-4 h-4" />
+          <Icon name="linkedin" class="w-4 h-4" aria-hidden="true" />
           LinkedIn
         </a>
         <ul class="list-none m-0 mt-3 p-0 text-body">
@@ -382,7 +426,7 @@ const brands = [
   .hero-photo {
     position: relative;
     flex: 1 1 auto;
-    min-height: 140px;
+    min-height: 96px;
   }
   .lead-photo {
     position: absolute;

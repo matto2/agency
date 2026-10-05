@@ -1,6 +1,23 @@
 ---
 const { title, fullBleed = false } = Astro.props;
 const fullTitle = title.includes("O’Leary") ? title : `${title} — Matthew O’Leary`;
+
+// Shared social/search copy. ogImage must be 1200×630 at public/images/og-image.jpg.
+const siteTitle = "Matthew O’Leary | Part-Time Production Designer & Manager for Magazines, Books, Packaging & Print";
+const siteDescription = "Santa Cruz production designer for California magazine. Taking on contract or project work: editorial, books, packaging, prepress.";
+const ogImage = "https://mattoleary.design/images/og-image.jpg";
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Matthew O’Leary",
+  jobTitle: "Production Designer & Production Manager",
+  worksFor: { "@type": "Organization", name: "Cal Alumni Association (California magazine)" },
+  address: { "@type": "PostalAddress", addressLocality: "Santa Cruz", addressRegion: "CA" },
+  email: "mailto:matt@mattoleary.design",
+  url: "https://mattoleary.design",
+  sameAs: ["https://www.linkedin.com/in/matt-oleary/"],
+};
 import "../styles/main.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
@@ -26,21 +43,28 @@ import { SEO } from "astro-seo";
 
     <SEO
       title={fullTitle}
-      description="Matthew O’Leary is a production designer specializing in packaging, editorial, books, and print. Available for contract and full-time production design roles."
+      description={siteDescription}
       openGraph={{
         basic: {
-          title: "Matthew O’Leary — Production Designer | Packaging, Editorial & Print",
+          title: siteTitle,
           type: "website",
-          image: "https://mattoleary.design/images/og-image.jpg",
+          image: ogImage,
         },
         optional: {
-          description: "Production design for packaging, editorial, books, and print. Available for contract and full-time roles.",
+          description: siteDescription,
         },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        title: siteTitle,
+        description: siteDescription,
+        image: ogImage,
       }}
       extend={{
         link: [{ rel: "icon", href: "/favicon.ico" }],
       }}
     />
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <meta charset="utf-8" />
