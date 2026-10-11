@@ -4,3 +4,16 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+# Old résumé filenames point to the current one
+[[redirects]]
+  from = "/OLeary-Resume_Production_Oct2026.pdf"
+  to = "/OLeary_Resume.pdf"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/OLeary_Resume_Sept2026.pdf"
+  to = "/OLeary_Resume.pdf"
+  status = 301
+  force = true
